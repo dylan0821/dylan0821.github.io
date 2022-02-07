@@ -15,16 +15,16 @@
 <meta property="og:site_name" content="董晟渤的个人主页">
 <meta property="og:description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dylandong.top/article/img/a/2021igem1.png">
-<meta property="og:image" content="https://dylandong.top/article/img/a/2021igem2.png">
-<meta property="og:image" content="https://dylandong.top/article/img/a/2021igem3.png">
+<meta property="og:image" content="https://dylandong.top/img/a/2021igem1.png">
+<meta property="og:image" content="https://dylandong.top/img/a/2021igem2.png">
+<meta property="og:image" content="https://dylandong.top/img/a/2021igem3.png">
 <meta property="article:published_time" content="2022-02-07T07:16:38.000Z">
-<meta property="article:modified_time" content="2022-02-07T07:55:58.380Z">
+<meta property="article:modified_time" content="2022-02-07T07:59:18.611Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="数学建模">
 <meta property="article:tag" content="iGEM">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dylandong.top/article/img/a/2021igem1.png">
+<meta name="twitter:image" content="https://dylandong.top/img/a/2021igem1.png">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
   
@@ -204,15 +204,15 @@
 <li>给定生长率$r$和环境容纳量$K$，预测种群数量的变化，需要使用<code>ode45</code>函数。</li>
 <li>给定种群数量随时间变化的数据，计算生长率并预测种群的最大数量，需要使用<code>lsqcurvefit</code>函数。</li>
 </ul>
-<img src="../img/a/2021igem1.png" alt="2021igem" style="zoom: 80%;" align=center/>
+<img src="/img/a/2021igem1.png" alt="2021igem" style="zoom: 80%;" align=center/>
 
 <h3 id="物质守恒定律"><a href="#物质守恒定律" class="headerlink" title="物质守恒定律"></a>物质守恒定律</h3><p>所谓的<strong>物质守恒定律</strong>，说的是物质不会凭空消失，也不会凭空产生，只能由一种物质转化成另一种物质。在物质的转化过程中，就需要用到该定律。</p>
-<img src="../img/a/2021igem2.png" alt="2021igem" style="zoom: 40%;" align=center/>
+<img src="/img/a/2021igem2.png" alt="2021igem" style="zoom: 40%;" align=center/>
 
 <p>以<strong>中心法则</strong>为例，DNA首先转录为RNA，再由RNA翻译为蛋白质，这个过程就涉及到了物质的转化。</p>
 <p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有<br>$$<br>\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],<br>$$<br>其中$k_{syn,x}$是$x$对应的RNA转录速率，$k_{de,x}$是$x$对应的RNA降解速率，$\alpha_{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成<br>$$<br>\alpha_{A}=\alpha_{A,0}+\alpha_{A,i},<br>$$<br>其中$\alpha_{A,0}$是$A$的本底表达率，$\alpha_{A,i}$是$A$的诱导表达率。对于翻译的过程，有<br>$$<br>\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],<br>$$<br>其中$k_{psyn,x}$是$x$的翻译速率，$k_{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
 <h3 id="Michaelis-Menten方程"><a href="#Michaelis-Menten方程" class="headerlink" title="Michaelis-Menten方程"></a>Michaelis-Menten方程</h3><p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
-<img src="../img/a/2021igem3.png" alt="2021igem" style="zoom: 40%;" align=center/>
+<img src="/img/a/2021igem3.png" alt="2021igem" style="zoom: 40%;" align=center/>
 
 <p>设蛋白质$x$转化成蛋白质$y$的过程由蛋白质$z$催化，并设它们的浓度分别为$[x]$、$[y]$和$[z]$，则有<br>$$<br>\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},<br>$$<br>其中$v_{max,z}=k_{cat,z}\cdot[z]$，$k_{cat,z}$是$z$的催化效率，$k_{m,z}$是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
 <blockquote>
