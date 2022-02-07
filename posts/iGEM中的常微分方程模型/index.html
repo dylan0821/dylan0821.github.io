@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://dylandong.top/posts/img/2021igem2.png">
 <meta property="og:image" content="https://dylandong.top/posts/img/2021igem3.png">
 <meta property="article:published_time" content="2022-02-07T07:16:38.000Z">
-<meta property="article:modified_time" content="2022-02-07T08:21:03.280Z">
+<meta property="article:modified_time" content="2022-02-07T08:25:46.659Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="数学建模">
 <meta property="article:tag" content="iGEM">
@@ -214,7 +214,7 @@
 </div>
 
 <p>以<strong>中心法则</strong>为例，DNA首先转录为RNA，再由RNA翻译为蛋白质，这个过程就涉及到了物质的转化。</p>
-<p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有<br>$$<br>\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],<br>$$<br>其中$k_{syn,x}$是$x$对应的RNA转录速率，$k_{de,x}$是$x$对应的RNA降解速率，$\alpha_{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成<br>$$<br>\alpha_{A}=\alpha_{A,0}+\alpha_{A,i},<br>$$<br>其中$\alpha_{A,0}$是$A$的本底表达率，$\alpha_{A,i}$是$A$的诱导表达率。对于翻译的过程，有<br>$$<br>\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],<br>$$<br>其中$k_{psyn,x}$是$x$的翻译速率，$k_{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
+<p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有<br>$$<br>\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],<br>$$<br>其中$k_{syn,x}$是$x$对应的RNA转录速率，$k_{de,x}$是$x$对应的RNA降解速率，$\alpha_{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成$\alpha_{A}=\alpha_{A,0}+\alpha_{A,i}$，其中$\alpha_{A,0}$是$A$的本底表达率，$\alpha_{A,i}$是$A$的诱导表达率。对于翻译的过程，有<br>$$<br>\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],<br>$$<br>其中$k_{psyn,x}$是$x$的翻译速率，$k_{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
 <h3 id="Michaelis-Menten方程"><a href="#Michaelis-Menten方程" class="headerlink" title="Michaelis-Menten方程"></a>Michaelis-Menten方程</h3><p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
 <div align="center">
 <img src="../img/2021igem3.png" alt="2021igem" style="zoom: 40%;"/>
