@@ -165,6 +165,217 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-实分析视角下的概率论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/%E5%AE%9E%E5%88%86%E6%9E%90%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%A6%82%E7%8E%87%E8%AE%BA/">实分析视角下的概率论</a>
+    </h1>
+  
+
+        
+        <a href="/posts/%E5%AE%9E%E5%88%86%E6%9E%90%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%A6%82%E7%8E%87%E8%AE%BA/" class="archive-article-date">
+  	<time datetime="2022-02-11T16:42:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-概率空间"><a href="#1-概率空间" class="headerlink" title="1. 概率空间"></a>1. 概率空间</h3><p>通常，用$\Omega$表示样本空间，$\omega\in\Omega$为样本点。样本空间的子集$A\subset\Omega$称为事件，事件所构成的集合可以用$\mathscr{F}$表示。</p>
+<hr>
+<p><strong>定义1.1（概率）</strong> 设$\Omega$是样本空间，$\mathscr{F}$是$\Omega$上的$\sigma$-域，$\mathbb{P}$是$\{\Omega,\mathscr{F}\}$上的测度，且满足$\mathbb{P}\{\Omega\}=1$，则$\mathbb{P}$为<strong>概率</strong>，$\{\Omega,\mathscr{F},\mathbb{P}\}$为<strong>概率空间</strong>。</p>
+<hr>
+<p>概率其实就是测度，只是外加了$\mathbb{P}\{\Omega\}=1$这个条件。在有限的测度下，许多问题都变得非常简单。另外，设$A\in\mathscr{F}$，则$\mathbb{P}\{A\}$也被称为事件$A$发生的概率。以下设$\{\Omega,\mathscr{F},\mathbb{P}\}$是概率空间。</p>
+<ul>
+<li>如果$\Omega$是有限集，$\lambda$是计数测度的话，定义$\mathbb{P}\{A\}=\dfrac{\lambda(A)}{\lambda(\Omega)}$，这样的概率空间即为<strong>古典概型</strong>；</li>
+<li>如果$\Omega$是$\mathbb{R}^n$中的Lebesgue可测集，$m$是Lebesgue测度的话，定义$\mathbb{P}\{A\}=\dfrac{m(A)}{m(\Omega)}$，这样的概率空间即为<strong>几何概型</strong>。</li>
+</ul>
+<hr>
+<p><strong>定义1.2（分布函数）</strong> 设$F:\mathbb{R}\to\mathbb{R}$是右连续的单调递增函数，则$F$为<strong>准分布函数</strong>；如果$F(-\infty)=0$，$F(+\infty)=1$，则$F$为<strong>分布函数</strong>。</p>
+<hr>
+<p>每一个准分布函数$F$，都决定着$\mathbb{R}$上的一个Lebesgue-Stieltjes测度$m_F$。</p>
+<h3 id="2-随机变量"><a href="#2-随机变量" class="headerlink" title="2. 随机变量"></a>2. 随机变量</h3><p><strong>定义2.1（随机变量）</strong> 设$X:\Omega\to\mathbb{R}$是可测函数，则$X$为<strong>随机变量</strong>。</p>
+<hr>
+<p><strong>定义2.2（特征函数）</strong> 设$A\in\mathscr{F}$，令</p>
+<script type="math/tex; mode=display">
+\chi_{A}(\omega)=\begin{cases}
+1,& \omega\in A，\\
+0,& \omega\in\Omega\setminus A,
+\end{cases}</script><p>则$\chi_{A}$是随机变量，为事件$A$的<strong>特征函数</strong>。</p>
+<hr>
+<p><strong>定义2.3（分布函数）</strong> 设$X$是概率空间$\{\Omega,\mathscr{F},\mathbb{P}\}$上的随机变量，令</p>
+<script type="math/tex; mode=display">
+F_X(x)=\mathbb{P}\{X\le x\},\quad x\in\mathbb{R},</script><p>则$F_X(x)$为$X$的<strong>分布函数</strong>。</p>
+<hr>
+<p>可以验证上面所定义的分布函数是右连续的单调递增函数，且$F(-\infty)=0$，$F(+\infty)=1$。事实上，满足这三条性质的函数一定也是某个随机变量的分布函数。</p>
+<hr>
+<p><strong>定义2.4（离散型分布）</strong> 设$X$是概率空间$\{\Omega,\mathscr{F},\mathbb{P}\}$上的随机变量，若</p>
+<script type="math/tex; mode=display">
+\mathrm{Rg} X=\{a_1,a_2,\cdots\}</script><p>包含至多可数个实数，则其为<strong>离散型随机变量</strong>，对应的分布函数</p>
+<script type="math/tex; mode=display">
+F_X(x)=\sum_{a_n\le x}\mathbb{P}\{X=a_n\}</script><p>为<strong>离散型分布</strong>。</p>
+<hr>
+<p><strong>定义2.5（连续型分布）</strong> 设$X$是概率空间$\{\Omega,\mathscr{F},\mathbb{P}\}$上的随机变量，$F_X(x)$为$X$的分布函数，若存在非负函数$p(x)\in L^1(\mathbb{R})$，使得</p>
+<script type="math/tex; mode=display">
+F_X(x)=\int_{-\infty}^{x}p(t)\mathrm{d}t,\quad x\in\mathbb{R},</script><p>则$X$为<strong>连续型随机变量</strong>，$F_X(x)$为<strong>连续型分布</strong>，$p(x)$为$X$的<strong>概率密度</strong>。</p>
+<hr>
+<p>若$X$既不是离散型随机变量，也不是连续型随机变量，则$X$为<strong>奇异型随机变量</strong>。</p>
+<h3 id="3-期望、矩与特征函数"><a href="#3-期望、矩与特征函数" class="headerlink" title="3. 期望、矩与特征函数"></a>3. 期望、矩与特征函数</h3><p><strong>定义3.1（期望）</strong> 设$X\in L^1(\Omega)$，则</p>
+<script type="math/tex; mode=display">
+\mathbb{E} X=\int_{\Omega}X\mathrm{d}\mathbb{P}</script><p>为$X$的<strong>期望</strong>。</p>
+<hr>
+<p><strong>定理3.2（概率空间的积分）</strong> 设$F_X(x)$为$X$的分布函数，$g:\mathbb{R}\to\mathbb{R}$是可测函数，则</p>
+<script type="math/tex; mode=display">
+\mathbb{E} g(X)=\int_{\mathbb{R}}g\mathrm{d}F_X(x),</script><p>并且只要等式一端有意义，另一端就有意义。特别地，取$g(x)=x$，则有</p>
+<script type="math/tex; mode=display">
+\mathbb{E} X=\int_{\mathbb{R}}x\mathrm{d}F_X(x).</script><hr>
+<p>若$X$是离散型随机变量，设$\mathrm{Rg} X=\{a_1,a_2,\cdots\}，p_n=\mathbb{P}\{X=a_n\}，n=1,2,\cdots$，则</p>
+<script type="math/tex; mode=display">
+\mathbb{E} X=\sum_{n=1}^{+\infty}a_np_n;</script><p>若$X$是连续型随机变量，设密度函数为$p(x)$，则</p>
+<script type="math/tex; mode=display">
+\mathbb{E} X=\int_{\mathbb{R}}xp(x)\mathrm{d}x.</script><hr>
+<p><strong>定义3.3（矩）</strong> 设$X\in L^r(\Omega)$，则$\mathbb{E} X^r$为$X$的<strong>$r$阶矩</strong>，$\mathbb{E}(X-\mathbb{E} X)^r$为$X$的<strong>$r$阶中心矩</strong>。特别地，当$r=2$时，$2$阶中心距即为$X$的<strong>方差</strong>，记作$\mathrm{Var} X$。</p>
+<hr>
+<p>设$F_X(x)$为$X$的分布函数，则容易得到计算公式</p>
+<script type="math/tex; mode=display">
+\mathbb{E} X^r=\int_{\mathbb{R}}x^r\mathrm{d}F_X(x),\quad \mathbb{E}(X-\mathbb{E} X)^r=\int_{\mathbb{R}}(x-\mathbb{E} X)^r\mathrm{d}F_X(x)。</script><hr>
+<p><strong>定理3.4（$C_r$不等式）</strong> 设$r&gt;0$，定义</p>
+<script type="math/tex; mode=display">
+C_r=\left\{\begin{aligned}
+& 2^{r-1},\quad & r\geq 1，\\
+& 1,\quad & 0<r<1,
+\end{aligned}\right.</script><p>随机变量$X_1,X_2\in L^r(\Omega)$，则有</p>
+<script type="math/tex; mode=display">
+\mathbb{E}|X_1+X_2|^r\le C_r(\mathbb{E} |X_1|^r+\mathbb{E} |X_2|^r).</script><hr>
+<p><strong>定理3.5（Chebyshev不等式）</strong> 设$X$是随机变量，$g:[0,+\infty)\to[0,\infty)$单调递增，若$g(|X|)\in L_1$，则对任意的$a&gt;0$，$g(a)&gt;0$，都有</p>
+<script type="math/tex; mode=display">
+\mathbb{P}\{|X|\geq a\}\le\dfrac{\mathbb{E} g(|X|)}{g(a)}.</script><hr>
+<p>若$X\in L_r$，取$g(x)=x^r$得</p>
+<script type="math/tex; mode=display">
+\mathbb{P}\{|X|\geq x\}\le\dfrac{\mathbb{E}|X|^r}{x^r},\quad\forall x>0;</script><p>取$r=2$得</p>
+<script type="math/tex; mode=display">
+\mathbb{P}\{|X-\mathbb{E} X|\geq x\}\le\dfrac{\mathrm{Var} X}{x^2}.</script><hr>
+<p><strong>定义3.6（特征函数）</strong> 设$X$是概率空间$\{\Omega,\mathscr{F},\mathbb{P}\}$上的随机变量，则</p>
+<script type="math/tex; mode=display">
+f(t)=\mathbb{E}\mathrm{e}^{itX}</script><p>为$X$的<strong>特征函数</strong>。</p>
+<hr>
+<p><strong>命题3.7（特征函数的性质）</strong> 设$f(t)$是随机变量$X$的特征函数。</p>
+<ul>
+<li>$f(0)=1$；</li>
+<li>$f|(t)|\le 1,\forall t\in\mathbb{R}$；</li>
+<li>$f(t)$在$\mathbb{R}$上一致连续。</li>
+</ul>
+<hr>
+<p><strong>命题3.8（特征函数的Taylor展开式）</strong> 设$f(t)$是随机变量$X$的特征函数，$X\in L_n$，则</p>
+<script type="math/tex; mode=display">
+f(t)=1+\sum_{k=1}^{n}\dfrac{(it)^k}{k!}\mathbb{E} X^k+o(t^n),\quad t\to 0.</script><hr>
+<p><strong>命题3.9（特征函数的反演公式）</strong> 设$f(t)$是分布函数$F$的特征函数，则</p>
+<script type="math/tex; mode=display">
+\overline{F}(b)-\overline{F}(a)=\dfrac{1}{2\pi}\lim_{T\to+\infty}\int_{-T}^{T}\dfrac{\mathrm{e}^{-itb}-\mathrm{e}^{-ita}}{-it}f(t)\mathrm{d}t,</script><p>其中$\overline{F}(x)=\dfrac{F(x)+F(x-0)}{2}$。</p>
+<hr>
+<p>设$X$是连续型随机变量，密度函数为$p(x)$，特征函数为$f(t)$，则</p>
+<script type="math/tex; mode=display">
+p(x)=\dfrac{1}{2\pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}f(t)\mathrm{d}t,</script><p>其中积分的计算可以应用<strong>复分析</strong>中的留数定理。</p>
+<h3 id="4-随机变量的收敛"><a href="#4-随机变量的收敛" class="headerlink" title="4. 随机变量的收敛"></a>4. 随机变量的收敛</h3><p>借助实分析中的收敛模式，还可以讨论随机变量的收敛。设$\{\Omega,\mathscr{F},\mathbb{P}\}$是概率空间，$\{X_n\}$是随机变量序列，$X$是随机变量。</p>
+<hr>
+<p><strong>定义4.1（几乎必然收敛）</strong> 设$X_n\to X，\mathrm{a.e.}$，则$X_n$<strong>几乎必然收敛</strong>于$X$，记作$X_n\to X，\mathrm{a.s.}$。</p>
+<hr>
+<p>若$X_n\to X，\mathrm{a.s.}$，则有$\mathbb{P}\left\{X_n\to X\right\}=1$。</p>
+<hr>
+<p><strong>定义4.2（依概率收敛）</strong> 设$X_n\xrightarrow{\mathbb{P}} X$，则$X_n$<strong>依概率收敛</strong>于$X$，记作$X_n\xrightarrow{p}X$。</p>
+<hr>
+<p>若$X_n\xrightarrow{p}X$，则对任意的$\varepsilon&gt;0$，有$\mathbb{P}\{|X_n-X|&lt;\varepsilon\}\to1$。</p>
+<hr>
+<p><strong>定义4.3（平均收敛）</strong> 设$X_n，X\in L^r(\Omega)$，其中$r&gt;0$，若</p>
+<script type="math/tex; mode=display">
+\lim_{n\to+\infty}\mathbb{E}|X_n-X|^r=0,</script><p>则$X_n$<strong>依$r$阶平均收敛</strong>于$X$，记为$X_n\xrightarrow{L_r}X$。</p>
+<hr>
+<p><strong>定义4.4（依分布收敛）</strong> 设$X_n，X$对应的分布函数为$F_n，F，n=1,2,\cdots$，若</p>
+<script type="math/tex; mode=display">
+F_n(x)\to F(x),\quad\text{对任意的$F(x)$的连续点$x$,}</script><p>则$\{F_n\}$<strong>弱收敛</strong>到$F$，记为$F_n\xrightarrow{w}F$；$\{X_n\}$<strong>依分布收敛</strong>于$X$，记为$X_n\xrightarrow{d}X$。</p>
+<hr>
+<p><strong>定义4.5（连续性定理）</strong> 设$X_n，X$对应的特征函数为$f_n，f(t)，n=1,2,\cdots$，则$X_n\xrightarrow{d}X$当且仅当</p>
+<script type="math/tex; mode=display">
+\lim_{n\to+\infty}f_n(t)=f(t),\quad\forall t\in\mathbb{R}.</script><hr>
+<p>研究随机变量的收敛时，Levi单调收敛定理和Lebesgue控制收敛定理同样适用。</p>
+<hr>
+<p><strong>命题4.6（蕴含关系）</strong> 以上几种收敛有如下的蕴含关系：</p>
+<ul>
+<li>若$X_n\to X，\mathrm{a.s.}$，则$X_n\xrightarrow{p}X$；</li>
+<li>若$X_n\xrightarrow{L_r}$，则$X_n\xrightarrow{p}X$；</li>
+<li>若$X_n\xrightarrow{p}X$，则$X_n\xrightarrow{d}X$；</li>
+<li>设$c$为常数，则$X_n\xrightarrow{p}c$当且仅当$X_n\xrightarrow{d}c$。</li>
+</ul>
+<hr>
+<p><strong>定理4.7（Slutsky引理）</strong> 若$X_n\xrightarrow{d}X,Y_n\xrightarrow{p}0,W_n\xrightarrow{p}1$，则</p>
+<script type="math/tex; mode=display">
+W_nX_n+Y_n\xrightarrow{p}X.</script><hr>
+<p>随机变量的收敛可以用于研究大数律与中心极限定理。在此由于篇幅有限，同时这部分内容不是实分析的重点，便不再提及。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">实分析</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/posts/%E5%AE%9E%E5%88%86%E6%9E%90%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%A6%82%E7%8E%87%E8%AE%BA/">展开 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-本网站备案期间公告" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -187,8 +398,8 @@
       
         <p>网站正在备案中，可能不能正常访问，解决方案如下：</p>
 <ul>
-<li>目前可以直接输入服务器的IP地址<a target="_blank" rel="noopener" href="https://101.43.181.164/">101.43.181.164</a>访问本网站，但是浏览器会提示“此网站的证书无效”，这是因为网站的SSL证书是颁发给<a href="https://dylandong.top/">dylandong.top</a>的。对于Chrome浏览器，请点击高级-&gt;继续前往101.43.181.164（不安全）。</li>
-<li>等到本网站备案结束后，可以使用<a href="https://dylandong.top/">dylandong.top</a>访问本网站。</li>
+<li>目前可以直接输入服务器的IP地址<a target="_blank" rel="noopener" href="https://101.43.181.164/">101.43.181.164</a>访问本网站，但是浏览器会提示“此网站的证书无效”，这是因为网站的SSL证书是颁发给<a href="https://dylandong.top">dylandong.top</a>的。对于Chrome浏览器，请点击高级-&gt;继续前往101.43.181.164（不安全）。</li>
+<li>等到本网站备案结束后，可以使用<a href="https://dylandong.top">dylandong.top</a>访问本网站。</li>
 </ul>
 
       
@@ -431,7 +642,6 @@
       
         <h2 id="前言：排版工具与书写工具的讨论"><a href="#前言：排版工具与书写工具的讨论" class="headerlink" title="前言：排版工具与书写工具的讨论"></a>前言：排版工具与书写工具的讨论</h2><p>LaTeX是一种“非所见即所得”的排版系统，用户需要输入特定的代码，保存在后缀为.tex的文件中，通过编译得到所需的pdf文件，例如以下代码：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line">Hello, world!</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <p>最后输出的结果是一个pdf文件，内容是“Hello, world!”。</p>
         
       
@@ -511,7 +721,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>所谓的Riemann-Lebesgue引理，说的是这样的结论：</p>
-<p><strong>定理1</strong> 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么<br>$$<br>\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.<br>$$</p>
+<p><strong>定理1</strong> 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么</p>
+<script type="math/tex; mode=display">
+\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.</script>
         
       
 
@@ -943,10 +1155,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
@@ -955,7 +1163,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">实分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">概率论</a>
               </li>
             
             <div class="clearfix"></div>

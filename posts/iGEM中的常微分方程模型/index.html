@@ -198,8 +198,11 @@
 <p>本文中建模使用的编程语言是<code>MATLAB</code>。</p>
 </blockquote>
 <span id="more"></span>
-
-<h3 id="Logistic方程"><a href="#Logistic方程" class="headerlink" title="Logistic方程"></a>Logistic方程</h3><p><strong>Logistic方程</strong>可以用于种群动力学模型的建模。设$N$是某种生物的种群密度，则<br>$$<br>\dfrac{\mathrm{d}N}{\mathrm{d}t}=rN\cdot\left(1-\dfrac{N}{K}\right),<br>$$<br>其中$r$是生长率，$K$是环境容纳量。该方程可以求出解析解<br>$$<br>N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},<br>$$<br>其中$N_0=N(0)$是初始数量。该方程可以应用于：</p>
+<h3 id="Logistic方程"><a href="#Logistic方程" class="headerlink" title="Logistic方程"></a>Logistic方程</h3><p><strong>Logistic方程</strong>可以用于种群动力学模型的建模。设$N$是某种生物的种群密度，则</p>
+<script type="math/tex; mode=display">
+\dfrac{\mathrm{d}N}{\mathrm{d}t}=rN\cdot\left(1-\dfrac{N}{K}\right),</script><p>其中$r$是生长率，$K$是环境容纳量。该方程可以求出解析解</p>
+<script type="math/tex; mode=display">
+N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},</script><p>其中$N_0=N(0)$是初始数量。该方程可以应用于：</p>
 <ul>
 <li>给定生长率$r$和环境容纳量$K$，预测种群数量的变化，需要使用<code>ode45</code>函数。</li>
 <li>给定种群数量随时间变化的数据，计算生长率并预测种群的最大数量，需要使用<code>lsqcurvefit</code>函数。</li>
@@ -214,13 +217,19 @@
 </div>
 
 <p>以<strong>中心法则</strong>为例，DNA首先转录为RNA，再由RNA翻译为蛋白质，这个过程就涉及到了物质的转化。</p>
-<p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有<br>$$<br>\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],<br>$$<br>其中$k_{syn,x}$是$x$对应的RNA转录速率，$k_{de,x}$是$x$对应的RNA降解速率，$\alpha_{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成$\alpha_{A}=\alpha_{A,0}+\alpha_{A,i}$，其中$\alpha_{A,0}$是$A$的本底表达率，$\alpha_{A,i}$是$A$的诱导表达率。对于翻译的过程，有<br>$$<br>\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],<br>$$<br>其中$k_{psyn,x}$是$x$的翻译速率，$k_{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
+<p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有</p>
+<script type="math/tex; mode=display">
+\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],</script><p>其中$k<em>{syn,x}$是$x$对应的RNA转录速率，$k</em>{de,x}$是$x$对应的RNA降解速率，$\alpha<em>{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成$\alpha</em>{A}=\alpha<em>{A,0}+\alpha</em>{A,i}$，其中$\alpha<em>{A,0}$是$A$的本底表达率，$\alpha</em>{A,i}$是$A$的诱导表达率。对于翻译的过程，有</p>
+<script type="math/tex; mode=display">
+\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],</script><p>其中$k<em>{psyn,x}$是$x$的翻译速率，$k</em>{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
 <h3 id="Michaelis-Menten方程"><a href="#Michaelis-Menten方程" class="headerlink" title="Michaelis-Menten方程"></a>Michaelis-Menten方程</h3><p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
 <div align="center">
 <img src="../img/2021igem3.png" alt="2021igem" style="zoom: 40%;"/>
 </div>
 
-<p>设蛋白质$x$转化成蛋白质$y$的过程由蛋白质$z$催化，并设它们的浓度分别为$[x]$、$[y]$和$[z]$，则有<br>$$<br>\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},<br>$$<br>其中$v_{max,z}=k_{cat,z}\cdot[z]$，$k_{cat,z}$是$z$的催化效率，$k_{m,z}$是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
+<p>设蛋白质$x$转化成蛋白质$y$的过程由蛋白质$z$催化，并设它们的浓度分别为$[x]$、$[y]$和$[z]$，则有</p>
+<script type="math/tex; mode=display">
+\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},</script><p>其中$v<em>{max,z}=k</em>{cat,z}\cdot[z]$，$k<em>{cat,z}$是$z$的催化效率，$k</em>{m,z}$是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
 <blockquote>
 <p>建模主要的工作是模拟和预测，并根据结果来给出建议。要了解更多，可以参考2021年的建模结果：<a target="_blank" rel="noopener" href="https://2021.igem.org/Team:XJTU-China/Model">Team:XJTU-China/Model</a>。</p>
 </blockquote>
@@ -441,10 +450,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
@@ -453,7 +458,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">实分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">概率论</a>
               </li>
             
             <div class="clearfix"></div>
