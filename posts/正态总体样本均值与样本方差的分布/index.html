@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>个人简历 | 董晟渤的个人主页</title>
+  <title>正态总体样本均值与样本方差的分布 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本页面建议使用电脑、平板等宽屏设备查看，将会不断更新。  .tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hid">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人简历">
-<meta property="og:url" content="https://dylandong.top/cv/index.html">
+  <meta name="description" content="本文研究的是正态总体的样本均值与样本方差，将会得到一系列简单但是重要的结论。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正态总体样本均值与样本方差的分布">
+<meta property="og:url" content="https://dylandong.top/posts/%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E6%A0%B7%E6%9C%AC%E5%9D%87%E5%80%BC%E4%B8%8E%E6%A0%B7%E6%9C%AC%E6%96%B9%E5%B7%AE%E7%9A%84%E5%88%86%E5%B8%83/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="本页面建议使用电脑、平板等宽屏设备查看，将会不断更新。  .tg  {border-collapse:collapse;border-spacing:0;}.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;  overflow:hid">
+<meta property="og:description" content="本文研究的是正态总体的样本均值与样本方差，将会得到一系列简单但是重要的结论。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-02T15:01:55.000Z">
-<meta property="article:modified_time" content="2022-02-10T08:54:48.191Z">
+<meta property="article:published_time" content="2022-02-12T07:23:38.000Z">
+<meta property="article:modified_time" content="2022-02-12T08:16:53.663Z">
 <meta property="article:author" content="董晟渤">
+<meta property="article:tag" content="课程">
+<meta property="article:tag" content="概率论">
+<meta property="article:tag" content="数理统计">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -167,220 +170,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-正态总体样本均值与样本方差的分布" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      个人简历
+      正态总体样本均值与样本方差的分布
     </h1>
   
 
         
-        <a href="/cv/index.html" class="archive-article-date">
-  	<time datetime="2022-02-02T15:01:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
+        <a href="/posts/%E6%AD%A3%E6%80%81%E6%80%BB%E4%BD%93%E6%A0%B7%E6%9C%AC%E5%9D%87%E5%80%BC%E4%B8%8E%E6%A0%B7%E6%9C%AC%E6%96%B9%E5%B7%AE%E7%9A%84%E5%88%86%E5%B8%83/" class="archive-article-date">
+  	<time datetime="2022-02-12T07:23:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>本页面建议使用电脑、平板等宽屏设备查看，将会不断更新。</p>
+        <p>本文研究的是正态总体的样本均值与样本方差，将会得到一系列简单但是重要的结论。</p>
+<span id="more"></span>
+<blockquote>
+<p>以下设$x_1,x_2,\cdots,x_n$是来自正态总体$\mathcal{N}(\mu,\sigma^2)$的样本，其样本均值</p>
+<script type="math/tex; mode=display">
+\bar{x}=\dfrac{1}{n}\sum_{i=1}^{n}x_i,</script><p>样本方差</p>
+<script type="math/tex; mode=display">
+s^2=\dfrac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x}).</script></blockquote>
+<p><strong>准备工作</strong> 记$\boldsymbol{x}=(x_1,x_2,\cdots,x_n)^T$，则$\boldsymbol{x}$的密度函数，也即$x_1,x_2,\cdots,x_n$的联合密度函数</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+p(x_1,x_2,\cdots,x_n)&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\sum_{i=1}^{n}\dfrac{(x_i-\mu)^2}{2\sigma^2}\right\}\\
+&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-2n\bar{x}\mu+n\mu^2\right)\right\}.
+\end{aligned}</script><p>在这里，构造一个首行元素都相等的正交矩阵</p>
+<script type="math/tex; mode=display">
+\boldsymbol{A}=\begin{bmatrix}
+\dfrac{1}{\sqrt{n}} & \dfrac{1}{\sqrt{n}} & \dfrac{1}{\sqrt{n}} & \cdots & \dfrac{1}{\sqrt{n}} \\
+\dfrac{1}{\sqrt{2\cdot 1}} & -\dfrac{1}{\sqrt{2\cdot 1}} & 0 & \cdots & 0 \\
+\dfrac{1}{\sqrt{3\cdot 2}} & \dfrac{1}{\sqrt{3\cdot 2}}  & -\dfrac{2}{\sqrt{3\cdot 2}} & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+\dfrac{1}{\sqrt{n\cdot(n-1)}} & \dfrac{1}{\sqrt{n\cdot(n-1)}} & \dfrac{1}{\sqrt{n\cdot(n-1)}} & \cdots & -\dfrac{n-1}{\sqrt{n\cdot(n-1)}} 
+\end{bmatrix},</script><p>并令$\boldsymbol{y}=(y_1,y_2,\cdots,y_n)^T=\boldsymbol{A}\boldsymbol{x}$，则有$\bar{x}=\dfrac{y_1}{\sqrt{n}}$，且</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{n}y_i^2=\boldsymbol{y}^T\boldsymbol{y}=\boldsymbol{x}^T\boldsymbol{A}^T\boldsymbol{A}\boldsymbol{x}=\boldsymbol{x}^T\boldsymbol{x}=\sum_{i=1}^{n}x_i^2,</script><p>从而$\boldsymbol{y}$的密度函数，也即$y_1,y_2,\cdots,y_n$的联合密度函数</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+p(y_1,y_2,\cdots,y_n)&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-2\sqrt{n}y_1\mu+n\mu^2\right)\right\}\\
+&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=2}^{n}y_i^2+(y_1-\sqrt{n}\mu)^2\right)\right\}\\
+&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{(y_1-\sqrt{n}\mu)^2}{2\sigma^2}\right\}\cdot\prod_{i=2}^{n}\exp\left\{-\dfrac{y_i^2}{2\sigma^2}\right\},
+\end{aligned}</script><p>这便说明了$y_1,y_2,\cdots,y_n$相互独立，且$y_1\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)$，$y_2,\cdots,y_n\sim\mathcal{N}(0,\sigma^2)$。</p>
+<blockquote>
+<p><strong>性质1（样本均值的分布）</strong> 样本均值$\bar{x}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
 </blockquote>
-<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg .tg-7fle{background-color:#efefef;font-weight:bold;text-align:center;vertical-align:top}<br>.tg .tg-v0hj{background-color:#efefef;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}<br>.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}<br>.tg .tg-i81m{background-color:#ffffff;text-align:center;vertical-align:top}
-</style></p>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-v0hj">姓名</th>
-    <th class="tg-3xi5">董晟渤</th>
-    <th class="tg-v0hj">性别</th>
-    <th class="tg-3xi5">男</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-v0hj">籍贯</td>
-    <td class="tg-3xi5">福建省</td>
-    <td class="tg-v0hj">民族</td>
-    <td class="tg-3xi5">汉族</td>
-  </tr>
-  <tr>
-    <td class="tg-v0hj">学校</td>
-    <td class="tg-3xi5"><a href="http://www.xjtu.edu.cn/"  target="opentype">西安交通大学</a></td>
-    <td class="tg-v0hj">学院</td>
-    <td class="tg-3xi5"><a href="http://math.xjtu.edu.cn/"  target="opentype">数学与统计学院</a></td>
-  </tr>
-  <tr>
-    <td class="tg-v0hj">专业</td>
-    <td class="tg-3xi5">统计学</td>
-    <td class="tg-v0hj">年级</td>
-    <td class="tg-3xi5">2019级</td>
-  </tr>
-  <tr>
-    <td class="tg-7fle">电话</td>
-    <td class="tg-i81m">15980088801</td>
-    <td class="tg-7fle">邮箱</td>
-    <td class="tg-i81m"><a href="mailto:dylan-dong@qq.com"  target="opentype">dylan-dong@qq.com</a></td>
-  </tr>
-</tbody>
-</table>
+<p><strong>证明1</strong> 根据$x_1,x_2,\cdots,x_n\sim\mathcal{N}(\mu,\sigma^2)$，可得</p>
+<script type="math/tex; mode=display">
+x_1+x_2+\cdots+x_n\sim\mathcal{N}(n\mu,n\sigma^2),</script><p>从而$\bar{x}=\dfrac{x_1+x_2+\cdots+x_n}{n}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
+<p><strong>证明2</strong> 利用<strong>准备工作</strong>中的结果，由$y_1=\sqrt{n}\cdot\bar{x}\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)$，可得$\bar{x}=\dfrac{y_1}{\sqrt{n}}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
+<blockquote>
+<p><strong>性质2（样本方差的分布）</strong> 样本方差$s$满足$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$。</p>
+</blockquote>
+<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，计算得</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\dfrac{(n-1)s^2}{\sigma^2}&=\dfrac{1}{\sigma^2}\cdot\sum_{i=1}^{n}(x_i-\bar{x})^2\\
+&=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-n\cdot\bar{x}^2\right)\\
+&=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-y_1^2\right)\\
+&=\sum_{i=2}^{n}\left(\dfrac{y_i}{\sigma}\right)^2,
+\end{aligned}</script><p>其中$\dfrac{y_i}{\sigma}\sim\mathcal{N}(0,1)$，从而$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$。</p>
+<blockquote>
+<p><strong>性质3（由样本均值和样本方差得到$t$分布）</strong> $t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}\sim t(n-1)$。</p>
+</blockquote>
+<p><strong>证明</strong> 计算得</p>
+<script type="math/tex; mode=display">
+t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}=\dfrac{\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}}{\sqrt{\dfrac{1}{n-1}\cdot{\dfrac{(n-1)s^2}{\sigma^2}}}},</script><p>其中$\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}\sim\mathcal{N}(0,1)$，且根据<strong>性质2</strong>得$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$，从而$t\sim t(n-1)$。</p>
+<blockquote>
+<p><strong>性质4（样本均值与样本方差的独立性）</strong> 样本均值$\bar{x}$与样本方差$s^2$独立。</p>
+</blockquote>
+<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，由$\bar{x}=\dfrac{y_1}{\sqrt{n}}$，且根据<strong>性质2</strong>的证明过程得</p>
+<script type="math/tex; mode=display">
+s^2=\dfrac{1}{n-1}\cdot\sum_{i=2}^{n}y_i^2,</script><p> 结合$y_1$与$y_2,\cdots,y_n$独立，得知$\bar{x}$与$s^2$独立。</p>
 
-<h3 id="能力简述"><a href="#能力简述" class="headerlink" title="能力简述"></a>能力简述</h3><ul>
-<li>数学功底扎实，可见下列课程成绩和自己整理的<a href="../课程资料#完整的课程笔记">课程笔记</a>。</li>
-<li>英语基础良好，六级成绩553，能够阅读英文文献，并完成英文论文。</li>
-<li>写作能力，熟练使用$\rm\LaTeX$，能够自己设计模板，个人作品见<a href="../课程资料">课程资料</a>和<a href="../其他作品">其他作品</a>。</li>
-<li>编程能力，熟练使用<code>MATLAB</code>等编程语言，能够完成基本的工作，见<a href="../建模论文">建模论文</a>。</li>
-<li>知乎数学话题优秀答主，关注数接近10万，账号为<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/dylan-dong-233">Dylaaan</a>。</li>
-</ul>
-<h3 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h3><ul>
-<li>2019年~2020年，西安交通大学，理科试验班，排名22/300+。</li>
-<li>2020年~2023年，西安交通大学，统计学，排名1/36（大二）。</li>
-<li>获一等奖学金（5000元）、校级二等奖学金（3000元）、优秀学生荣誉称号。</li>
-<li>所有数学课程的成绩如下：</li>
-</ul>
-<p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg .tg-v0hj{background-color:#efefef;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}<br>.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
-</style></p>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-v0hj">数学分析1</th>
-    <th class="tg-v0hj">数学分析2</th>
-    <th class="tg-v0hj">数学分析3</th>
-    <th class="tg-v0hj">高等代数1</th>
-    <th class="tg-v0hj">高等代数2</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-3xi5">97</td>
-    <td class="tg-3xi5">96</td>
-    <td class="tg-3xi5">93</td>
-    <td class="tg-3xi5">93</td>
-    <td class="tg-3xi5">95</td>
-  </tr>
-  <tr>
-    <td class="tg-v0hj">常微分方程</td>
-    <td class="tg-v0hj">实变函数</td>
-    <td class="tg-v0hj">复变函数</td>
-    <td class="tg-v0hj">概率论</td>
-    <td class="tg-v0hj">矩阵分析</td>
-  </tr>
-  <tr>
-    <td class="tg-3xi5">98</td>
-    <td class="tg-3xi5">96</td>
-    <td class="tg-3xi5">98</td>
-    <td class="tg-3xi5">98</td>
-    <td class="tg-3xi5">93</td>
-  </tr>
-  <tr>
-    <td class="tg-v0hj">随机过程</td>
-    <td class="tg-v0hj">数理统计</td>
-    <td class="tg-v0hj">泛函分析</td>
-    <td class="tg-v0hj">...</td>
-    <td class="tg-v0hj"></td>
-  </tr>
-  <tr>
-    <td class="tg-3xi5">99</td>
-    <td class="tg-3xi5">...</td>
-    <td class="tg-3xi5">...</td>
-    <td class="tg-3xi5">...</td>
-    <td class="tg-3xi5"></td>
-  </tr>
-</tbody>
-</table>
-
-<h3 id="竞赛奖项"><a href="#竞赛奖项" class="headerlink" title="竞赛奖项"></a>竞赛奖项</h3><p><style type="text/css"><br>.tg  {border-collapse:collapse;border-spacing:0;}<br>.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;<br>  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}<br>.tg .tg-7fle{background-color:#efefef;font-weight:bold;text-align:center;vertical-align:top}<br>.tg .tg-baqh{text-align:center;vertical-align:top}<br>.tg .tg-8d8j{text-align:center;vertical-align:bottom}
-</style></p>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-7fle">等级</th>
-    <th class="tg-7fle">名称</th>
-    <th class="tg-7fle">奖项</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-baqh" rowspan="2">国际级</td>
-    <td class="tg-8d8j">2021年美国大学生数学建模竞赛，欢迎翻阅<a href="../建模论文"  target="opentype">建模论文</a></td>
-    <td class="tg-baqh">M奖（一等奖）</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">2021年国际基因工程机器大赛，欢迎翻阅<a href="../建模论文"  target="opentype">建模论文</a></td>
-    <td class="tg-baqh">银奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh" rowspan="2">国家级</td>
-    <td class="tg-baqh">第十三届全国大学生数学竞赛决赛</td>
-    <td class="tg-baqh">...</td>
-  <tr>
-    <td class="tg-baqh">第五届中国青年志愿服务项目大赛</td>
-    <td class="tg-baqh">银奖</td>
-  </tr>
-  </tr>
-  <tr>
-    <td class="tg-baqh" rowspan="5">省部级</td>
-    <td class="tg-baqh">2021年全国大学生数学建模竞赛，欢迎翻阅<a href="../建模论文"  target="opentype">建模论文</a></td>
-    <td class="tg-baqh">一等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">第十三届全国大学生数学竞赛初赛</td>
-    <td class="tg-baqh">一等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">2020年全国大学生数学建模竞赛</td>
-    <td class="tg-baqh">二等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">第十二届全国大学生数学竞赛初赛</td>
-    <td class="tg-baqh">二等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">第七届中国国际“互联网+”大学生创新创业大赛</td>
-    <td class="tg-baqh">银奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh" rowspan="4">校级</td>
-    <td class="tg-baqh">第四届最美教案</td>
-    <td class="tg-baqh">一等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">2021年数学建模新生杯</td>
-    <td class="tg-baqh">二等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">动态学术成果资源征集</td>
-    <td class="tg-baqh">二等奖</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">2020年“公益之星”评选活动创意组</td>
-    <td class="tg-baqh">优秀奖</td>
-  </tr>
-</tbody>
-</table>
-
-<div style="display:none">
-
-### 学生工作
-
-- 2020年5月至今，西安交通大学心理学协会团支书（第二负责人），曾负责微信公众号“西安交大心协”的运营等工作，策划并组织了“心协自习室”活动，现负责心理学协会团支部的管理和每月团组织生活会的召开。
-- 2020年7月至今，西安交通大学仲英学业辅导中心答疑志愿者，曾经参与线上答疑、每日一题的录制，主讲高等数学讲座一次，专业分流讲座一次，参与朋辈手册与高等数学小助手的编写和排版工作，累计获得工时100+。
-- 2020年9月至2021年6月，励志书院2020级小团辅导员，对口班级为理试001班，工作获得了书院辅导员与学弟学妹的认可，曾经作为代表在启动大会上分享工作经验。
-- 2021年7月至今，励志书院学业促进与发展中心主任（第一负责人），开展了线上与线下的学业答疑工作，组织了数学分析、高等代数的课程复习讲座和保研经验分享等讲座，策划了多个课程的学业辅导资料的编写。
-
-### 实践实习
-
-- 2020年1月期间，德州师说教育科技有限公司实习，地点为北京师范大学校内，主要工作为高中数学讲义的整理。
-- 2020年7月至2020年8月，建行大学陕西省分行“金智惠民-乡村振兴”2020年学子暑期下乡实践活动，表现优异。本次实践在“2020年第六届寻找全国大学生百强暑期实践团队”活动中，获得“百强实践团队”称号。
-- 2020年9月至今，西安万衍生文化传媒有限公司事业一部兼职，主要工作为文案的攥写。
-- 2021年4月至2022年2月，西安交通大学工会学生助理，主要工作为表格的整理、微信公众号推送的制作等。
-- 2022年1月期间，高途教育科技集团有限公司校园大使推广活动，主要工作为考途APP的体验与推广。
-
-</div>
       
 
       
@@ -388,6 +258,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数理统计</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -399,6 +288,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/posts/%E6%9C%AC%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88%E6%9C%9F%E9%97%B4%E5%85%AC%E5%91%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          本网站备案期间公告(2022-02-12更新)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/%E5%AE%9E%E5%88%86%E6%9E%90%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%A6%82%E7%8E%87%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实分析视角下的概率论</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -460,7 +368,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
