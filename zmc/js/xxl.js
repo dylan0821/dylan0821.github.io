@@ -5,7 +5,7 @@ document.ontouchmove = function(ev){
 $(function(){
  var Game = {
  colNum : 7,
- wH : 70,
+ wH : 50,
  timeBtn : true,
  dir : 0,
  dirThis : null,
