@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://dylandong.top">
   <title>ODE中的全微分与凑微分技巧 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
+  <meta name="description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ODE中的全微分与凑微分技巧">
 <meta property="og:url" content="https://dylandong.top/posts/ODE%E4%B8%AD%E7%9A%84%E5%85%A8%E5%BE%AE%E5%88%86%E4%B8%8E%E5%87%91%E5%BE%AE%E5%88%86%E6%8A%80%E5%B7%A7/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
+<meta property="og:description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-03T15:32:05.000Z">
 <meta property="article:modified_time" content="2022-02-03T15:36:29.207Z">
 <meta property="article:author" content="董晟渤">
-<meta property="article:tag" content="课程">
 <meta property="article:tag" content="ODE">
+<meta property="article:tag" content="课程">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -200,59 +200,59 @@
 </blockquote>
 <span id="more"></span>
 <p><strong>基本组合的全微分</strong> 根据函数微分的加减乘除运算法则，容易得到以下关于微分的性质。</p>
-<p>（1）${\rm{d}}(x\pm y)={\rm{d}}x\pm{\rm{d}}y$。</p>
-<p>（2）${\rm{d}}(xy)=x{\rm{d}}y+y{\rm{d}}x$。</p>
-<p>（3）${\rm{d}}\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2}$。</p>
+<p>（1）<span class="math inline">\({\rm{d}}(x\pm y)={\rm{d}}x\pm{\rm{d}}y\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}(xy)=x{\rm{d}}y+y{\rm{d}}x\)</span>。</p>
+<p>（3）<span class="math inline">\({\rm{d}}\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2}\)</span>。</p>
 <blockquote>
-<p>事实上，在一些微分方程的求解中，经常需要用$x+y$、$xy$或$\dfrac{y}{x}$作换元。</p>
+<p>事实上，在一些微分方程的求解中，经常需要用<span class="math inline">\(x+y\)</span>、<span class="math inline">\(xy\)</span>或<span class="math inline">\(\dfrac{y}{x}\)</span>作换元。</p>
 </blockquote>
 <p><strong>常见函数的全微分</strong> 一些常见的二元函数的全微分如下所示。</p>
-<p>（1）${\rm{d}}\ln\left|xy\right|=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{xy}$。</p>
-<p>（2）${\rm{d}}\ln\left|\dfrac{y}{x}\right|=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{xy}$。</p>
-<p>（3）${\rm{d}}\arctan(xy)=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{1+x^2y^2}$。</p>
-<p>（4）${\rm{d}}\arctan\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2+y^2}$。</p>
-<p>（5）${\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|=2\cdot\dfrac{y{\rm{d}}x-x{\rm{d}}y}{x^2-y^2}$。</p>
+<p>（1）<span class="math inline">\({\rm{d}}\ln\left|xy\right|=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{xy}\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}\ln\left|\dfrac{y}{x}\right|=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{xy}\)</span>。</p>
+<p>（3）<span class="math inline">\({\rm{d}}\arctan(xy)=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{1+x^2y^2}\)</span>。</p>
+<p>（4）<span class="math inline">\({\rm{d}}\arctan\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2+y^2}\)</span>。</p>
+<p>（5）<span class="math inline">\({\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|=2\cdot\dfrac{y{\rm{d}}x-x{\rm{d}}y}{x^2-y^2}\)</span>。</p>
 <blockquote>
-<p>在这里，若出现形如$x{\rm{d}}y+y{\rm{d}}x$的结构，则需要考虑含$xy$的二元函数。</p>
-<p>而若出现$x{\rm{d}}y-y{\rm{d}}x$的结构，则需要考虑含$\dfrac{y}{x}$的二元函数。</p>
+<p>在这里，若出现形如<span class="math inline">\(x{\rm{d}}y+y{\rm{d}}x\)</span>的结构，则需要考虑含<span class="math inline">\(xy\)</span>的二元函数。</p>
+<p>而若出现<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x\)</span>的结构，则需要考虑含<span class="math inline">\(\dfrac{y}{x}\)</span>的二元函数。</p>
 </blockquote>
 <p><strong>指数形式的全微分</strong> 一些含指数的二元函数的全微分如下所示。</p>
-<p>（1）${\rm{d}}(y{\rm{e}}^x)=({\rm{d}}y+y{\rm{d}}x){\rm{e}}^x$。</p>
-<p>（2）${\rm{d}}(y{\rm{e}}^{-x})=({\rm{d}}y-y{\rm{d}}x){\rm{e}}^{-x}$。</p>
+<p>（1）<span class="math inline">\({\rm{d}}(y{\rm{e}}^x)=({\rm{d}}y+y{\rm{d}}x){\rm{e}}^x\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}(y{\rm{e}}^{-x})=({\rm{d}}y-y{\rm{d}}x){\rm{e}}^{-x}\)</span>。</p>
 <blockquote>
 <p>指数函数常常被作为所谓“积分因子”。</p>
-<p>若出现形如${\rm{d}}y+\lambda y{\rm{d}}x$的结构，则需要考虑含指数的二元函数。</p>
+<p>若出现形如<span class="math inline">\({\rm{d}}y+\lambda y{\rm{d}}x\)</span>的结构，则需要考虑含指数的二元函数。</p>
 </blockquote>
 <p><strong>特殊的微分方程</strong> 以下是一些特殊的微分方程。</p>
-<p>（1）$x{\rm{d}}y-y{\rm{d}}x+xy{\rm{d}}x=0$。</p>
-<p>（2）$x{\rm{d}}y-y{\rm{d}}x+x^2{\rm{d}}y=0$。</p>
-<p>（3）$x{\rm{d}}y-y{\rm{d}}x+(x^2+y^2){\rm{d}}y=0$。</p>
-<p>（4）$x{\rm{d}}y-y{\rm{d}}x+(x^2-y^2){\rm{d}}y=0$。</p>
-<p><strong>解答</strong> （1）积分因子$\mu(x,y)=\dfrac{1}{xy}$，代入得${\rm{d}}\ln\left|\dfrac{y}{x}\right|+{\rm{d}}x=0$。</p>
-<p>从而解得$\ln\left|\dfrac{y}{x}\right|+x=c$，其中$c\in\mathbb{R}$。</p>
-<p>（2）积分因子$\mu(x,y)=\dfrac{1}{x^2}$，代入得${\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}y=0$。</p>
-<p>从而解得$\dfrac{y}{x}+y=c$，其中$c\in\mathbb{R}$。</p>
-<p>（3）积分因子$\mu(x,y)=\dfrac{1}{x^2+y^2}$，代入得${\rm{d}}\arctan\left(\dfrac{y}{x}\right)+{\rm{d}}y=0$。</p>
-<p>从而解得$\arctan\left(\dfrac{y}{x}\right)+y=c$，其中$c\in\mathbb{R}$。</p>
-<p>（4）积分因子$\mu(x,y)=\dfrac{1}{x^2-y^2}$，代入得$\dfrac{1}{2}\cdot{\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|+{\rm{d}}y=0$。</p>
-<p>从而解得$\dfrac{1}{2}\cdot\ln\left|\dfrac{x+y}{x-y}\right|+y=c$，其中$c\in\mathbb{R}$。</p>
+<p>（1）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+xy{\rm{d}}x=0\)</span>。</p>
+<p>（2）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+x^2{\rm{d}}y=0\)</span>。</p>
+<p>（3）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+(x^2+y^2){\rm{d}}y=0\)</span>。</p>
+<p>（4）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+(x^2-y^2){\rm{d}}y=0\)</span>。</p>
+<p><strong>解答</strong> （1）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{xy}\)</span>，代入得<span class="math inline">\({\rm{d}}\ln\left|\dfrac{y}{x}\right|+{\rm{d}}x=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\ln\left|\dfrac{y}{x}\right|+x=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（2）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{y}{x}+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（3）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2+y^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\arctan\left(\dfrac{y}{x}\right)+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\arctan\left(\dfrac{y}{x}\right)+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（4）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2-y^2}\)</span>，代入得<span class="math inline">\(\dfrac{1}{2}\cdot{\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{1}{2}\cdot\ln\left|\dfrac{x+y}{x-y}\right|+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
 <blockquote>
 <p>借助类似的策略，可以解决更多问题。</p>
 </blockquote>
 <p><strong>更多例题</strong> 求微分方程的通解。</p>
-<p>（1）$y{\rm{d}}x+(y-x){\rm{d}}y=0$。</p>
-<p>（2）$(3x^3+y){\rm{d}}x+(2x^2y-x){\rm{d}}y=0$。</p>
-<p><strong>解答</strong> （1）整理得$y{\rm{d}}x-x{\rm{d}}y+y{\rm{d}}y=0$。</p>
-<p>积分因子$\mu(x,y)=\dfrac{1}{y^2}$，代入得${\rm{d}}\left(\dfrac{x}{y}\right)+{\rm{d}}(\ln |y|)=0$。</p>
-<p>从而解得$\dfrac{x}{y}+\ln|y|=c$，其中$c\in\mathbb{R}$。</p>
-<p>（2）整理得$y{\rm{d}}x-x{\rm{d}}y+3x^3{\rm{d}}x+2x^2y{\rm{d}}y=0$。</p>
-<p>积分因子$\mu(x,y)=\dfrac{1}{x^2}$，代入得$-{\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}\left(\dfrac{3}{2}x^2\right)+{\rm{d}}(y^2)=0$。</p>
-<p>从而解得$\dfrac{y}{x}+\dfrac{3}{2}x^2+y^2=c$，其中$c\in\mathbb{R}$。</p>
+<p>（1）<span class="math inline">\(y{\rm{d}}x+(y-x){\rm{d}}y=0\)</span>。</p>
+<p>（2）<span class="math inline">\((3x^3+y){\rm{d}}x+(2x^2y-x){\rm{d}}y=0\)</span>。</p>
+<p><strong>解答</strong> （1）整理得<span class="math inline">\(y{\rm{d}}x-x{\rm{d}}y+y{\rm{d}}y=0\)</span>。</p>
+<p>积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{y^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\left(\dfrac{x}{y}\right)+{\rm{d}}(\ln |y|)=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{x}{y}+\ln|y|=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（2）整理得<span class="math inline">\(y{\rm{d}}x-x{\rm{d}}y+3x^3{\rm{d}}x+2x^2y{\rm{d}}y=0\)</span>。</p>
+<p>积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2}\)</span>，代入得<span class="math inline">\(-{\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}\left(\dfrac{3}{2}x^2\right)+{\rm{d}}(y^2)=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{y}{x}+\dfrac{3}{2}x^2+y^2=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
 <blockquote>
 <p>实际处理全微分方程或者微分方程的时候，方法较为灵活。</p>
-<p>事实上，对于大多数题目，如果积分因子只与$x$或是$y$有关，大可不必观察。</p>
-<p>例如对于微分方程$M(x,y){\rm{d}}x+N(x,y){\rm{d}}y=0$而言。</p>
-<p>可以直接计算得与$x$有关的积分因子$\mu(x)=\exp\left(\int{\dfrac{\dfrac{\partial M(x,y)}{\partial y}-\dfrac{\partial N(x,y)}{\partial x}}{N(x,y)}}{\rm{d}}x\right)$。</p>
+<p>事实上，对于大多数题目，如果积分因子只与<span class="math inline">\(x\)</span>或是<span class="math inline">\(y\)</span>有关，大可不必观察。</p>
+<p>例如对于微分方程<span class="math inline">\(M(x,y){\rm{d}}x+N(x,y){\rm{d}}y=0\)</span>而言。</p>
+<p>可以直接计算得与<span class="math inline">\(x\)</span>有关的积分因子<span class="math inline">\(\mu(x)=\exp\left(\int{\dfrac{\dfrac{\partial M(x,y)}{\partial y}-\dfrac{\partial N(x,y)}{\partial x}}{N(x,y)}}{\rm{d}}x\right)\)</span>。</p>
 </blockquote>
 
       
@@ -267,11 +267,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ODE</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ODE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
         		</li>
       		
 		</ul>
@@ -475,7 +475,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,7 +483,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,15 +495,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">实分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>

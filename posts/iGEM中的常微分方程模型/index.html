@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://dylandong.top">
   <title>iGEM中的常微分方程模型 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
+  <meta name="description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iGEM中的常微分方程模型">
 <meta property="og:url" content="https://dylandong.top/posts/iGEM%E4%B8%AD%E7%9A%84%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
+<meta property="og:description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dylandong.top/posts/img/2021igem1.png">
 <meta property="og:image" content="https://dylandong.top/posts/img/2021igem2.png">
 <meta property="og:image" content="https://dylandong.top/posts/img/2021igem3.png">
 <meta property="article:published_time" content="2022-02-07T07:16:38.000Z">
-<meta property="article:modified_time" content="2022-02-07T08:25:46.659Z">
+<meta property="article:modified_time" content="2022-02-21T14:13:19.681Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="数学建模">
 <meta property="article:tag" content="iGEM">
@@ -203,38 +203,38 @@
 <p>本文中建模使用的编程语言是<code>MATLAB</code>。</p>
 </blockquote>
 <span id="more"></span>
-<h3 id="Logistic方程"><a href="#Logistic方程" class="headerlink" title="Logistic方程"></a>Logistic方程</h3><p><strong>Logistic方程</strong>可以用于种群动力学模型的建模。设$N$是某种生物的种群密度，则</p>
-<script type="math/tex; mode=display">
-\dfrac{\mathrm{d}N}{\mathrm{d}t}=rN\cdot\left(1-\dfrac{N}{K}\right),</script><p>其中$r$是生长率，$K$是环境容纳量。该方程可以求出解析解</p>
-<script type="math/tex; mode=display">
-N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},</script><p>其中$N_0=N(0)$是初始数量。该方程可以应用于：</p>
+<h3 id="logistic方程">Logistic方程</h3>
+<p><strong>Logistic方程</strong>可以用于种群动力学模型的建模。设<span class="math inline">\(N\)</span>是某种生物的种群密度，则 <span class="math display">\[
+\dfrac{\mathrm{d}N}{\mathrm{d}t}=rN\cdot\left(1-\dfrac{N}{K}\right),
+\]</span> 其中<span class="math inline">\(r\)</span>是生长率，<span class="math inline">\(K\)</span>是环境容纳量。该方程可以求出解析解 <span class="math display">\[
+N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},
+\]</span> 其中<span class="math inline">\(N_0=N(0)\)</span>是初始数量。该方程可以应用于：</p>
 <ul>
-<li>给定生长率$r$和环境容纳量$K$，预测种群数量的变化，需要使用<code>ode45</code>函数。</li>
+<li>给定生长率<span class="math inline">\(r\)</span>和环境容纳量<span class="math inline">\(K\)</span>，预测种群数量的变化，需要使用<code>ode45</code>函数。</li>
 <li>给定种群数量随时间变化的数据，计算生长率并预测种群的最大数量，需要使用<code>lsqcurvefit</code>函数。</li>
 </ul>
-<div align="center">
-<img src="../img/2021igem1.png" alt="2021igem" style="zoom: 80%;"/>
+<div data-align="center">
+<p><img src="../img/2021igem1.png" alt="2021igem" style="zoom: 80%;"/></p>
 </div>
-
-<h3 id="物质守恒定律"><a href="#物质守恒定律" class="headerlink" title="物质守恒定律"></a>物质守恒定律</h3><p>所谓的<strong>物质守恒定律</strong>，说的是物质不会凭空消失，也不会凭空产生，只能由一种物质转化成另一种物质。在物质的转化过程中，就需要用到该定律。</p>
-<div align="center">
-<img src="../img/2021igem2.png" alt="2021igem" style="zoom: 40%;"/>
+<h3 id="物质守恒定律">物质守恒定律</h3>
+<p>所谓的<strong>物质守恒定律</strong>，说的是物质不会凭空消失，也不会凭空产生，只能由一种物质转化成另一种物质。在物质的转化过程中，就需要用到该定律。</p>
+<div data-align="center">
+<p><img src="../img/2021igem2.png" alt="2021igem" style="zoom: 40%;"/></p>
 </div>
-
 <p>以<strong>中心法则</strong>为例，DNA首先转录为RNA，再由RNA翻译为蛋白质，这个过程就涉及到了物质的转化。</p>
-<p>设蛋白质$x$的生产由启动子$A$决定，其浓度为$[x]$，对应的DNA浓度恒定且为$[dx]$，RNA浓度为$[rx]$。对于转录的过程，有</p>
-<script type="math/tex; mode=display">
-\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],</script><p>其中$k<em>{syn,x}$是$x$对应的RNA转录速率，$k</em>{de,x}$是$x$对应的RNA降解速率，$\alpha<em>{A}$是启动子$A$的表达率，如果$A$受到其他因素的影响，可以将其写成$\alpha</em>{A}=\alpha<em>{A,0}+\alpha</em>{A,i}$，其中$\alpha<em>{A,0}$是$A$的本底表达率，$\alpha</em>{A,i}$是$A$的诱导表达率。对于翻译的过程，有</p>
-<script type="math/tex; mode=display">
-\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],</script><p>其中$k<em>{psyn,x}$是$x$的翻译速率，$k</em>{pde,x}$是$x$的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
-<h3 id="Michaelis-Menten方程"><a href="#Michaelis-Menten方程" class="headerlink" title="Michaelis-Menten方程"></a>Michaelis-Menten方程</h3><p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
-<div align="center">
-<img src="../img/2021igem3.png" alt="2021igem" style="zoom: 40%;"/>
+<p>设蛋白质<span class="math inline">\(x\)</span>的生产由启动子<span class="math inline">\(A\)</span>决定，其浓度为<span class="math inline">\([x]\)</span>，对应的DNA浓度恒定且为<span class="math inline">\([dx]\)</span>，RNA浓度为<span class="math inline">\([rx]\)</span>。对于转录的过程，有 <span class="math display">\[
+\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],
+\]</span> 其中<span class="math inline">\(k_{syn,x}\)</span>是<span class="math inline">\(x\)</span>对应的RNA转录速率，<span class="math inline">\(k_{de,x}\)</span>是<span class="math inline">\(x\)</span>对应的RNA降解速率，<span class="math inline">\(\alpha_{A}\)</span>是启动子<span class="math inline">\(A\)</span>的表达率，如果<span class="math inline">\(A\)</span>受到其他因素的影响，可以将其写成<span class="math inline">\(\alpha_{A}=\alpha_{A,0}+\alpha_{A,i}\)</span>，其中<span class="math inline">\(\alpha_{A,0}\)</span>是<span class="math inline">\(A\)</span>的本底表达率，<span class="math inline">\(\alpha_{A,i}\)</span>是<span class="math inline">\(A\)</span>的诱导表达率。对于翻译的过程，有 <span class="math display">\[
+\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],
+\]</span> 其中<span class="math inline">\(k_{psyn,x}\)</span>是<span class="math inline">\(x\)</span>的翻译速率，<span class="math inline">\(k_{pde,x}\)</span>是<span class="math inline">\(x\)</span>的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
+<h3 id="michaelis-menten方程">Michaelis-Menten方程</h3>
+<p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
+<div data-align="center">
+<p><img src="../img/2021igem3.png" alt="2021igem" style="zoom: 40%;"/></p>
 </div>
-
-<p>设蛋白质$x$转化成蛋白质$y$的过程由蛋白质$z$催化，并设它们的浓度分别为$[x]$、$[y]$和$[z]$，则有</p>
-<script type="math/tex; mode=display">
-\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},</script><p>其中$v<em>{max,z}=k</em>{cat,z}\cdot[z]$，$k<em>{cat,z}$是$z$的催化效率，$k</em>{m,z}$是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
+<p>设蛋白质<span class="math inline">\(x\)</span>转化成蛋白质<span class="math inline">\(y\)</span>的过程由蛋白质<span class="math inline">\(z\)</span>催化，并设它们的浓度分别为<span class="math inline">\([x]\)</span>、<span class="math inline">\([y]\)</span>和<span class="math inline">\([z]\)</span>，则有 <span class="math display">\[
+\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},
+\]</span> 其中<span class="math inline">\(v_{max,z}=k_{cat,z}\cdot[z]\)</span>，<span class="math inline">\(k_{cat,z}\)</span>是<span class="math inline">\(z\)</span>的催化效率，<span class="math inline">\(k_{m,z}\)</span>是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
 <blockquote>
 <p>建模主要的工作是模拟和预测，并根据结果来给出建议。要了解更多，可以参考2021年的建模结果：<a target="_blank" rel="noopener" href="https://2021.igem.org/Team:XJTU-China/Model">Team:XJTU-China/Model</a>。</p>
 </blockquote>
@@ -312,7 +312,7 @@ N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},</script><
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Logistic%E6%96%B9%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Logistic方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E8%B4%A8%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">物质守恒定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Michaelis-Menten%E6%96%B9%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">Michaelis-Menten方程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#logistic%E6%96%B9%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Logistic方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E8%B4%A8%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">物质守恒定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#michaelis-menten%E6%96%B9%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">Michaelis-Menten方程</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -459,7 +459,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,7 +467,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,15 +479,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">实分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>

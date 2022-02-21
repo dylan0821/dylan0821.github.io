@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://dylandong.top">
   <title>Riemann-Lebesgue引理及其推论 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么  \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0.">
+  <meta name="description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设\(f\in\mathscr{R}[a,b]\)（这里\(a\)可以是\(-\infty\)，\(b\)可以是\(+\infty\)），那么 \[ \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0. \]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Riemann-Lebesgue引理及其推论">
 <meta property="og:url" content="https://dylandong.top/posts/Riemann-Lebesgue%E5%BC%95%E7%90%86%E5%8F%8A%E5%85%B6%E6%8E%A8%E8%AE%BA/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么  \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0.">
+<meta property="og:description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设\(f\in\mathscr{R}[a,b]\)（这里\(a\)可以是\(-\infty\)，\(b\)可以是\(+\infty\)），那么 \[ \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0. \]">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-03T15:38:35.000Z">
 <meta property="article:modified_time" content="2022-02-11T16:39:39.267Z">
 <meta property="article:author" content="董晟渤">
-<meta property="article:tag" content="数学分析">
 <meta property="article:tag" content="课程">
+<meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -195,51 +195,54 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>所谓的Riemann-Lebesgue引理，说的是这样的结论：</p>
-<p><strong>定理1</strong> 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么</p>
-<script type="math/tex; mode=display">
-\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.</script><span id="more"></span>
-<p><strong>注</strong> 在这里$e(t)={\rm{e}}^{2\pi ti}$，并且根据Euler公式有$e(t)=\cos(2\pi t)+i\sin(2\pi t)$，因此可以将$e(t)$用三角函数表示。$\mathscr{R}[a,b]$表示全体在$[a,b]$上可积或绝对可积的函数所构成的集合。可积的含义是积分$\displaystyle\int_a^b|f(t)|{\rm{d}}t$收敛。绝对可积的含义是积分$\displaystyle\int_a^b|f(t)|{\rm{d}}t$收敛，这里包括了$f(x)$存在奇点和$[a,b]$是无穷区间的情形。</p>
-<p><strong>证明</strong> 首先，设$[a,b]$是有限区间。</p>
-<p>第一步，设$f$在$[a,b]$上可积，则$f$在$[a,b]$上有界，设$|f(x)|\le M$。取$[a,b]$的一组划分</p>
-<script type="math/tex; mode=display">
-a=x_0<x_1<\cdots<x_n=b,</script><p>其中$x<em>j=a+\dfrac{b-a}{m}j$，再设$f$在$[x</em>{j-1},x_j]$上的振幅为$\omega_j$，则有</p>
-<script type="math/tex; mode=display">
+<p><strong>定理1</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.
+\]</span></p>
+<span id="more"></span>
+<p><strong>注</strong> 在这里<span class="math inline">\(e(t)={\rm{e}}^{2\pi ti}\)</span>，并且根据Euler公式有<span class="math inline">\(e(t)=\cos(2\pi t)+i\sin(2\pi t)\)</span>，因此可以将<span class="math inline">\(e(t)\)</span>用三角函数表示。<span class="math inline">\(\mathscr{R}[a,b]\)</span>表示全体在<span class="math inline">\([a,b]\)</span>上可积或绝对可积的函数所构成的集合。可积的含义是积分<span class="math inline">\(\displaystyle\int_a^b|f(t)|{\rm{d}}t\)</span>收敛。绝对可积的含义是积分<span class="math inline">\(\displaystyle\int_a^b|f(t)|{\rm{d}}t\)</span>收敛，这里包括了<span class="math inline">\(f(x)\)</span>存在奇点和<span class="math inline">\([a,b]\)</span>是无穷区间的情形。</p>
+<p><strong>证明</strong> 首先，设<span class="math inline">\([a,b]\)</span>是有限区间。</p>
+<p>第一步，设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上可积，则<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上有界，设<span class="math inline">\(|f(x)|\le M\)</span>。取<span class="math inline">\([a,b]\)</span>的一组划分 <span class="math display">\[
+a=x_0&lt;x_1&lt;\cdots&lt;x_n=b,
+\]</span> 其中<span class="math inline">\(x_j=a+\dfrac{b-a}{m}j\)</span>，再设<span class="math inline">\(f\)</span>在<span class="math inline">\([x_{j-1},x_j]\)</span>上的振幅为<span class="math inline">\(\omega_j\)</span>，则有 <span class="math display">\[
 \begin{aligned}
-\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&=\left|\sum_{j=1}^m\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\\
-&\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|,
-\end{aligned}</script><p>其中根据$|e(-\lambda t)|\le1$得</p>
-<script type="math/tex; mode=display">
-\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j;</script><p>另一方面，直接计算得</p>
-<script type="math/tex; mode=display">
-\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|=\sum_{j=1}^m\left|f(x_j)\cdot\frac{e(-\lambda x_{j})-e(-\lambda x_{j-1})}{-2\pi \lambda i}\right|\le\frac{mM}{\pi|\lambda|},</script><p>设$|\lambda|&gt;1$，取$M=\left[\sqrt{|\lambda|}\right]$，代入得</p>
-<script type="math/tex; mode=display">
-\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j+\frac{m}{\pi\sqrt{|\lambda|}},</script><p>当$\lambda\to\infty$时，右式可以任意小，进而知$\displaystyle<br>\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0$。</p>
-<p>第二步，设$f$在$[a,b]$上绝对可积，不妨设其在$[a,b]$上的唯一奇点为$a$，则对任意的$\varepsilon&gt;0$，存在$\delta&gt;0$，使得$\displaystyle\int_a^{a+\delta}|f(t)|{\rm{d}} t&lt;\varepsilon$，代入得</p>
-<script type="math/tex; mode=display">
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&amp;=\left|\sum_{j=1}^m\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|,
+\end{aligned}
+\]</span> 其中根据<span class="math inline">\(|e(-\lambda t)|\le1\)</span>得 <span class="math display">\[
+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j;
+\]</span> 另一方面，直接计算得 <span class="math display">\[
+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|=\sum_{j=1}^m\left|f(x_j)\cdot\frac{e(-\lambda x_{j})-e(-\lambda x_{j-1})}{-2\pi \lambda i}\right|\le\frac{mM}{\pi|\lambda|},
+\]</span> 设<span class="math inline">\(|\lambda|&gt;1\)</span>，取<span class="math inline">\(M=\left[\sqrt{|\lambda|}\right]\)</span>，代入得 <span class="math display">\[
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j+\frac{m}{\pi\sqrt{|\lambda|}},
+\]</span> 当<span class="math inline">\(\lambda\to\infty\)</span>时，右式可以任意小，进而知<span class="math inline">\(\displaystyle \lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0\)</span>。</p>
+<p>第二步，设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上绝对可积，不妨设其在<span class="math inline">\([a,b]\)</span>上的唯一奇点为<span class="math inline">\(a\)</span>，则对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，存在<span class="math inline">\(\delta&gt;0\)</span>，使得<span class="math inline">\(\displaystyle\int_a^{a+\delta}|f(t)|{\rm{d}} t&lt;\varepsilon\)</span>，代入得 <span class="math display">\[
 \begin{aligned}
-\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&\le\left|\int_a^{a+\delta}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
-&\le \int_a^{a+\delta}|f(t)|{\rm{d}} t+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
-&\le\varepsilon +\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|,
-\end{aligned}</script><p>其中根据第一步知$\displaystyle\left|\int<em>{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|$可以任意小，进而知$\displaystyle\lim</em>{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0$。其次，设$[a,b]$是无穷区间，不妨设$b=+\infty$，再设$f$在$[a,+\infty)$上绝对可积，则对任意的$\varepsilon&gt;0$，存在$A&gt;0$，使得</p>
-<script type="math/tex; mode=display">
-\int_A^{+\infty}|f(t)|{\rm{d}}t<\varepsilon,</script><p>代入得</p>
-<script type="math/tex; mode=display">
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&amp;\le\left|\int_a^{a+\delta}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le \int_a^{a+\delta}|f(t)|{\rm{d}} t+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le\varepsilon +\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|,
+\end{aligned}
+\]</span> 其中根据第一步知<span class="math inline">\(\displaystyle\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\)</span>可以任意小，进而知<span class="math inline">\(\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0\)</span>。其次，设<span class="math inline">\([a,b]\)</span>是无穷区间，不妨设<span class="math inline">\(b=+\infty\)</span>，再设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,+\infty)\)</span>上绝对可积，则对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，存在<span class="math inline">\(A&gt;0\)</span>，使得 <span class="math display">\[
+\int_A^{+\infty}|f(t)|{\rm{d}}t&lt;\varepsilon,
+\]</span> 代入得 <span class="math display">\[
 \begin{aligned}
-\left|\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|&\le\left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{A}^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|\\
-&\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\int_A^{+\infty}|f(t)|{\rm{d}}t\\
-&\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\varepsilon,
-\end{aligned}</script><p>其中根据第一步知$\displaystyle\left|\int<em>a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|$可以任意小，进而知$\displaystyle\lim</em>{\lambda\to\infty}\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t=0$。</p>
-<p><strong>推论2</strong> 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么</p>
-<script type="math/tex; mode=display">
-\lim_{\lambda\to\infty}\int_a^bf(t)\cos(\lambda t){\rm{d}}t=0,</script><p>以及</p>
-<script type="math/tex; mode=display">
-\lim_{\lambda\to\infty}\int_a^bf(t)\sin(\lambda t){\rm{d}}t=0.</script><p><strong>推论3</strong> 设$f\in\mathscr{R}[a,b]$（这里$a$可以是$-\infty$，$b$可以是$+\infty$），那么</p>
-<script type="math/tex; mode=display">
-\lim_{n\to\infty}\hat f(n)=0,</script><p>其中$\hat f(n)$为$f$的Fourier系数。</p>
-<p><strong>变式4</strong> 设$f\in\mathscr{R}[0,1]$，那么</p>
-<script type="math/tex; mode=display">
-\lim_{n\to\infty}\int_0^1t^nf(t){\rm{d}}t=0.</script><p><strong>注</strong> 可以利用相同的方法证明。</p>
-<p><strong>推论5</strong> 取$f(x)=\dfrac{1}{1+x}$可得$\displaystyle\lim_{n\to\infty}\int_0^1\frac{x^n}{1+x}{\rm{d}}x=0$。</p>
+\left|\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|&amp;\le\left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{A}^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\int_A^{+\infty}|f(t)|{\rm{d}}t\\
+&amp;\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\varepsilon,
+\end{aligned}
+\]</span> 其中根据第一步知<span class="math inline">\(\displaystyle\left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|\)</span>可以任意小，进而知<span class="math inline">\(\displaystyle\lim_{\lambda\to\infty}\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t=0\)</span>。</p>
+<p><strong>推论2</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\lim_{\lambda\to\infty}\int_a^bf(t)\cos(\lambda t){\rm{d}}t=0,
+\]</span> 以及 <span class="math display">\[
+\lim_{\lambda\to\infty}\int_a^bf(t)\sin(\lambda t){\rm{d}}t=0.
+\]</span></p>
+<p><strong>推论3</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\lim_{n\to\infty}\hat f(n)=0,
+\]</span> 其中<span class="math inline">\(\hat f(n)\)</span>为<span class="math inline">\(f\)</span>的Fourier系数。</p>
+<p><strong>变式4</strong> 设<span class="math inline">\(f\in\mathscr{R}[0,1]\)</span>，那么 <span class="math display">\[
+\lim_{n\to\infty}\int_0^1t^nf(t){\rm{d}}t=0.
+\]</span></p>
+<p><strong>注</strong> 可以利用相同的方法证明。</p>
+<p><strong>推论5</strong> 取<span class="math inline">\(f(x)=\dfrac{1}{1+x}\)</span>可得<span class="math inline">\(\displaystyle\lim_{n\to\infty}\int_0^1\frac{x^n}{1+x}{\rm{d}}x=0\)</span>。</p>
 
       
 
@@ -253,11 +256,11 @@ a=x_0<x_1<\cdots<x_n=b,</script><p>其中$x<em>j=a+\dfrac{b-a}{m}j$，再设$f$�
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学分析</a>
         		</li>
       		
 		</ul>
@@ -461,7 +464,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,7 +472,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -481,15 +484,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">实分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>

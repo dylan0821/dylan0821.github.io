@@ -19,8 +19,8 @@
 <meta property="article:modified_time" content="2022-02-12T08:16:53.663Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="课程">
-<meta property="article:tag" content="概率论">
 <meta property="article:tag" content="数理统计">
+<meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -198,63 +198,64 @@
         <p>本文研究的是正态总体的样本均值与样本方差，将会得到一系列简单但是重要的结论。</p>
 <span id="more"></span>
 <blockquote>
-<p>以下设$x_1,x_2,\cdots,x_n$是来自正态总体$\mathcal{N}(\mu,\sigma^2)$的样本，其样本均值</p>
-<script type="math/tex; mode=display">
-\bar{x}=\dfrac{1}{n}\sum_{i=1}^{n}x_i,</script><p>样本方差</p>
-<script type="math/tex; mode=display">
-s^2=\dfrac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x}).</script></blockquote>
-<p><strong>准备工作</strong> 记$\boldsymbol{x}=(x_1,x_2,\cdots,x_n)^T$，则$\boldsymbol{x}$的密度函数，也即$x_1,x_2,\cdots,x_n$的联合密度函数</p>
-<script type="math/tex; mode=display">
+<p>以下设<span class="math inline">\(x_1,x_2,\cdots,x_n\)</span>是来自正态总体<span class="math inline">\(\mathcal{N}(\mu,\sigma^2)\)</span>的样本，其样本均值 <span class="math display">\[
+\bar{x}=\dfrac{1}{n}\sum_{i=1}^{n}x_i,
+\]</span> 样本方差 <span class="math display">\[
+s^2=\dfrac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x}).
+\]</span></p>
+</blockquote>
+<p><strong>准备工作</strong> 记<span class="math inline">\(\boldsymbol{x}=(x_1,x_2,\cdots,x_n)^T\)</span>，则<span class="math inline">\(\boldsymbol{x}\)</span>的密度函数，也即<span class="math inline">\(x_1,x_2,\cdots,x_n\)</span>的联合密度函数 <span class="math display">\[
 \begin{aligned}
-p(x_1,x_2,\cdots,x_n)&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\sum_{i=1}^{n}\dfrac{(x_i-\mu)^2}{2\sigma^2}\right\}\\
-&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-2n\bar{x}\mu+n\mu^2\right)\right\}.
-\end{aligned}</script><p>在这里，构造一个首行元素都相等的正交矩阵</p>
-<script type="math/tex; mode=display">
+p(x_1,x_2,\cdots,x_n)&amp;=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\sum_{i=1}^{n}\dfrac{(x_i-\mu)^2}{2\sigma^2}\right\}\\
+&amp;=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-2n\bar{x}\mu+n\mu^2\right)\right\}.
+\end{aligned}
+\]</span> 在这里，构造一个首行元素都相等的正交矩阵 <span class="math display">\[
 \boldsymbol{A}=\begin{bmatrix}
-\dfrac{1}{\sqrt{n}} & \dfrac{1}{\sqrt{n}} & \dfrac{1}{\sqrt{n}} & \cdots & \dfrac{1}{\sqrt{n}} \\
-\dfrac{1}{\sqrt{2\cdot 1}} & -\dfrac{1}{\sqrt{2\cdot 1}} & 0 & \cdots & 0 \\
-\dfrac{1}{\sqrt{3\cdot 2}} & \dfrac{1}{\sqrt{3\cdot 2}}  & -\dfrac{2}{\sqrt{3\cdot 2}} & \cdots & 0 \\
-\vdots & \vdots & \vdots & \ddots & \vdots \\
-\dfrac{1}{\sqrt{n\cdot(n-1)}} & \dfrac{1}{\sqrt{n\cdot(n-1)}} & \dfrac{1}{\sqrt{n\cdot(n-1)}} & \cdots & -\dfrac{n-1}{\sqrt{n\cdot(n-1)}} 
-\end{bmatrix},</script><p>并令$\boldsymbol{y}=(y_1,y_2,\cdots,y_n)^T=\boldsymbol{A}\boldsymbol{x}$，则有$\bar{x}=\dfrac{y_1}{\sqrt{n}}$，且</p>
-<script type="math/tex; mode=display">
-\sum_{i=1}^{n}y_i^2=\boldsymbol{y}^T\boldsymbol{y}=\boldsymbol{x}^T\boldsymbol{A}^T\boldsymbol{A}\boldsymbol{x}=\boldsymbol{x}^T\boldsymbol{x}=\sum_{i=1}^{n}x_i^2,</script><p>从而$\boldsymbol{y}$的密度函数，也即$y_1,y_2,\cdots,y_n$的联合密度函数</p>
-<script type="math/tex; mode=display">
+\dfrac{1}{\sqrt{n}} &amp; \dfrac{1}{\sqrt{n}} &amp; \dfrac{1}{\sqrt{n}} &amp; \cdots &amp; \dfrac{1}{\sqrt{n}} \\
+\dfrac{1}{\sqrt{2\cdot 1}} &amp; -\dfrac{1}{\sqrt{2\cdot 1}} &amp; 0 &amp; \cdots &amp; 0 \\
+\dfrac{1}{\sqrt{3\cdot 2}} &amp; \dfrac{1}{\sqrt{3\cdot 2}}  &amp; -\dfrac{2}{\sqrt{3\cdot 2}} &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\dfrac{1}{\sqrt{n\cdot(n-1)}} &amp; \dfrac{1}{\sqrt{n\cdot(n-1)}} &amp; \dfrac{1}{\sqrt{n\cdot(n-1)}} &amp; \cdots &amp; -\dfrac{n-1}{\sqrt{n\cdot(n-1)}} 
+\end{bmatrix},
+\]</span> 并令<span class="math inline">\(\boldsymbol{y}=(y_1,y_2,\cdots,y_n)^T=\boldsymbol{A}\boldsymbol{x}\)</span>，则有<span class="math inline">\(\bar{x}=\dfrac{y_1}{\sqrt{n}}\)</span>，且 <span class="math display">\[
+\sum_{i=1}^{n}y_i^2=\boldsymbol{y}^T\boldsymbol{y}=\boldsymbol{x}^T\boldsymbol{A}^T\boldsymbol{A}\boldsymbol{x}=\boldsymbol{x}^T\boldsymbol{x}=\sum_{i=1}^{n}x_i^2,
+\]</span> 从而<span class="math inline">\(\boldsymbol{y}\)</span>的密度函数，也即<span class="math inline">\(y_1,y_2,\cdots,y_n\)</span>的联合密度函数 <span class="math display">\[
 \begin{aligned}
-p(y_1,y_2,\cdots,y_n)&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-2\sqrt{n}y_1\mu+n\mu^2\right)\right\}\\
-&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=2}^{n}y_i^2+(y_1-\sqrt{n}\mu)^2\right)\right\}\\
-&=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{(y_1-\sqrt{n}\mu)^2}{2\sigma^2}\right\}\cdot\prod_{i=2}^{n}\exp\left\{-\dfrac{y_i^2}{2\sigma^2}\right\},
-\end{aligned}</script><p>这便说明了$y_1,y_2,\cdots,y_n$相互独立，且$y_1\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)$，$y_2,\cdots,y_n\sim\mathcal{N}(0,\sigma^2)$。</p>
+p(y_1,y_2,\cdots,y_n)&amp;=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-2\sqrt{n}y_1\mu+n\mu^2\right)\right\}\\
+&amp;=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{1}{2\sigma^2}\cdot\left(\sum_{i=2}^{n}y_i^2+(y_1-\sqrt{n}\mu)^2\right)\right\}\\
+&amp;=\dfrac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\cdot\exp\left\{-\dfrac{(y_1-\sqrt{n}\mu)^2}{2\sigma^2}\right\}\cdot\prod_{i=2}^{n}\exp\left\{-\dfrac{y_i^2}{2\sigma^2}\right\},
+\end{aligned}
+\]</span> 这便说明了<span class="math inline">\(y_1,y_2,\cdots,y_n\)</span>相互独立，且<span class="math inline">\(y_1\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)\)</span>，<span class="math inline">\(y_2,\cdots,y_n\sim\mathcal{N}(0,\sigma^2)\)</span>。</p>
 <blockquote>
-<p><strong>性质1（样本均值的分布）</strong> 样本均值$\bar{x}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
+<p><strong>性质1（样本均值的分布）</strong> 样本均值<span class="math inline">\(\bar{x}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)\)</span>。</p>
 </blockquote>
-<p><strong>证明1</strong> 根据$x_1,x_2,\cdots,x_n\sim\mathcal{N}(\mu,\sigma^2)$，可得</p>
-<script type="math/tex; mode=display">
-x_1+x_2+\cdots+x_n\sim\mathcal{N}(n\mu,n\sigma^2),</script><p>从而$\bar{x}=\dfrac{x_1+x_2+\cdots+x_n}{n}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
-<p><strong>证明2</strong> 利用<strong>准备工作</strong>中的结果，由$y_1=\sqrt{n}\cdot\bar{x}\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)$，可得$\bar{x}=\dfrac{y_1}{\sqrt{n}}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)$。</p>
+<p><strong>证明1</strong> 根据<span class="math inline">\(x_1,x_2,\cdots,x_n\sim\mathcal{N}(\mu,\sigma^2)\)</span>，可得 <span class="math display">\[
+x_1+x_2+\cdots+x_n\sim\mathcal{N}(n\mu,n\sigma^2),
+\]</span> 从而<span class="math inline">\(\bar{x}=\dfrac{x_1+x_2+\cdots+x_n}{n}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)\)</span>。</p>
+<p><strong>证明2</strong> 利用<strong>准备工作</strong>中的结果，由<span class="math inline">\(y_1=\sqrt{n}\cdot\bar{x}\sim\mathcal{N}(\sqrt{n}\mu,\sigma^2)\)</span>，可得<span class="math inline">\(\bar{x}=\dfrac{y_1}{\sqrt{n}}\sim\mathcal{N}\left(\mu,\dfrac{\sigma^2}{n}\right)\)</span>。</p>
 <blockquote>
-<p><strong>性质2（样本方差的分布）</strong> 样本方差$s$满足$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$。</p>
+<p><strong>性质2（样本方差的分布）</strong> 样本方差<span class="math inline">\(s\)</span>满足<span class="math inline">\(\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)\)</span>。</p>
 </blockquote>
-<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，计算得</p>
-<script type="math/tex; mode=display">
+<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，计算得 <span class="math display">\[
 \begin{aligned}
-\dfrac{(n-1)s^2}{\sigma^2}&=\dfrac{1}{\sigma^2}\cdot\sum_{i=1}^{n}(x_i-\bar{x})^2\\
-&=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-n\cdot\bar{x}^2\right)\\
-&=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-y_1^2\right)\\
-&=\sum_{i=2}^{n}\left(\dfrac{y_i}{\sigma}\right)^2,
-\end{aligned}</script><p>其中$\dfrac{y_i}{\sigma}\sim\mathcal{N}(0,1)$，从而$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$。</p>
+\dfrac{(n-1)s^2}{\sigma^2}&amp;=\dfrac{1}{\sigma^2}\cdot\sum_{i=1}^{n}(x_i-\bar{x})^2\\
+&amp;=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}x_i^2-n\cdot\bar{x}^2\right)\\
+&amp;=\dfrac{1}{\sigma^2}\cdot\left(\sum_{i=1}^{n}y_i^2-y_1^2\right)\\
+&amp;=\sum_{i=2}^{n}\left(\dfrac{y_i}{\sigma}\right)^2,
+\end{aligned}
+\]</span> 其中<span class="math inline">\(\dfrac{y_i}{\sigma}\sim\mathcal{N}(0,1)\)</span>，从而<span class="math inline">\(\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)\)</span>。</p>
 <blockquote>
-<p><strong>性质3（由样本均值和样本方差得到$t$分布）</strong> $t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}\sim t(n-1)$。</p>
+<p><strong>性质3（由样本均值和样本方差得到<span class="math inline">\(t\)</span>分布）</strong> <span class="math inline">\(t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}\sim t(n-1)\)</span>。</p>
 </blockquote>
-<p><strong>证明</strong> 计算得</p>
-<script type="math/tex; mode=display">
-t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}=\dfrac{\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}}{\sqrt{\dfrac{1}{n-1}\cdot{\dfrac{(n-1)s^2}{\sigma^2}}}},</script><p>其中$\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}\sim\mathcal{N}(0,1)$，且根据<strong>性质2</strong>得$\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)$，从而$t\sim t(n-1)$。</p>
+<p><strong>证明</strong> 计算得 <span class="math display">\[
+t=\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{s}=\dfrac{\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}}{\sqrt{\dfrac{1}{n-1}\cdot{\dfrac{(n-1)s^2}{\sigma^2}}}},
+\]</span> 其中<span class="math inline">\(\dfrac{\sqrt{n}\cdot(\bar{x}-\mu)}{\sigma}\sim\mathcal{N}(0,1)\)</span>，且根据<strong>性质2</strong>得<span class="math inline">\(\dfrac{(n-1)s^2}{\sigma^2}\sim\chi^2(n-1)\)</span>，从而<span class="math inline">\(t\sim t(n-1)\)</span>。</p>
 <blockquote>
-<p><strong>性质4（样本均值与样本方差的独立性）</strong> 样本均值$\bar{x}$与样本方差$s^2$独立。</p>
+<p><strong>性质4（样本均值与样本方差的独立性）</strong> 样本均值<span class="math inline">\(\bar{x}\)</span>与样本方差<span class="math inline">\(s^2\)</span>独立。</p>
 </blockquote>
-<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，由$\bar{x}=\dfrac{y_1}{\sqrt{n}}$，且根据<strong>性质2</strong>的证明过程得</p>
-<script type="math/tex; mode=display">
-s^2=\dfrac{1}{n-1}\cdot\sum_{i=2}^{n}y_i^2,</script><p> 结合$y_1$与$y_2,\cdots,y_n$独立，得知$\bar{x}$与$s^2$独立。</p>
+<p><strong>证明</strong> 利用<strong>准备工作</strong>中的结果，由<span class="math inline">\(\bar{x}=\dfrac{y_1}{\sqrt{n}}\)</span>，且根据<strong>性质2</strong>的证明过程得 <span class="math display">\[
+s^2=\dfrac{1}{n-1}\cdot\sum_{i=2}^{n}y_i^2,
+\]</span>  结合<span class="math inline">\(y_1\)</span>与<span class="math inline">\(y_2,\cdots,y_n\)</span>独立，得知<span class="math inline">\(\bar{x}\)</span>与<span class="math inline">\(s^2\)</span>独立。</p>
 
       
 
@@ -272,11 +273,11 @@ s^2=\dfrac{1}{n-1}\cdot\sum_{i=2}^{n}y_i^2,</script><p> 结合$y_1$与$y_2,\cdot
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数理统计</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数理统计</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
         		</li>
       		
 		</ul>
@@ -480,7 +481,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -488,7 +489,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ODE</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -500,15 +501,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">实分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>
