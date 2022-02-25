@@ -6,25 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>iGEM中的常微分方程模型 | 董晟渤的个人主页</title>
+  <title>Riemann-Lebesgue引理及其推论 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
+  <meta name="description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设\(f\in\mathscr{R}[a,b]\)（这里\(a\)可以是\(-\infty\)，\(b\)可以是\(+\infty\)），那么 \[ \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0. \]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iGEM中的常微分方程模型">
-<meta property="og:url" content="https://dylandong.top/posts/iGEM%E4%B8%AD%E7%9A%84%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:title" content="Riemann-Lebesgue引理及其推论">
+<meta property="og:url" content="https://dylandong.top/posts/eccc/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。 本文中建模使用的编程语言是MATLAB。">
+<meta property="og:description" content="所谓的Riemann-Lebesgue引理，说的是这样的结论： 定理1 设\(f\in\mathscr{R}[a,b]\)（这里\(a\)可以是\(-\infty\)，\(b\)可以是\(+\infty\)），那么 \[ \displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t&#x3D;0. \]">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dylandong.top/posts/img/2021igem1.png">
-<meta property="og:image" content="https://dylandong.top/posts/img/2021igem2.png">
-<meta property="og:image" content="https://dylandong.top/posts/img/2021igem3.png">
-<meta property="article:published_time" content="2022-02-07T07:16:38.000Z">
-<meta property="article:modified_time" content="2022-02-21T14:13:19.681Z">
+<meta property="article:published_time" content="2022-02-03T15:38:35.000Z">
+<meta property="article:modified_time" content="2022-02-25T03:35:58.278Z">
 <meta property="article:author" content="董晟渤">
-<meta property="article:tag" content="数学建模">
-<meta property="article:tag" content="iGEM">
+<meta property="article:tag" content="课程">
+<meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dylandong.top/posts/img/2021igem1.png">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
   
@@ -171,20 +167,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-iGEM中的常微分方程模型" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Riemann-Lebesgue引理及其推论" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      iGEM中的常微分方程模型
+      Riemann-Lebesgue引理及其推论
     </h1>
   
 
         
-        <a href="/posts/iGEM%E4%B8%AD%E7%9A%84%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2022-02-07T07:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-07</time>
+        <a href="/posts/eccc/" class="archive-article-date">
+  	<time datetime="2022-02-03T15:38:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
 </a>
         
         
@@ -192,46 +188,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>根据笔者去年参加iGEM的经验，整理得到本文，供后面参加iGEM并负责建模的同学参考。</p>
-<p>本文中建模使用的编程语言是<code>MATLAB</code>。</p>
-</blockquote>
+        <p>所谓的Riemann-Lebesgue引理，说的是这样的结论：</p>
+<p><strong>定理1</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.
+\]</span></p>
 <span id="more"></span>
-<h3 id="logistic方程">Logistic方程</h3>
-<p><strong>Logistic方程</strong>可以用于种群动力学模型的建模。设<span class="math inline">\(N\)</span>是某种生物的种群密度，则 <span class="math display">\[
-\dfrac{\mathrm{d}N}{\mathrm{d}t}=rN\cdot\left(1-\dfrac{N}{K}\right),
-\]</span> 其中<span class="math inline">\(r\)</span>是生长率，<span class="math inline">\(K\)</span>是环境容纳量。该方程可以求出解析解 <span class="math display">\[
-N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},
-\]</span> 其中<span class="math inline">\(N_0=N(0)\)</span>是初始数量。该方程可以应用于：</p>
-<ul>
-<li>给定生长率<span class="math inline">\(r\)</span>和环境容纳量<span class="math inline">\(K\)</span>，预测种群数量的变化，需要使用<code>ode45</code>函数。</li>
-<li>给定种群数量随时间变化的数据，计算生长率并预测种群的最大数量，需要使用<code>lsqcurvefit</code>函数。</li>
-</ul>
-<div data-align="center">
-<p><img src="../img/2021igem1.png" alt="2021igem" style="zoom: 80%;"/></p>
-</div>
-<h3 id="物质守恒定律">物质守恒定律</h3>
-<p>所谓的<strong>物质守恒定律</strong>，说的是物质不会凭空消失，也不会凭空产生，只能由一种物质转化成另一种物质。在物质的转化过程中，就需要用到该定律。</p>
-<div data-align="center">
-<p><img src="../img/2021igem2.png" alt="2021igem" style="zoom: 40%;"/></p>
-</div>
-<p>以<strong>中心法则</strong>为例，DNA首先转录为RNA，再由RNA翻译为蛋白质，这个过程就涉及到了物质的转化。</p>
-<p>设蛋白质<span class="math inline">\(x\)</span>的生产由启动子<span class="math inline">\(A\)</span>决定，其浓度为<span class="math inline">\([x]\)</span>，对应的DNA浓度恒定且为<span class="math inline">\([dx]\)</span>，RNA浓度为<span class="math inline">\([rx]\)</span>。对于转录的过程，有 <span class="math display">\[
-\dfrac{\mathrm{d}[rx]}{\mathrm{d}t}=k_{syn,x}\cdot\alpha_{A}\cdot[dx]-k_{de,x}\cdot[rx],
-\]</span> 其中<span class="math inline">\(k_{syn,x}\)</span>是<span class="math inline">\(x\)</span>对应的RNA转录速率，<span class="math inline">\(k_{de,x}\)</span>是<span class="math inline">\(x\)</span>对应的RNA降解速率，<span class="math inline">\(\alpha_{A}\)</span>是启动子<span class="math inline">\(A\)</span>的表达率，如果<span class="math inline">\(A\)</span>受到其他因素的影响，可以将其写成<span class="math inline">\(\alpha_{A}=\alpha_{A,0}+\alpha_{A,i}\)</span>，其中<span class="math inline">\(\alpha_{A,0}\)</span>是<span class="math inline">\(A\)</span>的本底表达率，<span class="math inline">\(\alpha_{A,i}\)</span>是<span class="math inline">\(A\)</span>的诱导表达率。对于翻译的过程，有 <span class="math display">\[
-\dfrac{\mathrm{d}[x]}{\mathrm{d}t}=k_{psyn,x}\cdot [rx]-k_{pde,x}\cdot [x],
-\]</span> 其中<span class="math inline">\(k_{psyn,x}\)</span>是<span class="math inline">\(x\)</span>的翻译速率，<span class="math inline">\(k_{pde,x}\)</span>是<span class="math inline">\(x\)</span>的降解速率。该定律可以应用于预测RNA和蛋白质的产量，需要对微分方程组使用<code>ode45</code>函数。</p>
-<h3 id="michaelis-menten方程">Michaelis-Menten方程</h3>
-<p><strong>Michaelis-Menten方程</strong>是表示一个酶促反应的起始速度与底物浓度关系的速度方程。</p>
-<div data-align="center">
-<p><img src="../img/2021igem3.png" alt="2021igem" style="zoom: 40%;"/></p>
-</div>
-<p>设蛋白质<span class="math inline">\(x\)</span>转化成蛋白质<span class="math inline">\(y\)</span>的过程由蛋白质<span class="math inline">\(z\)</span>催化，并设它们的浓度分别为<span class="math inline">\([x]\)</span>、<span class="math inline">\([y]\)</span>和<span class="math inline">\([z]\)</span>，则有 <span class="math display">\[
-\dfrac{\mathrm{d}[y]}{\mathrm{d}t}=\dfrac{v_{max,z}\cdot[x]}{[x]+k_{m,z}},
-\]</span> 其中<span class="math inline">\(v_{max,z}=k_{cat,z}\cdot[z]\)</span>，<span class="math inline">\(k_{cat,z}\)</span>是<span class="math inline">\(z\)</span>的催化效率，<span class="math inline">\(k_{m,z}\)</span>是常数。该方程可以用于预测蛋白质的产量，需要使用<code>ode45</code>函数。</p>
-<blockquote>
-<p>建模主要的工作是模拟和预测，并根据结果来给出建议。要了解更多，可以参考2021年的建模结果：<a target="_blank" rel="noopener" href="https://2021.igem.org/Team:XJTU-China/Model">Team:XJTU-China/Model</a>。</p>
-</blockquote>
+<p><strong>注</strong> 在这里<span class="math inline">\(e(t)={\rm{e}}^{2\pi ti}\)</span>，并且根据Euler公式有<span class="math inline">\(e(t)=\cos(2\pi t)+i\sin(2\pi t)\)</span>，因此可以将<span class="math inline">\(e(t)\)</span>用三角函数表示。<span class="math inline">\(\mathscr{R}[a,b]\)</span>表示全体在<span class="math inline">\([a,b]\)</span>上可积或绝对可积的函数所构成的集合。可积的含义是积分<span class="math inline">\(\displaystyle\int_a^b|f(t)|{\rm{d}}t\)</span>收敛。绝对可积的含义是积分<span class="math inline">\(\displaystyle\int_a^b|f(t)|{\rm{d}}t\)</span>收敛，这里包括了<span class="math inline">\(f(x)\)</span>存在奇点和<span class="math inline">\([a,b]\)</span>是无穷区间的情形。</p>
+<p><strong>证明</strong> 首先，设<span class="math inline">\([a,b]\)</span>是有限区间。</p>
+<p>第一步，设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上可积，则<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上有界，设<span class="math inline">\(|f(x)|\le M\)</span>。取<span class="math inline">\([a,b]\)</span>的一组划分 <span class="math display">\[
+a=x_0&lt;x_1&lt;\cdots&lt;x_n=b,
+\]</span> 其中<span class="math inline">\(x_j=a+\dfrac{b-a}{m}j\)</span>，再设<span class="math inline">\(f\)</span>在<span class="math inline">\([x_{j-1},x_j]\)</span>上的振幅为<span class="math inline">\(\omega_j\)</span>，则有 <span class="math display">\[
+\begin{aligned}
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&amp;=\left|\sum_{j=1}^m\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|,
+\end{aligned}
+\]</span> 其中根据<span class="math inline">\(|e(-\lambda t)|\le1\)</span>得 <span class="math display">\[
+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}(f(t)-f(x_j))e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j;
+\]</span> 另一方面，直接计算得 <span class="math display">\[
+\sum_{j=1}^m\left|\int_{x_{j-1}}^{x_j}f(x_j)e(-\lambda t){\rm{d}}t\right|=\sum_{j=1}^m\left|f(x_j)\cdot\frac{e(-\lambda x_{j})-e(-\lambda x_{j-1})}{-2\pi \lambda i}\right|\le\frac{mM}{\pi|\lambda|},
+\]</span> 设<span class="math inline">\(|\lambda|&gt;1\)</span>，取<span class="math inline">\(M=\left[\sqrt{|\lambda|}\right]\)</span>，代入得 <span class="math display">\[
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|\le\sum_{j=1}^m\omega_j\Delta x_j+\frac{m}{\pi\sqrt{|\lambda|}},
+\]</span> 当<span class="math inline">\(\lambda\to\infty\)</span>时，右式可以任意小，进而知<span class="math inline">\(\displaystyle \lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0\)</span>。</p>
+<p>第二步，设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,b]\)</span>上绝对可积，不妨设其在<span class="math inline">\([a,b]\)</span>上的唯一奇点为<span class="math inline">\(a\)</span>，则对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，存在<span class="math inline">\(\delta&gt;0\)</span>，使得<span class="math inline">\(\displaystyle\int_a^{a+\delta}|f(t)|{\rm{d}} t&lt;\varepsilon\)</span>，代入得 <span class="math display">\[
+\begin{aligned}
+\left|\int_a^bf(t)e(-\lambda t){\rm{d}}t\right|&amp;\le\left|\int_a^{a+\delta}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le \int_a^{a+\delta}|f(t)|{\rm{d}} t+\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le\varepsilon +\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|,
+\end{aligned}
+\]</span> 其中根据第一步知<span class="math inline">\(\displaystyle\left|\int_{a+\delta}^bf(t)e(-\lambda t){\rm{d}}t\right|\)</span>可以任意小，进而知<span class="math inline">\(\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0\)</span>。其次，设<span class="math inline">\([a,b]\)</span>是无穷区间，不妨设<span class="math inline">\(b=+\infty\)</span>，再设<span class="math inline">\(f\)</span>在<span class="math inline">\([a,+\infty)\)</span>上绝对可积，则对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>，存在<span class="math inline">\(A&gt;0\)</span>，使得 <span class="math display">\[
+\int_A^{+\infty}|f(t)|{\rm{d}}t&lt;\varepsilon,
+\]</span> 代入得 <span class="math display">\[
+\begin{aligned}
+\left|\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|&amp;\le\left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\left|\int_{A}^{+\infty}f(t)e(-\lambda t){\rm{d}}t\right|\\
+&amp;\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\int_A^{+\infty}|f(t)|{\rm{d}}t\\
+&amp;\le \left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|+\varepsilon,
+\end{aligned}
+\]</span> 其中根据第一步知<span class="math inline">\(\displaystyle\left|\int_a^{A}f(t)e(-\lambda t)\rm{d}{t}\right|\)</span>可以任意小，进而知<span class="math inline">\(\displaystyle\lim_{\lambda\to\infty}\int_a^{+\infty}f(t)e(-\lambda t){\rm{d}}t=0\)</span>。</p>
+<p><strong>推论2</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\lim_{\lambda\to\infty}\int_a^bf(t)\cos(\lambda t){\rm{d}}t=0,
+\]</span> 以及 <span class="math display">\[
+\lim_{\lambda\to\infty}\int_a^bf(t)\sin(\lambda t){\rm{d}}t=0.
+\]</span></p>
+<p><strong>推论3</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
+\lim_{n\to\infty}\hat f(n)=0,
+\]</span> 其中<span class="math inline">\(\hat f(n)\)</span>为<span class="math inline">\(f\)</span>的Fourier系数。</p>
+<p><strong>变式4</strong> 设<span class="math inline">\(f\in\mathscr{R}[0,1]\)</span>，那么 <span class="math display">\[
+\lim_{n\to\infty}\int_0^1t^nf(t){\rm{d}}t=0.
+\]</span></p>
+<p><strong>注</strong> 可以利用相同的方法证明。</p>
+<p><strong>推论5</strong> 取<span class="math inline">\(f(x)=\dfrac{1}{1+x}\)</span>可得<span class="math inline">\(\displaystyle\lim_{n\to\infty}\int_0^1\frac{x^n}{1+x}{\rm{d}}x=0\)</span>。</p>
 
       
 
@@ -245,11 +250,11 @@ N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学建模</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">iGEM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学分析</a>
         		</li>
       		
 		</ul>
@@ -268,18 +273,18 @@ N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},
   
 <nav id="article-nav">
   
-    <a href="/posts/Visual-Studio-Code%E9%85%8D%E7%BD%AELaTeX%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/e480/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Visual Studio Code配置LaTeX教程
+          LaTeX：从入门到日常使用
         
       </div>
     </a>
   
   
-    <a href="/posts/LaTeX%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LaTeX：从入门到日常使用</div>
+    <a href="/posts/c214/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ODE中的全微分与凑微分技巧</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -306,7 +311,7 @@ N(t)=\dfrac{KN_0\cdot \mathrm{e}^{rt}}{K+N_0\cdot(\mathrm{e}^{rt}-1)},
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#logistic%E6%96%B9%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Logistic方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E8%B4%A8%E5%AE%88%E6%81%92%E5%AE%9A%E5%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">物质守恒定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#michaelis-menten%E6%96%B9%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">Michaelis-Menten方程</span></a></li></ol>
+                    无目录
                     </div>
                 </span>
             </div>
@@ -453,7 +458,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,6 +467,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,10 +487,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>

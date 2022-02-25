@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>基于Logistic模型的西安疫情趋势预测 | 董晟渤的个人主页</title>
+  <title>ODE中的全微分与凑微分技巧 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="根据12月至今以来西安的疫情数据，笔者建立了Logistic模型，使用MATLAB得到了相关参数。">
+  <meta name="description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于Logistic模型的西安疫情趋势预测">
-<meta property="og:url" content="https://dylandong.top/posts/%E5%9F%BA%E4%BA%8ELogistic%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A5%BF%E5%AE%89%E7%96%AB%E6%83%85%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B/index.html">
+<meta property="og:title" content="ODE中的全微分与凑微分技巧">
+<meta property="og:url" content="https://dylandong.top/posts/c214/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
-<meta property="og:description" content="根据12月至今以来西安的疫情数据，笔者建立了Logistic模型，使用MATLAB得到了相关参数。">
+<meta property="og:description" content="在解微分方程的时候，有一些特定的结构可以写成全微分的形式。 熟练地使用这些技巧，有助于找到解题的捷径。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dylandong.top/posts/img/xian.png">
-<meta property="article:published_time" content="2022-01-21T03:45:48.000Z">
-<meta property="article:modified_time" content="2022-02-07T08:20:20.721Z">
+<meta property="article:published_time" content="2022-02-03T15:32:05.000Z">
+<meta property="article:modified_time" content="2022-02-25T03:35:58.275Z">
 <meta property="article:author" content="董晟渤">
-<meta property="article:tag" content="数学建模">
+<meta property="article:tag" content="ODE">
+<meta property="article:tag" content="课程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dylandong.top/posts/img/xian.png">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
   
@@ -168,20 +167,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于Logistic模型的西安疫情趋势预测" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ODE中的全微分与凑微分技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      基于Logistic模型的西安疫情趋势预测
+      ODE中的全微分与凑微分技巧
     </h1>
   
 
         
-        <a href="/posts/%E5%9F%BA%E4%BA%8ELogistic%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A5%BF%E5%AE%89%E7%96%AB%E6%83%85%E8%B6%8B%E5%8A%BF%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2022-01-21T03:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-21</time>
+        <a href="/posts/c214/" class="archive-article-date">
+  	<time datetime="2022-02-03T15:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
 </a>
         
         
@@ -190,21 +189,65 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>根据12月至今以来西安的疫情数据，笔者建立了Logistic模型，使用MATLAB得到了相关参数。</p>
+<p>在解微分方程的时候，有一些<strong>特定的结构</strong>可以写成全微分的形式。</p>
+<p>熟练地使用这些技巧，有助于找到解题的捷径。</p>
 </blockquote>
 <span id="more"></span>
-<h3 id="预测结果">预测结果</h3>
-<div data-align="center">
-<p><img src="../img/xian.png" alt="xian" style="zoom: 80%;"/></p>
-</div>
-<ul>
-<li><span class="math inline">\(K=2040\)</span>，也即最大感染人数为2040人。</li>
-<li><span class="math inline">\(r=0.339\)</span>，这个参数代表了增长速率。</li>
-<li>预测拐点的时间<span class="math inline">\(t_1=23\)</span>，也即1月1日。</li>
-<li>预测稳定的时间<span class="math inline">\(t_2=38\)</span>，也即1月16日。</li>
-</ul>
-<h3 id="代码">代码</h3>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%% 初始化</span></span><br><span class="line"></span><br><span class="line">clear;</span><br><span class="line">close all;</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 导入数据</span></span><br><span class="line"></span><br><span class="line">data = xlsread(<span class="string">&#x27;\西安疫情.xlsx&#x27;</span>);</span><br><span class="line">x = data(:, <span class="number">1</span>);</span><br><span class="line">dy = data(:, <span class="number">2</span>);</span><br><span class="line">y = data(:, <span class="number">3</span>);</span><br><span class="line">n = <span class="built_in">size</span>(y, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 拟合与计算</span></span><br><span class="line"></span><br><span class="line">fun = @(k, x) k(<span class="number">3</span>).*k(<span class="number">1</span>).*<span class="built_in">exp</span>(k(<span class="number">2</span>).*x)./(k(<span class="number">1</span>)+k(<span class="number">3</span>).*(<span class="built_in">exp</span>(k(<span class="number">2</span>).*x)<span class="number">-1</span>));</span><br><span class="line">[k, resnorm] = lsqcurvefit(fun, [<span class="number">1000</span> <span class="number">1</span> <span class="number">1</span>], x, y);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 绘制结果图</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">figure</span>();</span><br><span class="line"><span class="built_in">scatter</span>(x, y, <span class="string">&#x27;x&#x27;</span>);</span><br><span class="line"><span class="built_in">hold</span> on;</span><br><span class="line">x = <span class="number">0</span> : <span class="number">40</span>;</span><br><span class="line">z = fun(k, x);</span><br><span class="line"><span class="built_in">plot</span>(x, z, <span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;b&#x27;</span>);</span><br><span class="line">grid on;</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">&#x27;公开数据&#x27;</span>, <span class="string">&#x27;拟合结果&#x27;</span>);</span><br><span class="line">xlabel(<span class="string">&#x27;时间（12月9日记为第0天）&#x27;</span>);</span><br><span class="line">ylabel(<span class="string">&#x27;确诊人数&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 输出结果</span></span><br><span class="line"></span><br><span class="line">fprintf(<span class="string">&#x27;\n使用Logistic函数进行建模, 预测结果如下: \n\n最大数量 K = %f, \n增长速率 r = %f, &#x27;</span>, k(<span class="number">1</span>), k(<span class="number">2</span>));</span><br><span class="line">t1 = <span class="built_in">ceil</span>(<span class="number">1</span>/k(<span class="number">2</span>) * <span class="built_in">log</span>((k(<span class="number">1</span>) - y(<span class="number">1</span>))/y(<span class="number">1</span>)));</span><br><span class="line">fprintf(<span class="string">&#x27;\n拐点时间 t1 = %d, &#x27;</span>, t1);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = t1 : <span class="number">50</span></span><br><span class="line">    <span class="keyword">if</span> z(<span class="built_in">i</span> + <span class="number">1</span>) - z(<span class="built_in">i</span>) &lt; <span class="number">2</span></span><br><span class="line">        t2 = <span class="built_in">i</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">&#x27;\n稳定时间 t2 = %d. \n\n&#x27;</span>, t2);</span><br></pre></td></tr></table></figure>
+<p><strong>基本组合的全微分</strong> 根据函数微分的加减乘除运算法则，容易得到以下关于微分的性质。</p>
+<p>（1）<span class="math inline">\({\rm{d}}(x\pm y)={\rm{d}}x\pm{\rm{d}}y\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}(xy)=x{\rm{d}}y+y{\rm{d}}x\)</span>。</p>
+<p>（3）<span class="math inline">\({\rm{d}}\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2}\)</span>。</p>
+<blockquote>
+<p>事实上，在一些微分方程的求解中，经常需要用<span class="math inline">\(x+y\)</span>、<span class="math inline">\(xy\)</span>或<span class="math inline">\(\dfrac{y}{x}\)</span>作换元。</p>
+</blockquote>
+<p><strong>常见函数的全微分</strong> 一些常见的二元函数的全微分如下所示。</p>
+<p>（1）<span class="math inline">\({\rm{d}}\ln\left|xy\right|=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{xy}\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}\ln\left|\dfrac{y}{x}\right|=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{xy}\)</span>。</p>
+<p>（3）<span class="math inline">\({\rm{d}}\arctan(xy)=\dfrac{x{\rm{d}}y+y{\rm{d}}x}{1+x^2y^2}\)</span>。</p>
+<p>（4）<span class="math inline">\({\rm{d}}\arctan\left(\dfrac{y}{x}\right)=\dfrac{x{\rm{d}}y-y{\rm{d}}x}{x^2+y^2}\)</span>。</p>
+<p>（5）<span class="math inline">\({\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|=2\cdot\dfrac{y{\rm{d}}x-x{\rm{d}}y}{x^2-y^2}\)</span>。</p>
+<blockquote>
+<p>在这里，若出现形如<span class="math inline">\(x{\rm{d}}y+y{\rm{d}}x\)</span>的结构，则需要考虑含<span class="math inline">\(xy\)</span>的二元函数。</p>
+<p>而若出现<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x\)</span>的结构，则需要考虑含<span class="math inline">\(\dfrac{y}{x}\)</span>的二元函数。</p>
+</blockquote>
+<p><strong>指数形式的全微分</strong> 一些含指数的二元函数的全微分如下所示。</p>
+<p>（1）<span class="math inline">\({\rm{d}}(y{\rm{e}}^x)=({\rm{d}}y+y{\rm{d}}x){\rm{e}}^x\)</span>。</p>
+<p>（2）<span class="math inline">\({\rm{d}}(y{\rm{e}}^{-x})=({\rm{d}}y-y{\rm{d}}x){\rm{e}}^{-x}\)</span>。</p>
+<blockquote>
+<p>指数函数常常被作为所谓“积分因子”。</p>
+<p>若出现形如<span class="math inline">\({\rm{d}}y+\lambda y{\rm{d}}x\)</span>的结构，则需要考虑含指数的二元函数。</p>
+</blockquote>
+<p><strong>特殊的微分方程</strong> 以下是一些特殊的微分方程。</p>
+<p>（1）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+xy{\rm{d}}x=0\)</span>。</p>
+<p>（2）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+x^2{\rm{d}}y=0\)</span>。</p>
+<p>（3）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+(x^2+y^2){\rm{d}}y=0\)</span>。</p>
+<p>（4）<span class="math inline">\(x{\rm{d}}y-y{\rm{d}}x+(x^2-y^2){\rm{d}}y=0\)</span>。</p>
+<p><strong>解答</strong> （1）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{xy}\)</span>，代入得<span class="math inline">\({\rm{d}}\ln\left|\dfrac{y}{x}\right|+{\rm{d}}x=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\ln\left|\dfrac{y}{x}\right|+x=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（2）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{y}{x}+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（3）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2+y^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\arctan\left(\dfrac{y}{x}\right)+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\arctan\left(\dfrac{y}{x}\right)+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（4）积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2-y^2}\)</span>，代入得<span class="math inline">\(\dfrac{1}{2}\cdot{\rm{d}}\ln\left|\dfrac{x+y}{x-y}\right|+{\rm{d}}y=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{1}{2}\cdot\ln\left|\dfrac{x+y}{x-y}\right|+y=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<blockquote>
+<p>借助类似的策略，可以解决更多问题。</p>
+</blockquote>
+<p><strong>更多例题</strong> 求微分方程的通解。</p>
+<p>（1）<span class="math inline">\(y{\rm{d}}x+(y-x){\rm{d}}y=0\)</span>。</p>
+<p>（2）<span class="math inline">\((3x^3+y){\rm{d}}x+(2x^2y-x){\rm{d}}y=0\)</span>。</p>
+<p><strong>解答</strong> （1）整理得<span class="math inline">\(y{\rm{d}}x-x{\rm{d}}y+y{\rm{d}}y=0\)</span>。</p>
+<p>积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{y^2}\)</span>，代入得<span class="math inline">\({\rm{d}}\left(\dfrac{x}{y}\right)+{\rm{d}}(\ln |y|)=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{x}{y}+\ln|y|=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<p>（2）整理得<span class="math inline">\(y{\rm{d}}x-x{\rm{d}}y+3x^3{\rm{d}}x+2x^2y{\rm{d}}y=0\)</span>。</p>
+<p>积分因子<span class="math inline">\(\mu(x,y)=\dfrac{1}{x^2}\)</span>，代入得<span class="math inline">\(-{\rm{d}}\left(\dfrac{y}{x}\right)+{\rm{d}}\left(\dfrac{3}{2}x^2\right)+{\rm{d}}(y^2)=0\)</span>。</p>
+<p>从而解得<span class="math inline">\(\dfrac{y}{x}+\dfrac{3}{2}x^2+y^2=c\)</span>，其中<span class="math inline">\(c\in\mathbb{R}\)</span>。</p>
+<blockquote>
+<p>实际处理全微分方程或者微分方程的时候，方法较为灵活。</p>
+<p>事实上，对于大多数题目，如果积分因子只与<span class="math inline">\(x\)</span>或是<span class="math inline">\(y\)</span>有关，大可不必观察。</p>
+<p>例如对于微分方程<span class="math inline">\(M(x,y){\rm{d}}x+N(x,y){\rm{d}}y=0\)</span>而言。</p>
+<p>可以直接计算得与<span class="math inline">\(x\)</span>有关的积分因子<span class="math inline">\(\mu(x)=\exp\left(\int{\dfrac{\dfrac{\partial M(x,y)}{\partial y}-\dfrac{\partial N(x,y)}{\partial x}}{N(x,y)}}{\rm{d}}x\right)\)</span>。</p>
+</blockquote>
 
       
 
@@ -218,7 +261,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学建模</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ODE</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
         		</li>
       		
 		</ul>
@@ -237,15 +284,20 @@
   
 <nav id="article-nav">
   
-    <a href="/posts/%E5%9F%BA%E4%BA%8EElegantPaper%E7%9A%84%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E6%A8%A1%E6%9D%BF/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/eccc/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          基于ElegantPaper的美赛论文模板
+          Riemann-Lebesgue引理及其推论
         
       </div>
     </a>
   
+  
+    <a href="/posts/9d29/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于ElegantPaper的美赛论文模板</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -270,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C"><span class="toc-number">1.</span> <span class="toc-text">预测结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li></ol>
+                    无目录
                     </div>
                 </span>
             </div>
@@ -417,7 +469,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -426,6 +478,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -442,10 +498,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">概率论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数理统计</a>
               </li>
             
             <div class="clearfix"></div>
