@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>2021年概率论试题回忆 | 董晟渤的个人主页</title>
+  <title>2021年概率论试题回忆及解答 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本份试题是半年前概率论考题的回忆。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2021年概率论试题回忆">
+<meta property="og:title" content="2021年概率论试题回忆及解答">
 <meta property="og:url" content="https://dylandong.top/posts/ec41/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
 <meta property="og:description" content="本份试题是半年前概率论考题的回忆。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-26T08:11:37.000Z">
-<meta property="article:modified_time" content="2022-02-26T08:19:02.725Z">
+<meta property="article:modified_time" content="2022-02-26T10:01:10.548Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="课程">
 <meta property="article:tag" content="概率论">
@@ -174,7 +174,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2021年概率论试题回忆
+      2021年概率论试题回忆及解答
     </h1>
   
 
@@ -201,6 +201,7 @@
 <p>本份试题是半年前概率论考题的回忆。</p>
 </blockquote>
 <span id="more"></span>
+<h2 id="试题">试题</h2>
 <p>一、设事件<span class="math inline">\(A,B\)</span>的概率都为<span class="math inline">\(\dfrac{2}{3}\)</span>，求事件<span class="math inline">\(A\cup B-(AB)\)</span>的概率的最大值。</p>
 <hr />
 <p>二、独立地投掷三个骰子，求第一个骰子和第二个骰子的点数之和与第三个骰子的点数相等的概率。</p>
@@ -213,13 +214,72 @@
 <hr />
 <p>六、设<span class="math inline">\((X,Y)\sim\mathcal{N}(a_1,a_2;\sigma_1^2,\sigma_2^2;r)\)</span>，求<span class="math inline">\(X+Y\)</span>与<span class="math inline">\(X-Y\)</span>独立的充要条件。</p>
 <hr />
-<p>七、设<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立，且<span class="math inline">\(\mathrm{Var} X_i=\sigma_i^2,1\le i\le n\)</span>，再设<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>非负，且<span class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_i=1\)</span>，求使得 <span class="math display">\[
-\sum_{i=1}^{n}\omega_iX_i
-\]</span> 的方差最小的权重<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>。</p>
+<p>七、设<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立，且<span class="math inline">\(\mathrm{Var} X_i=\sigma_i^2,1\le i\le n\)</span>，再设<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>非负，且<span class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_i=1\)</span>，求使得<span class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>的方差最小的权重<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>。</p>
 <hr />
 <p>八、设<span class="math inline">\(X\)</span>的特征函数<span class="math inline">\(f(t)=\cos^{2021}(t)\)</span>，求<span class="math inline">\(X\)</span>的期望与方差。</p>
 <hr />
 <p>九、叙述并证明Levy中心极限定理。</p>
+<hr />
+<h2 id="解答">解答</h2>
+<p>一、注意到 <span class="math display">\[
+\mathbb{P}(A\cup B-(AB))=\mathbb{P}(A\cup B)-\mathbb{P}(AB)\le 1-\mathbb{P}(AB),
+\]</span> 以及 <span class="math display">\[
+\mathbb{P}(A\cup B-(AB))=\mathbb{P}(A-B)+\mathbb{P}(B-A)=\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(AB),
+\]</span> 解得<span class="math inline">\(\mathbb{P}(AB)\geq\dfrac{1}{3}\)</span>，从而<span class="math inline">\(\mathbb{P}(A\cup B-(AB))\le\dfrac{2}{3}\)</span>。一种取等的方式如下：设<span class="math inline">\(\Omega=[0,1]\)</span>，<span class="math inline">\(A=\left[0,\dfrac{2}{3}\right]\)</span>，<span class="math inline">\(B=\left[\dfrac{1}{3},1\right]\)</span>，则<span class="math inline">\(\mathbb{P}(A)=\mathbb{P}(B)=\dfrac{2}{3}\)</span>，<span class="math inline">\(\mathbb{P}(A\cup B-(AB))=\dfrac{2}{3}\)</span>。</p>
+<hr />
+<p>二、设三个骰子的点数分别为<span class="math inline">\(X,Y,Z\)</span>，由全概率公式得 <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(X+Y=Z)&amp;=\sum_{k=1}^{6}\mathbb{P}(X+Y=k|Z=k)\\
+&amp;=\dfrac{1}{6}\times\dfrac{1}{36}\times(1+2+3+4+5)\\
+&amp;=\dfrac{5}{72}.
+\end{aligned}
+\]</span></p>
+<hr />
+<p>三、密度函数 <span class="math display">\[
+p(x)=
+\begin{cases}
+0,&amp;x\le 0,\\
+2\mathrm{e}^{-2x},&amp;x&gt;0,
+\end{cases}
+\]</span> 计算得 <span class="math display">\[
+\mathbb{E}X^3=\int_0^{+\infty}2x^3\mathrm{e}^{-2x}\mathrm{d}x=\dfrac{16}{3}.
+\]</span></p>
+<hr />
+<p>四、密度函数 <span class="math display">\[
+p(x)=\dfrac{1}{\sqrt{2\pi}}\cdot\mathrm{e}^{-\frac{1}{2}x^2},
+\]</span> 计算得 <span class="math display">\[
+\mathbb{E}\exp\left(\dfrac{16}{50}X^2\right)=\int_{-\infty}^{+\infty}\dfrac{1}{\sqrt{2\pi}}\cdot\mathrm{e}^{-\frac{9}{50}x^2}\mathrm{d}x=\dfrac{5}{3}.
+\]</span></p>
+<hr />
+<p>五、由<span class="math inline">\(y=\dfrac{1}{1+x}\)</span>得<span class="math inline">\(x=\dfrac{1}{y}-1\)</span>，<span class="math inline">\(\mathrm{d}x=-\dfrac{\mathrm{d}y}{y^2}\)</span>，因此 <span class="math display">\[
+q(y)=\dfrac{1}{y^2},\quad \dfrac{1}{2}\le y\le 1.
+\]</span></p>
+<hr />
+<p>六、由<span class="math inline">\((X,Y)\)</span>服从正态分布知<span class="math inline">\((X-Y,X+Y)\)</span>服从正态分布，从而独立等价于不相关。计算得 <span class="math display">\[
+\mathrm{Cov}(X-Y,X+Y)=\mathrm{Var} X-\mathrm{Var}Y=\sigma_1^2-\sigma_2^2,
+\]</span> 因此<span class="math inline">\(X-Y\)</span>与<span class="math inline">\(X+Y\)</span>独立的充要条件是<span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span>。</p>
+<hr />
+<p>七、记<span class="math inline">\(Y=\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>，计算得 <span class="math display">\[
+\mathrm{Var}Y=\mathrm{Var}\left(\sum_{i=1}^{n}\omega_iX_i\right)=\sum_{i=1}^{n}\omega_i^2\sigma_i^2.
+\]</span> 由Cauchy不等式得 <span class="math display">\[
+\left(\sum_{i=1}^{n}\omega_i^2\sigma_i^2\right)\cdot\left(\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}\right)\geq\left(\sum_{i=1}^{n}\omega_i\right)^2=1,
+\]</span> 从而 <span class="math display">\[
+\mathrm{Var}Y\geq\dfrac{1}{\displaystyle\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}},
+\]</span> 取等时<span class="math inline">\(\omega_i^2\sigma_i^4=\omega_j^2\sigma_j^4\)</span>，解得<span class="math inline">\(\omega_j=\left.\dfrac{1}{\sigma_j^2}\middle/\displaystyle\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}\right.\)</span>。</p>
+<hr />
+<p>八、计算得<span class="math inline">\(\mathbb{E}X=\dfrac{f&#39;(0)}{i}=0\)</span>，<span class="math inline">\(\mathbb{E}X^2=\dfrac{f&#39;&#39;(0)}{i^2}=2021\)</span>，因此<span class="math inline">\(\mathrm{Var}X=\mathbb{E}X^2=2021\)</span>。</p>
+<hr />
+<p>九、设<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立同分布，且<span class="math inline">\(\mathbb{E}X=\mu\)</span>，<span class="math inline">\(0&lt;\mathrm{Var}X=\sigma^2&lt;\infty\)</span>，则 <span class="math display">\[
+\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot \sigma}\xrightarrow{d}\mathcal{N}(0,1).
+\]</span> 计算得 <span class="math display">\[
+\begin{aligned}
+\mathbb{E}\exp\left\{it\cdot\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot \sigma}\right\}&amp;=\mathbb{E}\exp\left\{it\cdot\sum_{i=1}^{n}\dfrac{X_i-\mu}{\sqrt{n}\sigma}\right\}\\
+&amp;=\prod_{i=1}^{n}\mathbb{E}\exp\left\{it\cdot\dfrac{X_i-\mu}{\sqrt{n}\sigma}\right\}\\
+&amp;=\left(\mathbb{E}\exp\left\{it\cdot\dfrac{X-\mu}{\sqrt{n}\sigma}\right\}\right)^n\\
+&amp;=\left(1-\dfrac{t^2}{n}+o\left(\dfrac{t^2}{n}\right)\right)^n\\
+&amp;\to\exp\left\{-\dfrac{t^2}{2}\right\},
+\end{aligned}
+\]</span> 右式即为<span class="math inline">\(\mathcal{N}(0,1)\)</span>的特征函数，从而上式依分布收敛到<span class="math inline">\(\mathcal{N}(0,1)\)</span>。</p>
 
       
 
