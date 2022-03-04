@@ -163,6 +163,158 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C-期末复习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/977b/">C#期末复习笔记</a>
+    </h1>
+  
+
+        
+        
+        <a href="/posts/977b/" class="archive-article-date">
+  	<time datetime="2022-03-04T01:40:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-04</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="考试内容">考试内容</h2>
+<ul>
+<li><p>单选题10道，每题2分</p></li>
+<li><p>编程题4道，每题20分</p>
+<ul>
+<li>编程题1：控制结构、数组、方法的重载，简单类</li>
+<li>编程题2：类的定义、属性、构造方法</li>
+<li>编程题3：继承、多态</li>
+<li>编程题4：五子棋相关题目</li>
+</ul></li>
+</ul>
+<h2 id="编程题1控制结构数组方法的重载">编程题1：控制结构、数组、方法的重载</h2>
+<h4 id="控制结构">1.1 控制结构</h4>
+<p>C#的控制结构有if else语句、switch case语句、for循环、while循环等。if语句的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(布尔表达式)</span><br><span class="line">&#123;</span><br><span class="line">	语句块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外，if else语句的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(布尔表达式 1)</span><br><span class="line">&#123;</span><br><span class="line">    语句块 1;</span><br><span class="line">&#125;</span><br><span class="line">else if(布尔表达式 2)&#123;</span><br><span class="line">    语句块 2;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">else&#123;</span><br><span class="line">    语句块 n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch case语句的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)</span><br><span class="line">&#123;</span><br><span class="line">	case 值1:</span><br><span class="line">		语句块1;</span><br><span class="line">		break;</span><br><span class="line">	case 值2:</span><br><span class="line">		语句块2;</span><br><span class="line">		break;</span><br><span class="line">	...</span><br><span class="line">	default:</span><br><span class="line">		语句块n;</span><br><span class="line">		break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for循环的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(表达式 1; 表达式 2; 表达式3)</span><br><span class="line">&#123;</span><br><span class="line">    表达式 4;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，<code>表达式1</code>对变量赋初值，<code>表达式2</code>为循环条件，<code>表达式3</code>用于改变变量的大小。while循环的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while(布尔表达式)</span><br><span class="line">&#123;</span><br><span class="line">    语句块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外，do while语句的用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line">&#123;</span><br><span class="line">    语句块；</span><br><span class="line">&#125;</span><br><span class="line">while(布尔表达式);</span><br></pre></td></tr></table></figure>
+<p>在循环中，可以用break和continue：</p>
+<ul>
+<li><code>break;</code>可以用来终止循环，使循环不再执行；</li>
+<li><code>continue;</code>可以用来终止当前循环，进入下一循环。</li>
+</ul>
+<h4 id="数组">1.2 数组</h4>
+<p>创建一维数组的方式是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名;</span><br><span class="line">数据类型[] 数组名 = new 数据类型[长度]；</span><br><span class="line">数据类型[] 数组名 = &#123;值1, 值2, ...&#125;；</span><br><span class="line">数据类型[] 数组名 = new 数据类型[长度]&#123;值1, 值2, ...&#125;；</span><br></pre></td></tr></table></figure>
+<p>创建多维数组的方式是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数据类型[ , , ...] 数组名;</span><br><span class="line">数据类型[ , , ...] 数组名 = new 数据类型[m, n, ...]  &#123;&#123; , , ...&#125;,&#123; , , ...&#125;,...&#125;;</span><br></pre></td></tr></table></figure>
+<p>其中每多一个维度就在<code>[]</code>中多一个<code>,</code>。在数组的基础上，可以使用foreach循环，用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foreach(数据类型 变量名 in 数组名)</span><br><span class="line">&#123;</span><br><span class="line">	语句块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>一个比较重要的例子是：输入一串数字，用空格隔开，用C#编写时可以使用字符串的Split函数实现。方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var s = Console.ReadLine();</span><br><span class="line">var sSplit = s.Split(&#x27; &#x27;);</span><br><span class="line">var a = new double[sSplit.Length];</span><br><span class="line">for (var i = 0; i &lt; sSplit.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">	a[i] = Convert.ToDouble(sSplit[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样的结果是，数组<code>a</code>中存储了输入的一串数字。</p>
+</blockquote>
+<h4 id="方法的重载">1.3 方法的重载</h4>
+<p>构成重载的方法具有以下特点：</p>
+<ul>
+<li>方法名相同；</li>
+<li>方法参数列表不同。</li>
+</ul>
+<p>用法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">访问修饰符1 修饰符1 返回值类型1 方法名(参数列表1)</span><br><span class="line">&#123;</span><br><span class="line">    语句块1;</span><br><span class="line">&#125;</span><br><span class="line">访问修饰符2 修饰符2 返回值类型2 方法名(参数列表1)</span><br><span class="line">&#123;</span><br><span class="line">    语句块2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="编程题2类的定义属性构造方法">编程题2：类的定义、属性、构造方法</h2>
+<h4 id="类的定义">2.1 类的定义</h4>
+<p>定义类的方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">访问修饰符 修饰符 类名</span><br><span class="line">&#123;</span><br><span class="line">    成员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>类的访问修饰符：包括public和internal。</p>
+<ul>
+<li>internal或不写：只能在当前项目中访问类；</li>
+<li>public：可以在任何项目中访问类。</li>
+</ul></li>
+<li><p>修饰符：包括abstract、sealed 和 static。</p>
+<ul>
+<li>abstract：抽象类，不能被实例化；</li>
+<li>sealed：密封类，不能被继承；</li>
+<li>static：静态类，不能被实例化。</li>
+</ul></li>
+<li><p>类的成员：在类中能定义的元素，主要包括字段、属性、方法。成员的访问修饰符包含public、private、internal和protected。</p></li>
+<li><p>public：成员可以被任何代码访问；</p></li>
+<li><p>private或不写：成员仅能被同一个类中的代码访问；</p></li>
+<li><p>internal：成员仅能被同一个项目中的代码访问；</p></li>
+<li><p>protected：成员只能由类或派生类中的代码访问。</p></li>
+</ul>
+<h4 id="类的属性">2.2 类的属性</h4>
+<p>定义属性的方式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public 数据类型 属性名</span><br><span class="line">&#123;</span><br><span class="line">    get</span><br><span class="line">    &#123;</span><br><span class="line">        获取属性的语句块;</span><br><span class="line">        return 值;</span><br><span class="line">    &#125;</span><br><span class="line">    set</span><br><span class="line">    &#123;</span><br><span class="line">        设置属性得到语句块;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以使用自动属性设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public 数据类型 属性名</span><br><span class="line">&#123;</span><br><span class="line">	get;</span><br><span class="line">	set;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="类的构造方法">2.3 类的构造方法</h4>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/posts/977b/">展开 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-基于ElegantPaper的带封面报告模板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -458,85 +610,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/posts/bbdc/">展开 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-数理统计考前速成复习资料" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/455f/">数理统计考前速成复习资料</a>
-    </h1>
-  
-
-        
-        
-        <a href="/posts/455f/" class="archive-article-date">
-  	<time datetime="2022-02-16T05:35:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-16</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>笔者在复习的过程中，梳理了数理统计的重要知识点，整理出本份资料。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数理统计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/455f/">展开 >></a>
         </p>
       
 
