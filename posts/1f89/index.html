@@ -16,7 +16,7 @@
 <meta property="og:description" content="本文摘自实分析期末复习材料。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-11T16:42:09.000Z">
-<meta property="article:modified_time" content="2022-03-05T02:17:34.462Z">
+<meta property="article:modified_time" content="2022-03-05T03:03:55.426Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="概率论">
 <meta property="article:tag" content="课程">
@@ -204,7 +204,7 @@
       <div id="toc-article" class="toc-article">
           <span id="toc-close" class="toc-close" title="隐藏" onclick="showBtn();">×</span>
         <strong class="toc-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E7%8E%87%E7%A9%BA%E9%97%B4"><span class="toc-number">1.</span> <span class="toc-text">1. 概率空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">2. 随机变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%9F%E6%9C%9B%E7%9F%A9%E4%B8%8E%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">3. 期望、矩与特征函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%94%B6%E6%95%9B"><span class="toc-number">4.</span> <span class="toc-text">4. 随机变量的收敛</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E7%8E%87%E7%A9%BA%E9%97%B4"><span class="toc-number">1.</span> <span class="toc-text">概率空间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">随机变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%9F%E6%9C%9B%E7%9F%A9%E4%B8%8E%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">期望、矩与特征函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%94%B6%E6%95%9B"><span class="toc-number">4.</span> <span class="toc-text">随机变量的收敛</span></a></li></ol>
             </div>
       <script type="text/javascript">
       function showToc(){
@@ -227,7 +227,7 @@
       
         <p>本文摘自实分析期末复习材料。</p>
 <span id="more"></span>
-<h3 id="概率空间">1. 概率空间</h3>
+<h1 id="概率空间">概率空间</h1>
 <p>通常，用<span class="math inline">\(\Omega\)</span>表示样本空间，<span class="math inline">\(\omega\in\Omega\)</span>为样本点。样本空间的子集<span class="math inline">\(A\subset\Omega\)</span>称为事件，事件所构成的集合可以用<span class="math inline">\(\mathscr{F}\)</span>表示。</p>
 <hr />
 <p><strong>定义1.1（概率）</strong> 设<span class="math inline">\(\Omega\)</span>是样本空间，<span class="math inline">\(\mathscr{F}\)</span>是<span class="math inline">\(\Omega\)</span>上的<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(\mathbb{P}\)</span>是<span class="math inline">\(\{\Omega,\mathscr{F}\}\)</span>上的测度，且满足<span class="math inline">\(\mathbb{P}\{\Omega\}=1\)</span>，则<span class="math inline">\(\mathbb{P}\)</span>为<strong>概率</strong>，<span class="math inline">\(\{\Omega,\mathscr{F},\mathbb{P}\}\)</span>为<strong>概率空间</strong>。</p>
@@ -241,7 +241,7 @@
 <p><strong>定义1.2（分布函数）</strong> 设<span class="math inline">\(F:\mathbb{R}\to\mathbb{R}\)</span>是右连续的单调递增函数，则<span class="math inline">\(F\)</span>为<strong>准分布函数</strong>；如果<span class="math inline">\(F(-\infty)=0\)</span>，<span class="math inline">\(F(+\infty)=1\)</span>，则<span class="math inline">\(F\)</span>为<strong>分布函数</strong>。</p>
 <hr />
 <p>每一个准分布函数<span class="math inline">\(F\)</span>，都决定着<span class="math inline">\(\mathbb{R}\)</span>上的一个Lebesgue-Stieltjes测度<span class="math inline">\(m_F\)</span>。</p>
-<h3 id="随机变量">2. 随机变量</h3>
+<h1 id="随机变量">随机变量</h1>
 <p><strong>定义2.1（随机变量）</strong> 设<span class="math inline">\(X:\Omega\to\mathbb{R}\)</span>是可测函数，则<span class="math inline">\(X\)</span>为<strong>随机变量</strong>。</p>
 <hr />
 <p><strong>定义2.2（特征函数）</strong> 设<span class="math inline">\(A\in\mathscr{F}\)</span>，令 <span class="math display">\[
@@ -268,7 +268,7 @@ F_X(x)=\int_{-\infty}^{x}p(t)\mathrm{d}t,\quad x\in\mathbb{R},
 \]</span> 则<span class="math inline">\(X\)</span>为<strong>连续型随机变量</strong>，<span class="math inline">\(F_X(x)\)</span>为<strong>连续型分布</strong>，<span class="math inline">\(p(x)\)</span>为<span class="math inline">\(X\)</span>的<strong>概率密度</strong>。</p>
 <hr />
 <p>若<span class="math inline">\(X\)</span>既不是离散型随机变量，也不是连续型随机变量，则<span class="math inline">\(X\)</span>为<strong>奇异型随机变量</strong>。</p>
-<h3 id="期望矩与特征函数">3. 期望、矩与特征函数</h3>
+<h1 id="期望矩与特征函数">期望、矩与特征函数</h1>
 <p><strong>定义3.1（期望）</strong> 设<span class="math inline">\(X\in L^1(\Omega)\)</span>，则 <span class="math display">\[
 \mathbb{E} X=\int_{\Omega}X\mathrm{d}\mathbb{P}
 \]</span> 为<span class="math inline">\(X\)</span>的<strong>期望</strong>。</p>
@@ -327,7 +327,7 @@ f(t)=1+\sum_{k=1}^{n}\dfrac{(it)^k}{k!}\mathbb{E} X^k+o(t^n),\quad t\to 0.
 <p>设<span class="math inline">\(X\)</span>是连续型随机变量，密度函数为<span class="math inline">\(p(x)\)</span>，特征函数为<span class="math inline">\(f(t)\)</span>，则 <span class="math display">\[
 p(x)=\dfrac{1}{2\pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}f(t)\mathrm{d}t,
 \]</span> 其中积分的计算可以应用<strong>复分析</strong>中的留数定理。</p>
-<h3 id="随机变量的收敛">4. 随机变量的收敛</h3>
+<h1 id="随机变量的收敛">随机变量的收敛</h1>
 <p>借助实分析中的收敛模式，还可以讨论随机变量的收敛。设<span class="math inline">\(\{\Omega,\mathscr{F},\mathbb{P}\}\)</span>是概率空间，<span class="math inline">\(\{X_n\}\)</span>是随机变量序列，<span class="math inline">\(X\)</span>是随机变量。</p>
 <hr />
 <p><strong>定义4.1（几乎必然收敛）</strong> 设<span class="math inline">\(X_n\to X，\mathrm{a.e.}\)</span>，则<span class="math inline">\(X_n\)</span><strong>几乎必然收敛</strong>于<span class="math inline">\(X\)</span>，记作<span class="math inline">\(X_n\to X，\mathrm{a.s.}\)</span>。</p>
@@ -491,7 +491,7 @@ W_nX_n+Y_n\xrightarrow{p}X.
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: true
