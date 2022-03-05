@@ -16,7 +16,7 @@
 <meta property="og:description" content="复习时随手记下的笔记，目前包含以下内容：  单选题整理； 控制结构、数组、方法的重载； 类的定义、属性、构造方法； 类的继承、多态； 绘图、文件。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-04T01:40:31.000Z">
-<meta property="article:modified_time" content="2022-03-04T13:22:32.478Z">
+<meta property="article:modified_time" content="2022-03-05T02:12:50.638Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="课程">
 <meta name="twitter:card" content="summary">
@@ -51,7 +51,7 @@
 			<img src="/img/portrait.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">董晟渤</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
 		
 
@@ -112,7 +112,7 @@
 				<img src="/img/portrait.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">董晟渤</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -193,6 +193,33 @@
         
         
       </header>
+      <!-- 目录内容 -->
+      
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">目录</span>
+              </p>
+      <div id="toc-article" class="toc-article">
+          <span id="toc-close" class="toc-close" title="隐藏" onclick="showBtn();">×</span>
+        <strong class="toc-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%83%E8%AF%95%E9%A2%98%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">0. 考试题型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%80%89%E9%A2%98%E6%95%B4%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">1. 单选题整理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.0.1.</span> <span class="toc-text">1.1 数据类型与表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="toc-number">2.0.2.</span> <span class="toc-text">1.2 输入与输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.0.3.</span> <span class="toc-text">1.3 枚举类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">2.0.4.</span> <span class="toc-text">1.4 数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">2.0.5.</span> <span class="toc-text">1.5 类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD"><span class="toc-number">3.</span> <span class="toc-text">2. 控制结构、数组、方法的重载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 控制结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84-1"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.2 数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD"><span class="toc-number">3.0.3.</span> <span class="toc-text">2.3 方法的重载</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">3. 类的定义、属性、构造方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">4.0.1.</span> <span class="toc-text">3.1 类的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">4.0.2.</span> <span class="toc-text">3.2 类的属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">4.0.3.</span> <span class="toc-text">3.3 类的构造方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%A4%9A%E6%80%81"><span class="toc-number">5.</span> <span class="toc-text">4. 类的继承、多态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">5.0.1.</span> <span class="toc-text">4.1 类的继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%A4%9A%E6%80%81"><span class="toc-number">5.0.2.</span> <span class="toc-text">4.2 类的多态</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">5. 绘图、文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE"><span class="toc-number">6.0.1.</span> <span class="toc-text">5.1 绘图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-number">6.0.2.</span> <span class="toc-text">5.2 文件</span></a></li></ol></li></ol></li></ol>
+            </div>
+      <script type="text/javascript">
+      function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+      function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+      </script>
+          
+      <!-- 目录内容结束 -->
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -385,7 +412,7 @@
 <p>答案：B。</p>
 <p>解析：要能够执行<code>ClassA.M1();</code>，<code>M1</code>方法必须是静态的。</p>
 </blockquote>
-<p><strong>题目14</strong> 判断下列类<code>MyClass</code>的定义中哪些是合法的抽象类？</p>
+<p><strong>题目14</strong> 判断下列类<code>MyClass</code>的定义中哪些是合法的抽象类？</p>
 <ul>
 <li>A</li>
 </ul>
@@ -630,7 +657,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: false,
+		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
 		showTags: true
@@ -907,5 +934,5 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":50,"vOffset":-60},"mobile":{"show":false},"log":false});</script></body>
 </html>
