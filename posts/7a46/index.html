@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>董晟渤的个人主页</title>
+  <title>条件期望、条件概率与例子 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="董晟渤的个人主页">
-<meta property="og:url" content="https://dylandong.top/page/3/index.html">
+  <meta name="description" content="本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="条件期望、条件概率与例子">
+<meta property="og:url" content="https://dylandong.top/posts/7a46/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
+<meta property="og:description" content="本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-08T15:21:33.000Z">
+<meta property="article:modified_time" content="2022-03-08T15:54:27.576Z">
 <meta property="article:author" content="董晟渤">
+<meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -163,23 +168,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-LaTeX：从入门到日常使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-条件期望、条件概率与例子" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/e480/">LaTeX：从入门到日常使用</a>
+    <h1 class="article-title" itemprop="name">
+      条件期望、条件概率与例子
     </h1>
   
 
         
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span style="color:gray;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </a>
         
-        <a href="/posts/e480/" class="archive-article-date">
-  	<time datetime="2022-02-05T05:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-05</time>
+        
+        <a href="/posts/7a46/" class="archive-article-date">
+  	<time datetime="2022-03-08T15:21:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
 </a>
         
         
@@ -190,102 +201,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言排版工具与书写工具的讨论">前言：排版工具与书写工具的讨论</h1>
-<p>LaTeX是一种“非所见即所得”的排版系统，用户需要输入特定的代码，保存在后缀为.tex的文件中，通过编译得到所需的pdf文件，例如以下代码：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line">Hello, world!</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
-<p>最后输出的结果是一个pdf文件，内容是“Hello, world!”。</p>
-        
-      
-       <!-- 添加版权声明 -->
-    
-  
-    <div class="declare" hidden="hidden"></div>
-  
-        <!-- 添加版权声明 -->  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/e480/">展开 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Riemann-Lebesgue引理及其推论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/eccc/">Riemann-Lebesgue引理及其推论</a>
-    </h1>
-  
-
-        
-        
-        <a href="/posts/eccc/" class="archive-article-date">
-  	<time datetime="2022-02-03T15:38:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-        
-        
-      </header>
-      <!-- 目录内容 -->
-      
-      <!-- 目录内容结束 -->
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>所谓的Riemann-Lebesgue引理，说的是这样的结论：</p>
-<p><strong>定理1</strong> 设<span class="math inline">\(f\in\mathscr{R}[a,b]\)</span>（这里<span class="math inline">\(a\)</span>可以是<span class="math inline">\(-\infty\)</span>，<span class="math inline">\(b\)</span>可以是<span class="math inline">\(+\infty\)</span>），那么 <span class="math display">\[
-\displaystyle\lim_{\lambda\to\infty}\int_a^bf(t)e(-\lambda t){\rm{d}}t=0.
+        <p>本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。</p>
+<span id="more"></span>
+<h1 id="条件期望与条件概率的定义">条件期望与条件概率的定义</h1>
+<p>设<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>为概率空间，条件期望首先是对于<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域而言的。</p>
+<hr />
+<p><strong>定义1（子<span class="math inline">\(\sigma\)</span>-域）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是<span class="math inline">\(\sigma\)</span>-域，则称<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的<strong>子<span class="math inline">\(\sigma\)</span>-域</strong>。</p>
+<hr />
+<p>设<span class="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，定义 <span class="math display">\[
+\varphi(C):=\int_CX\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G},
+\]</span> 则<span class="math inline">\(\varphi\)</span>是<span class="math inline">\(\mathscr{G}\)</span>上的符号测度，且根据 <span class="math display">\[
+\mathbb{P}(C)=0\implies \varphi(C)=\int_CX\mathrm{d}\mathbb{P}=0
+\]</span> 得知<span class="math inline">\(\varphi\ll\mathbb{P}\)</span>，从而由Radon-Nikodym定理知，存在概率空间<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量<span class="math inline">\(Y\in\mathscr{L}^1(\Omega)\)</span>，使得 <span class="math display">\[
+\varphi(C)=\int_CX\mathrm{d}\mathbb{P}=\int_CY\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G}.
+\]</span> 需要注意的是，上式中<span class="math inline">\(X\)</span>是<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，而<span class="math inline">\(Y\)</span>是<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量。据此，条件期望可以得到定义：</p>
+<hr />
+<p><strong>定义2（条件期望）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathbb{E}(X|\mathscr{G})\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量，且满足 <span class="math display">\[
+\int_CX\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G},
+\]</span> 则称<span class="math inline">\(\mathbb{E}(X|\mathscr{G})\)</span>是<span class="math inline">\(X\)</span>关于子<span class="math inline">\(\sigma\)</span>-域<span class="math inline">\(\mathscr{G}\)</span>的<strong>条件期望</strong>。</p>
+<hr />
+<p>在初等概率论中，设<span class="math inline">\(A\in\mathscr{F}\)</span>，<span class="math inline">\(I_A\)</span>是<span class="math inline">\(A\)</span>的示性函数，则<span class="math inline">\(\mathbb{E} I_A=\mathbb{P}(A)\)</span>。受此启发，可以定义条件概率：</p>
+<hr />
+<p><strong>定义3（条件概率）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(A\in\mathscr{F}\)</span>，称<span class="math inline">\(\mathbb{P}(A|\mathscr{G})=\mathbb{E}(I_A|\mathscr{G})\)</span>是<span class="math inline">\(A\)</span>关于子<span class="math inline">\(\sigma\)</span>-域<span class="math inline">\(\mathscr{G}\)</span>的<strong>条件概率</strong>。</p>
+<hr />
+<p>需要注意，条件概率实际上也是随机变量。</p>
+<h1 id="简单的例子">简单的例子</h1>
+<p>为了加强对条件概率与条件期望的定义的理解，在这里考虑一些简单的例子。</p>
+<hr />
+<p><strong>例4</strong> 设<span class="math inline">\(B\in\mathscr{F}\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B)=\{\varnothing,B,B^C,\Omega\}\)</span>，且<span class="math inline">\(\mathbb{P}(B)\notin\{0,1\}\)</span>。设<span class="math inline">\(A\in\mathscr{G}\)</span>，则<span class="math inline">\(\mathbb{P}(A|\mathscr{G})\)</span>是<span class="math inline">\(\mathscr{G}\)</span>上的可测函数，从而 <span class="math display">\[
+\mathbb{P}(A|\mathscr{G})=a I_B+b I_{B^C};
+\]</span> 另外，根据定义得 <span class="math display">\[
+\int_C\mathbb{P}(A|\mathscr{G})\mathrm{d}\mathbb{P}=\int_C I_A\mathrm{d}\mathbb{P}=\mathbb{P}(AC),
+\]</span> 取<span class="math inline">\(C=B\)</span>得<span class="math inline">\(a=\dfrac{\mathbb{P}(AB)}{\mathbb{P}(B)}=\mathbb{P}(A|B)\)</span>，取<span class="math inline">\(C=B^C\)</span>得<span class="math inline">\(b=\dfrac{\mathbb{P}(AB^C)}{\mathbb{P}(B^C)}=\mathbb{P}(A|B^C)\)</span>，从而 <span class="math display">\[
+\mathbb{P}(A|\mathscr{G})=\mathbb{P}(A|B)\cdot I_B+\mathbb{P}(A|B^C)\cdot I_{B^C}.
 \]</span></p>
-        
+<hr />
+<p><strong>例5</strong> 设<span class="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<span class="math inline">\(B_1\cup B_2\cup\cdots\cup B_m=\Omega\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>。设<span class="math inline">\(A\in\mathscr{F}\)</span>，类似例4，可以求出 <span class="math display">\[
+\mathbb{P}(A|\mathscr{G})=\sum_{j=1}^{m}\mathbb{P}(A|B_j)\cdot I_{B_j}.
+\]</span></p>
+<hr />
+<p>对于例5的结果，如果<span class="math inline">\(\omega\in B_j\)</span>，也即给定条件<span class="math inline">\(B_j\)</span>，则 <span class="math display">\[
+\mathbb{P}(A|\mathscr{G})(\omega)=\mathbb{P}(A|B_j),
+\]</span> 右边是在条件<span class="math inline">\(B_j\)</span>下，事件<span class="math inline">\(A\)</span>发生的概率，这说明了抽象定义的合理性。</p>
+<hr />
+<p><strong>例6</strong> 设<span class="math inline">\(A_1,A_2,\cdots,A_n\in\mathscr{F}\)</span>互不相关，且<span class="math inline">\(A_1\cup A_2\cup\cdots\cup A_n=\Omega\)</span>，令 <span class="math display">\[
+X=\sum_{i=1}^{n}a_i\cdot I_{A_i},
+\]</span> 再设<span class="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<span class="math inline">\(B_1\cup B_2\cup\cdots\cup B_m=\Omega\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>，类似例4，可以求出 <span class="math display">\[
+\mathbb{E}(X|\mathscr{G})=\sum_{j=1}^{m}\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j)\cdot I_{B_j.}
+\]</span></p>
+<hr />
+<p>例6的结果非常有趣。如果<span class="math inline">\(\omega\in B_j\)</span>，也即给定条件<span class="math inline">\(B_j\)</span>，我们知道 <span class="math display">\[
+\mathbb{E}(X|\mathscr{G})(\omega)=\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j),
+\]</span> 这事实上是将样本空间作划分<span class="math inline">\(\Omega=A_1\cup A_2\cup\cdots\cup A_n\)</span>，随机变量<span class="math inline">\(X\)</span>在第<span class="math inline">\(i\)</span>个集合<span class="math inline">\(A_i\)</span>上的取值为<span class="math inline">\(a_i\)</span>，而<span class="math inline">\(\mathbb{P}(A_i|B_j)\)</span>是在条件<span class="math inline">\(B_j\)</span>下，事件<span class="math inline">\(A_i\)</span>发生的概率，它们相乘求和，就得到了初等概率论中定义的条件期望。</p>
+
       
        <!-- 添加版权声明 -->
     
@@ -304,11 +272,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
         		</li>
       		
 		</ul>
@@ -317,10 +281,6 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/eccc/">展开 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -328,273 +288,17 @@
   </div>
 </article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
   
-    <article id="post-ODE中的全微分与凑微分技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/c214/">ODE中的全微分与凑微分技巧</a>
-    </h1>
   
-
-        
-        
-        <a href="/posts/c214/" class="archive-article-date">
-  	<time datetime="2022-02-03T15:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-        
-        
-      </header>
-      <!-- 目录内容 -->
-      
-      <!-- 目录内容结束 -->
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>在解微分方程的时候，有一些<strong>特定的结构</strong>可以写成全微分的形式。</p>
-<p>熟练地使用这些技巧，有助于找到解题的捷径。</p>
-</blockquote>
-        
-      
-       <!-- 添加版权声明 -->
-    
+    <a href="/posts/977b/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C#期末复习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <div class="declare" hidden="hidden"></div>
-  
-        <!-- 添加版权声明 -->  
+</nav>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ODE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/c214/">展开 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-基于ElegantPaper的美赛论文模板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/9d29/">基于ElegantPaper的美赛论文模板</a>
-    </h1>
-  
-
-        
-        
-        <a href="/posts/9d29/" class="archive-article-date">
-  	<time datetime="2022-01-21T08:20:18.168Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-21</time>
-</a>
-        
-        
-      </header>
-      <!-- 目录内容 -->
-      
-      <!-- 目录内容结束 -->
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>美赛也即美国大学生数学建模竞赛，分为MCM和ICM。笔者基于ElegantPaper模板，整理了美赛的论文模板，希望可以帮到大家。</p>
-<p>本模板与官方模板可能有冲突，需要使用者自行注意。保险起见，请在这里下载<a target="_blank" rel="noopener" href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.docx">Microsoft Word Summary Sheet</a>和<a target="_blank" rel="noopener" href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.tex">LaTeX Summary Sheet</a>，并根据自己的要求做修改。</p>
-</blockquote>
-        
-      
-       <!-- 添加版权声明 -->
-    
-  
-    <div class="declare" hidden="hidden"></div>
-  
-        <!-- 添加版权声明 -->  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学建模</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/9d29/">展开 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-基于Logistic模型的西安疫情趋势预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/55ba/">基于Logistic模型的西安疫情趋势预测</a>
-    </h1>
-  
-
-        
-        
-        <a href="/posts/55ba/" class="archive-article-date">
-  	<time datetime="2022-01-21T03:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-21</time>
-</a>
-        
-        
-      </header>
-      <!-- 目录内容 -->
-      
-      <!-- 目录内容结束 -->
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>根据12月至今以来西安的疫情数据，笔者建立了Logistic模型，使用MATLAB得到了相关参数。</p>
-</blockquote>
-        
-      
-       <!-- 添加版权声明 -->
-    
-  
-    <div class="declare" hidden="hidden"></div>
-  
-        <!-- 添加版权声明 -->  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学建模</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/55ba/">展开 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -616,11 +320,23 @@
 
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
   
 
+  
+  <div id="SOHUCS" sid="条件期望、条件概率与例子" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvVAUfPX",
+        conf: "9f9091c7ba291ec8fd508d234064a4c4"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
           </div>
         </div>
@@ -653,8 +369,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
