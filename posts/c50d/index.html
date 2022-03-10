@@ -16,7 +16,7 @@
 <meta property="og:description" content="本节中将探讨条件期望的一些基本性质。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-10T14:08:18.000Z">
-<meta property="article:modified_time" content="2022-03-10T14:28:46.721Z">
+<meta property="article:modified_time" content="2022-03-10T14:35:35.638Z">
 <meta property="article:author" content="董晟渤">
 <meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
@@ -204,7 +204,7 @@
         <p>本节中将探讨条件期望的一些基本性质。</p>
 <span id="more"></span>
 <hr />
-<p><strong>命题1</strong>（特殊的条件期望）设<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域。</p>
+<p><strong>命题1（特殊的条件期望）</strong>设<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域。</p>
 <p>（1）如果<span class="math inline">\(X\)</span>关于<span class="math inline">\(\mathscr{G}\)</span>可测，则<span class="math inline">\(\mathbb{E}(X|\mathscr{G})=X,\mathrm{a.s.}\)</span>；</p>
 <p>（2）如果<span class="math inline">\(X\)</span>与<span class="math inline">\(\mathscr{G}\)</span>独立，则<span class="math inline">\(\mathbb{E}(X|\mathscr{G})=\mathbb{E}X,\mathrm{a.s.}\)</span>。</p>
 <hr />
@@ -218,7 +218,7 @@
 <p>在这里应用了结论：若<span class="math inline">\(X\)</span>与<span class="math inline">\(C\)</span>独立，则<span class="math inline">\(\mathbb{E}(X\cdot I_C)=\mathbb{E}X\cdot\mathbb{P}(C)\)</span>，证明需要使用典型方法。</p>
 </blockquote>
 <hr />
-<p><strong>命题2</strong>（复合条件期望）设<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\subset\mathscr{F}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，则 <span class="math display">\[
+<p><strong>命题2（复合条件期望）</strong>设<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\subset\mathscr{F}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，则 <span class="math display">\[
 \mathbb{E}[\mathbb{E}(X|\mathscr{G}_1)|\mathscr{G}_2]=\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}.
 \]</span></p>
 <hr />
@@ -230,7 +230,7 @@
 \mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}. 
 \]</span> 综合以上两条可知命题成立。</p>
 <hr />
-<p><strong>命题3</strong>（单调性）设<span class="math inline">\(X, Y\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(X\le Y, \mathrm{a.s.}\)</span>，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，则 <span class="math display">\[
+<p><strong>命题3（单调性）</strong>设<span class="math inline">\(X, Y\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(X\le Y, \mathrm{a.s.}\)</span>，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，则 <span class="math display">\[
 \mathbb{E}(X|\mathscr{G})\le\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}. 
 \]</span> 特别地，<span class="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p>
 <hr />
@@ -245,7 +245,7 @@
 \end{cases}
 \]</span> 综合以上两式，有<span class="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p>
 <hr />
-<p><strong>命题4</strong>（可加性）设<span class="math inline">\(X, Y\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(a, b\in\mathbb{R}\)</span>，且<span class="math inline">\(a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，则 <span class="math display">\[
+<p><strong>命题4（可加性）</strong>设<span class="math inline">\(X, Y\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(a, b\in\mathbb{R}\)</span>，且<span class="math inline">\(a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，则 <span class="math display">\[
 \mathbb{E}(aX+bY|\mathscr{G})=a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.
 \]</span></p>
 <hr />
@@ -259,7 +259,7 @@
 <hr />
 <p>命题3和4都是期望<span class="math inline">\(\mathbb{E}(\cdot)\)</span>的性质向条件期望<span class="math inline">\(\mathbb{E}(\cdot|\mathscr{G})\)</span>的推广。联想到期望所满足的单调收敛定理、Fatou引理及Lebesgue控制收敛定理，我们接下来证明这些定理对于条件期望也是成立的。</p>
 <hr />
-<p><strong>定理5</strong>（单调收敛定理）设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(0\le X_n\uparrow X,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
+<p><strong>定理5（单调收敛定理）</strong>设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(0\le X_n\uparrow X,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
 0\le\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.
 \]</span></p>
 <hr />
@@ -267,7 +267,7 @@
 \int_C\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_C\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P},
 \]</span> 这便说明了<span class="math inline">\(\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\mathrm{a.s.}\)</span>。</p>
 <hr />
-<p><strong>定理6</strong>（Fatou引理）设<span class="math inline">\(\{X_n\}\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量序列，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(X_n\geq 0,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
+<p><strong>定理6（Fatou引理）</strong>设<span class="math inline">\(\{X_n\}\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量序列，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(X_n\geq 0,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
 \mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\quad\mathrm{a.s.}.
 \]</span></p>
 <hr />
@@ -275,7 +275,7 @@
 \int_C\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\mathrm{d}\mathbb{P}=\int_C\liminf_{n\to\infty}X_n\mathrm{d}\mathbb{P}\le\liminf_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P},
 \]</span> 这便说明了<span class="math inline">\(\displaystyle\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\mathrm{a.s.}\)</span>。</p>
 <hr />
-<p><strong>定理7</strong>（Lebesgue控制收敛定理）设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(\displaystyle\lim_{n\to\infty}X_n=X\)</span>，且存在<span class="math inline">\(Y\in L^1(\Omega)\)</span>，使得对任意的<span class="math inline">\(n\geq 1\)</span>，都有<span class="math inline">\(|X_n|\le Y,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
+<p><strong>定理7（Lebesgue控制收敛定理）</strong>设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(X\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域，若<span class="math inline">\(\displaystyle\lim_{n\to\infty}X_n=X\)</span>，且存在<span class="math inline">\(Y\in L^1(\Omega)\)</span>，使得对任意的<span class="math inline">\(n\geq 1\)</span>，都有<span class="math inline">\(|X_n|\le Y,\mathrm{a.s.}\)</span>，则 <span class="math display">\[
 \lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})=\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.
 \]</span></p>
 <hr />
