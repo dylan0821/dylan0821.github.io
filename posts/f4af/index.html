@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dylandong.top">
-  <title>Archives: 2022/3 | 董晟渤的个人主页</title>
+  <title>停时与上穿不等式 | 董晟渤的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="董晟渤的个人主页">
-<meta property="og:url" content="https://dylandong.top/archives/2022/03/index.html">
+  <meta name="description" content="本节将对离散时间鞅定义停时，并介绍上穿不等式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="停时与上穿不等式">
+<meta property="og:url" content="https://dylandong.top/posts/f4af/index.html">
 <meta property="og:site_name" content="董晟渤的个人主页">
+<meta property="og:description" content="本节将对离散时间鞅定义停时，并介绍上穿不等式。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-15T12:53:14.000Z">
+<meta property="article:modified_time" content="2022-03-15T13:08:58.372Z">
 <meta property="article:author" content="董晟渤">
+<meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
@@ -163,36 +168,118 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-停时与上穿不等式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      停时与上穿不等式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/f4af/" class="archive-article-date">
+
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span style="color:gray;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </a>
+        
+        
+        <a href="/posts/f4af/" class="archive-article-date">
   	<time datetime="2022-03-15T12:53:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/f4af/">停时与上穿不等式</a>
-    </h1>
-  
+        
+        
+      </header>
+      <!-- 目录内容 -->
+      
+      <!-- 目录内容结束 -->
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本节将对离散时间鞅定义停时，并介绍上穿不等式。</p>
+<span id="more"></span>
+<p><strong>定义1</strong> 设<span class="math inline">\(\{\mathscr{F}_n\}\)</span>是上升的<span class="math inline">\(\sigma\)</span>-域，也即对任意的<span class="math inline">\(n\geq 0\)</span>，都有<span class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。随机变量<span class="math inline">\(T:\Omega\to\{0,1,2,\cdots\}\)</span>，且对任意的<span class="math inline">\(n\geq 0\)</span>，都有 <span class="math display">\[
+\{T=n\}\in\mathscr{F}_n,
+\]</span> 则称<span class="math inline">\(T\)</span>是<span class="math inline">\(\{\mathscr{F}_n\}\)</span>的<strong>停时</strong>。</p>
+<hr />
+<p>事实上，注意到<span class="math inline">\(\{\mathscr{F}_n\}\)</span>是上升的，在这里<span class="math inline">\(\{T=n\}\in\mathscr{F}_n\)</span>对任意的<span class="math inline">\(n\geq 0\)</span>成立，等价于<span class="math inline">\(\{T\le n\}\in\mathscr{F}_n\)</span>对任意的<span class="math inline">\(n\geq 0\)</span>成立。</p>
+<hr />
+<p><strong>例2</strong> 设<span class="math inline">\(T\)</span>表示赌徒停止赌博的时间，<span class="math inline">\(T=n\)</span>表示在经过<span class="math inline">\(n\)</span>次赌博后赌徒停止赌博，则事件<span class="math inline">\(\{T=n\}\)</span>取决于前<span class="math inline">\(n\)</span>次赌博中所获得的信息<span class="math inline">\(\mathscr{F}_n\)</span>。</p>
+<hr />
+<p><strong>定义3</strong> 设<span class="math inline">\(T\)</span>是停时，记 <span class="math display">\[
+\mathscr{F}_{\infty}=\sigma\left(\bigcup_{n=1}^{\infty}\mathscr{F}_n\right),\quad\mathscr{F}_T=\{A\in\mathscr{F}_{\infty}:A\cap\{T=n\}\in\mathscr{F}_n,\forall n\geq 0\},
+\]</span> 称<span class="math inline">\(\mathscr{F}_T\)</span>为<strong><span class="math inline">\(T\)</span>前<span class="math inline">\(\sigma\)</span>-域</strong>。</p>
+<hr />
+<p>关于停时和<span class="math inline">\(T\)</span>前<span class="math inline">\(\sigma\)</span>-域，有一些基本的性质。</p>
+<hr />
+<p><strong>命题4</strong> 设<span class="math inline">\(S, T\)</span>是停时，则<span class="math inline">\(S+T\)</span>是停时。</p>
+<hr />
+<p><strong>证明</strong> 根据 <span class="math display">\[
+\{S+T=n\}=\bigcup_{i=0}^{n}\{S=i,T=n-i\}=\bigcup_{i=0}^{n}\{S=i\}\{T=n-i\}\in\mathscr{F}_n,
+\]</span> 知<span class="math inline">\(S+T\)</span>是停时。</p>
+<hr />
+<p><strong>命题5</strong> 设<span class="math inline">\(S, T\)</span>是停时，<span class="math inline">\(S\le T\)</span>，则<span class="math inline">\(\mathscr{F}_S\subset\mathscr{F}_T\)</span>。</p>
+<hr />
+<p><strong>证明</strong> 任取<span class="math inline">\(A\in\mathscr{F}_S\)</span>，则对任意的<span class="math inline">\(n\geq 0\)</span>，都有 <span class="math display">\[
+A\cap\{S\le n\}=A\cap\{S\le T\}\cap\{T=n\}\in\mathscr{F}_n,
+\]</span> 从而<span class="math inline">\(A=A\cap\{S\le T\}\in\mathscr{F}_T\)</span>。</p>
+<hr />
+<p><strong>定理6（Doob停止定理）</strong> 设<span class="math inline">\(S, T\)</span>是有界停时，且<span class="math inline">\(S\le T\)</span>。</p>
+<p>（1）设<span class="math inline">\(\{X_n\}\)</span>是鞅，则<span class="math inline">\(\mathbb{E}(X_T|\mathscr{F}_S)=X_S,\mathrm{a.s.}\)</span>；</p>
+<p>（2）设<span class="math inline">\(\{X_n\}\)</span>是上鞅，则<span class="math inline">\(\mathbb{E}(X_T|\mathscr{F}_S)\le X_S,\mathrm{a.s.}\)</span>。</p>
+<hr />
+<p><strong>证明</strong> 对于上鞅的情形，设<span class="math inline">\(\{X_n\}\)</span>是上鞅，<span class="math inline">\(S\le T\le N\)</span>，任取<span class="math inline">\(A\in\mathscr{F}_S\)</span>。首先设<span class="math inline">\(T=S+1\)</span>，对任意的<span class="math inline">\(0\le i\le N\)</span>，记 <span class="math display">\[
+A_i=A\cap[S=i]\cap[T\geq i]\in\mathscr{F}_i.
+\]</span> 利用上鞅的期望的单调性，有 <span class="math display">\[
+\int_A(X_S-X_T)\mathrm{d}\mathbb{P}=\sum_{i=0}^{N}\int_{A_i}(X_{i}-X_{i+1})\mathrm{d}\mathbb{P}\geq 0\implies\int_AX_S\mathrm{d}\mathbb{P}\geq\int_AX_T\mathrm{d}\mathbb{P};
+\]</span> 接下来设<span class="math inline">\(T&gt;S+1\)</span>，令<span class="math inline">\(R_i=S+i, 1\le i\le T-S-1\)</span>，则<span class="math inline">\(S\le R_1\le R_2\le\cdots\le T\)</span>，且它们之间间隔为<span class="math inline">\(1\)</span>。应用上式可得 <span class="math display">\[
+\int_A X_S\mathrm{d}\mathbb{P}\geq\int_A X_{R_1}\mathrm{d}\mathbb{P}\geq\int_A X_{R_2}\mathrm{d}\mathbb{P}\geq\cdots\geq\int_A X_T\mathrm{d}\mathbb{P}.
+\]</span> 从而，对任意的<span class="math inline">\(S\le T\)</span>，及对任意的<span class="math inline">\(A\in\mathscr{F}_S\)</span>，都有 <span class="math display">\[
+\int_AX_S\mathrm{d}\mathbb{P}\geq\int_AX_T\mathrm{d}\mathbb{P}=\int_A\mathbb{E}(X_T|\mathscr{F}_S)\mathrm{d}\mathbb{P},
+\]</span> 这便说明了<span class="math inline">\(\mathbb{E}(X_T|\mathscr{F}_S)\le X_S,\mathrm{a.s.}\)</span>。鞅的情形同理可证。</p>
+<hr />
+<p>最后，我们将介绍鞅的上穿不等式，为此引入一些记号。对于上鞅<span class="math inline">\(\{X_n\}\)</span>，记<span class="math inline">\(U_a^b(k)\)</span>表示<span class="math inline">\(\{X_1,X_2,\cdots,X_k\}\)</span>上穿区间<span class="math inline">\([a,b]\)</span>的次数。为了更精确地描述<span class="math inline">\(U_a^b(k)\)</span>，记 <span class="math display">\[
+T_0=\inf\{n\geq 0, X_n\le a\},\quad T_1=\inf\{n&gt; T_0, X_n\geq b\},
+\]</span> 以及 <span class="math display">\[
+T_{2i}=\inf\{n&gt;T_{2i-1}|X_n\le a\},\quad T_{2i+1}=\inf\{n&gt;T_{2i}|X_n\geq b\}, 
+\]</span> 则<span class="math inline">\(T_{2i}\)</span>表示第<span class="math inline">\(i+1\)</span>上穿区间<span class="math inline">\([a,b]\)</span>的开始时间，而<span class="math inline">\(T_{2i+1}\)</span>表示第<span class="math inline">\(i+1\)</span>上穿区间<span class="math inline">\([a,b]\)</span>的结束时间，并且<span class="math inline">\(\{T_n,n\geq 0\}\)</span>为递增的停时序列。从而， <span class="math display">\[
+\{U_a^b(k)=i\}=\{T_{2i-1}&lt;k&lt;T_{2i+1}\}\in\mathscr{F}_k,
+\]</span> 也即<span class="math inline">\(U_a^b(k)\)</span>是关于<span class="math inline">\(\mathscr{F}_k\)</span>可测的随机变量。</p>
+<hr />
+<p><strong>定理7（上穿不等式）</strong>设<span class="math inline">\(\{X_n\}\)</span>是上鞅，<span class="math inline">\(U_a^b(k)\)</span>表示<span class="math inline">\(\{X_1,X_2,\cdots,X_k\}\)</span>上穿区间<span class="math inline">\([a,b]\)</span>的次数，则 <span class="math display">\[
+\mathbb{E} U_a^b(k)\le\dfrac{1}{b-a}\cdot\mathbb{E}[(X_k-a)^-].
+\]</span></p>
+<hr />
+<p><strong>证明</strong> 由<span class="math inline">\(\{X_n\}\)</span>是上鞅知<span class="math inline">\(\mathbb{E}X_{T_{2i+1}\wedge k}\le\mathbb{E}X_{T_{2i}\wedge k}\)</span>，从而 <span class="math display">\[
+\begin{aligned}
+    0&amp;\geq\mathbb{E}(X_{T_{2i+1}\wedge k}-X_{T_{2i}\wedge k})\\
+    &amp;=\mathbb{E}(X_{T_{2i+1}\wedge k}-X_{T_{2i}\wedge k})\cdot\left(I_{\{T_{2i}\le k\le T_{2i+1}\}}+I_{\{k\geq T_{2i+1}\}}\right)\\
+    &amp;\geq\mathbb{E}(X_k-a)\cdot I_{\{T_{2i}\le k\le T_{2i+1}\}}+(b-a)\cdot\mathbb{E}I_{\{k\geq T_{2i+1}\}}.
+\end{aligned}
+\]</span> 由于<span class="math inline">\(\{U_a^b(k)\geq i+1\}\subset\{k\geq T_{2i+1}\}\)</span>，并且<span class="math inline">\(\{2i\le k\le 2i+1\}\subset\{U_a^b(k)=i\}\)</span>，因此 <span class="math display">\[
+(b-a)\cdot\mathbb{P}(U_a^b(k)\geq i+1)\le\mathbb{E}(X_k-a)^-\cdot I_{\{U_a^b(k)=i\}},
+\]</span> 在上式中对<span class="math inline">\(i\)</span>进行求和，可得 <span class="math display">\[
+\mathbb{E}U_a^b(k)=\sum_{i=0}^{\infty}\mathbb{P}(U_a^b(k)\geq i+1)\le\dfrac{1}{b-a}\cdot\mathbb{E}(X_k-a)^-.
+\]</span> 这便完成了定理的证明。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+       <!-- 添加版权声明 -->
+    
+  
+    <div class="declare" hidden="hidden"></div>
+  
+        <!-- 添加版权声明 -->  
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,214 +291,65 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/fe14/" class="archive-article-date">
-  	<time datetime="2022-03-15T07:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/posts/fe14/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">离散时间鞅的定义</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/fe14/">离散时间鞅的定义</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/c50d/" class="archive-article-date">
-  	<time datetime="2022-03-10T14:08:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/c50d/">条件期望的性质</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/7a46/" class="archive-article-date">
-  	<time datetime="2022-03-08T15:21:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/7a46/">条件期望、条件概率与例子</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/977b/" class="archive-article-date">
-  	<time datetime="2022-03-04T01:40:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/977b/">C#期末复习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/posts/4367/" class="archive-article-date">
-  	<time datetime="2022-03-03T11:25:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/posts/4367/">基于ElegantPaper的带封面报告模板</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">课程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTeX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+  <div id="SOHUCS" sid="停时与上穿不等式" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyvVAUfPX",
+        conf: "9f9091c7ba291ec8fd508d234064a4c4"
+    });
+</script>
+</script>
+  
 
+  
+
+  
 
           </div>
         </div>
@@ -445,8 +383,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
