@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dylandong.top/about/index.html</loc>
+    
+    <lastmod>2022-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dylandong.top/course/index.html</loc>
+    
+    <lastmod>2022-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dylandong.top/works/index.html</loc>
     
     <lastmod>2022-05-06</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://dylandong.top/about/index-en.html</loc>
-    
-    <lastmod>2022-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/about/index.html</loc>
     
     <lastmod>2022-05-06</lastmod>
     
@@ -140,15 +149,6 @@
     <loc>https://dylandong.top/posts/3627/</loc>
     
     <lastmod>2022-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/course/index.html</loc>
-    
-    <lastmod>2022-03-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
