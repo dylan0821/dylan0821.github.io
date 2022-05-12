@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>随机变量序列的一致可积 | 董晟渤的个人主页</title><meta name="keywords" content="概率论,收敛,一致可积"><meta name="author" content="董晟渤"><meta name="copyright" content="董晟渤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="现在开始探讨\(X_n\xrightarrow{p} X\)与\(X_n\xrightarrow{L^r}X\)之间的关系. 我们需要对\(\{X_n\}\)加一些条件. 对随机变量序列\(\{X_n\}\), 在此引入一个新的定义.  定义1(一致可积) 设\(\{X_n\}\)是随机变量序列, 如果 \[ \lim_{A\to\infty}\sup_{n\geq 1}\mathbb{E}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随机变量序列的一致可积">
+<meta property="og:url" content="https://dylandong.top/posts/76ab/index.html">
+<meta property="og:site_name" content="董晟渤的个人主页">
+<meta property="og:description" content="现在开始探讨\(X_n\xrightarrow{p} X\)与\(X_n\xrightarrow{L^r}X\)之间的关系. 我们需要对\(\{X_n\}\)加一些条件. 对随机变量序列\(\{X_n\}\), 在此引入一个新的定义.  定义1(一致可积) 设\(\{X_n\}\)是随机变量序列, 如果 \[ \lim_{A\to\infty}\sup_{n\geq 1}\mathbb{E}">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dylandong.top/posts/top/data.jpg">
+<meta property="article:published_time" content="2022-05-12T13:00:24.000Z">
+<meta property="article:modified_time" content="2022-05-12T13:08:29.706Z">
+<meta property="article:author" content="董晟渤">
+<meta property="article:tag" content="概率论">
+<meta property="article:tag" content="收敛">
+<meta property="article:tag" content="一致可积">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dylandong.top/posts/top/data.jpg"><link rel="shortcut icon" href="/img/portrait.jpg"><link rel="canonical" href="https://dylandong.top/posts/76ab/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?https://hm.baidu.com/hm.js?33cedb9c9ebaea6dd40705edde03eb5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随机变量序列的一致可积',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-05-12 21:08:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/portrait.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">33</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/course"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/top/data.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">董晟渤的个人主页</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/course"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">随机变量序列的一致可积</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-12T13:08:29.706Z" title="更新于 2022-05-12 21:08:29">2022-05-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/">讨论班</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="随机变量序列的一致可积"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>现在开始探讨<span class="math inline">\(X_n\xrightarrow{p} X\)</span>与<span class="math inline">\(X_n\xrightarrow{L^r}X\)</span>之间的关系. 我们需要对<span class="math inline">\(\{X_n\}\)</span>加一些条件. 对随机变量序列<span class="math inline">\(\{X_n\}\)</span>, 在此引入一个新的定义.</p>
+<hr />
+<p><strong>定义1(一致可积)</strong> 设<span class="math inline">\(\{X_n\}\)</span>是随机变量序列, 如果 <span class="math display">\[
+\lim_{A\to\infty}\sup_{n\geq 1}\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)=0,
+\]</span> 则称<span class="math inline">\(\{X_n\}\)</span>.</p>
+<hr />
+<p>一致可积也可以写成 <span class="math display">\[
+\lim_{A\to\infty}\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)=0, \quad\forall n\geq 1.
+\]</span> 接下来给出一致可积的等价形式.</p>
+<hr />
+<p><strong>定理1</strong> 设<span class="math inline">\(\{X_n\}\)</span>是随机变量序列, 则<span class="math inline">\(\{X_n\}\)</span>一致可积当且仅当以下两条性质同时成立:</p>
+<ol type="1">
+<li><p>一致有界, 也即存在<span class="math inline">\(M&gt;0\)</span>, 使得 <span class="math display">\[
+\sup_{n\geq 1}\mathbb{E}|X_n|&lt;M;
+\]</span></p></li>
+<li><p>一致绝对连续, 也即对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>, 存在<span class="math inline">\(\delta&gt;0\)</span>, 使得对任意的满足<span class="math inline">\(\mathbb{P}(E)&lt;\delta\)</span>的<span class="math inline">\(E\in\mathscr{F}\)</span>, 都有 <span class="math display">\[
+\sup_{n\geq 1}\mathbb{E}\left(|X_n|\cdot I_E\right)&lt;\varepsilon.
+\]</span></p></li>
+</ol>
+<hr />
+<p><strong>证明</strong> 一方面, 设<span class="math inline">\(\{X_n\}\)</span>一致可积, 则对任意的<span class="math inline">\(n\geq 1\)</span>, 都有 <span class="math display">\[
+\lim_{A\to\infty}\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)=0,
+\]</span> 从而存在<span class="math inline">\(A\)</span>, 使得<span class="math inline">\(\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)&lt;1\)</span>, 进一步有 <span class="math display">\[
+\begin{aligned}
+\mathbb{E}|X_n|&amp;=\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|\le A\}}\right)+\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)\\
+&amp;\le A\cdot\mathbb{P}(|X_n|\le A)+1\\
+&amp;\le A+1,
+\end{aligned}
+\]</span> 上式与<span class="math inline">\(n\)</span>无关, 这便说明了<span class="math inline">\(\{X_n\}\)</span>一致有界; 同时, 对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>, 存在<span class="math inline">\(A&gt;0\)</span>, 使得 <span class="math display">\[
+\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)&lt;\dfrac{\varepsilon}{2}.
+\]</span> 取<span class="math inline">\(\delta=\dfrac{\varepsilon}{2A}\)</span>, 设<span class="math inline">\(E\in\mathscr{F}\)</span>, 且<span class="math inline">\(\mathbb{P}(E)&lt;\delta\)</span>, 则 <span class="math display">\[
+\begin{aligned}
+\mathbb{E}\left(|X_n|\cdot I_E\right)&amp;=\mathbb{E}\left(|X_n|\cdot I_E\cdot I_{\{|X_n|\le A\}}\right)+\mathbb{E}\left(|X_n|\cdot I_E\cdot I_{\{|X_n|&gt; A\}}\right)\\
+&amp;\le A\cdot\mathbb{P}(E)+\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt; A\}}\right)\\
+&amp;\le A\cdot\dfrac{\varepsilon}{2A}+\dfrac{\varepsilon}{2}=\varepsilon,
+\end{aligned}
+\]</span> 上式与<span class="math inline">\(n\)</span>无关, 说明了<span class="math inline">\(\{X_n\}\)</span>一致绝对连续.</p>
+<p>反之, 设<span class="math inline">\(\{X_n\}\)</span>一致有界且一致绝对连续, 则对任意的<span class="math inline">\(n\geq 1\)</span>, 应用Chebyshev不等式得 <span class="math display">\[
+\mathbb{P}(|X_n|&gt;A)\le\dfrac{\mathbb{E}|X_n|}{A}&lt;\dfrac{M}{A},
+\]</span> 对任意的<span class="math inline">\(\delta&gt;0\)</span>, 只要<span class="math inline">\(A&gt;\dfrac{M}{\delta}\)</span>, 就有<span class="math inline">\(\mathbb{P}(|X_n|&gt;A)&lt;\delta\)</span>. 取<span class="math inline">\(E=\{|X_n|&gt;A\}\)</span>, 对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>, 都存在<span class="math inline">\(\delta\)</span>以及<span class="math inline">\(A&gt;\dfrac{M}{\delta}\)</span>, 使得 <span class="math display">\[
+\mathbb{E}\left(|X_n|\cdot I_E\right)=\mathbb{E}\left(|X_n|\cdot I_{\{|X_n|&gt;A\}}\right)&lt;\varepsilon,
+\]</span> 这便说明了<span class="math inline">\(\{X_n\}\)</span>绝对可积.</p>
+<hr />
+<p>介绍一致可积性是为了在<span class="math inline">\(X_n\xrightarrow{p}X\)</span>的情况下, 探究加入<span class="math inline">\(X_n\xrightarrow{L^r}X\)</span>的条件所能得到的结果. 以下设<span class="math inline">\(X_n, X\in L^r(\Omega)\)</span>.</p>
+<hr />
+<p><strong>定理2</strong> 设<span class="math inline">\(r&gt;0\)</span>, <span class="math inline">\(X_n\xrightarrow{p}X\)</span>, 下列命题等价:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\{|X_n|^r\}\)</span>一致可积;</p></li>
+<li><p><span class="math inline">\(X_n\xrightarrow{L^r}X\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathbb{E}|X_n|^r\to\mathbb{E}|X|^r\)</span>.</p></li>
+</ol>
+<hr />
+<p><strong>证明</strong> (1)<span class="math inline">\(\implies\)</span>(2): 设<span class="math inline">\(\{|X_n|^r\}\)</span>一致可积, 对任意的<span class="math inline">\(n\geq 1\)</span>, 由<span class="math inline">\(C_r\)</span>不等式得 <span class="math display">\[
+|X_n-X|^r\le 2^{r-1}\cdot\left(|X_n|^r+|X|^r\right), 
+\]</span> 因此<span class="math inline">\(\{|X_n-X|^r\}\)</span>也一致可积. 设<span class="math inline">\(\varepsilon&gt;0\)</span>, 由<span class="math inline">\(X_n\xrightarrow{p}X\)</span>得<span class="math inline">\(\mathbb{P}\left(|X_n-X|&gt;\varepsilon\right)\to 0\)</span>, 并且存在<span class="math inline">\(M&gt;0\)</span>, 使得<span class="math inline">\(|X_n-X|&lt;M, \mathrm{a.s.}\)</span>. 计算得 <span class="math display">\[
+\begin{aligned}
+\mathbb{E}|X_n-X|^r&amp;=\mathbb{E}\left(|X_n-X|^r\cdot I_{\{|X_n-X|\le\varepsilon\}}\right)+\mathbb{E}\left(|X_n-X|^r\cdot I_{\{|X_n-X|&gt;\varepsilon\}}\right)\\
+&amp;\le \varepsilon^r+\mathbb{E}\left(|X_n-X|^r\cdot I_{\{|X_n-X|&gt;\varepsilon\}}\right)\\
+&amp;\le\varepsilon^r+M^r\cdot\mathbb{P}(|X_n-X|&gt;\varepsilon)\\
+&amp;\to\varepsilon^r,
+\end{aligned}
+\]</span> 再令<span class="math inline">\(\varepsilon\to 0\)</span>即可得<span class="math inline">\(X_n\xrightarrow{L^r}X\)</span>.</p>
+<p>(2)<span class="math inline">\(\implies\)</span>(3): 这是已经证明的结论.</p>
+<p>(3)<span class="math inline">\(\implies\)</span>(1): 设<span class="math inline">\(\mathbb{E}|X_n|^r\to\mathbb{E}|X|^r\)</span>, 对于<span class="math inline">\(A&gt;0\)</span>, 由Fatou引理得 <span class="math display">\[
+\mathbb{E}\left(|X|^r\cdot I_{\{|X|^r\le A\}}\right)\le\liminf_{n\to\infty}\mathbb{E}\left(|X_n|^r\cdot I_{\{|X_n|^r\le A\}}\right),
+\]</span> 因此 <span class="math display">\[
+\limsup_{n\to\infty}\mathbb{E}\left(|X_n|^r\cdot I_{\{|X_n|^r&gt;A\}}\right)\le\mathbb{E}\left(|X|^r\cdot I_{\{|X|^r&gt;A\}}\right).
+\]</span> 由<span class="math inline">\(X\in L^r(\Omega)\)</span>知, 当<span class="math inline">\(A\to\infty\)</span>时有<span class="math inline">\(\mathbb{E}\left(|X|^r\cdot I_{\{|X|^r&gt;A\}}\right)\to 0\)</span>, 因此对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>, 存在<span class="math inline">\(A_0&gt;0\)</span>及<span class="math inline">\(n_0\)</span>, 使得当<span class="math inline">\(A&gt;A_0\)</span>时, 有 <span class="math display">\[
+\sup_{n&gt;n_0}\mathbb{E}\left(|X_n|^r\cdot I_{\{|X_n|^r&gt;A\}}\right)&lt;\varepsilon.
+\]</span> 又当<span class="math inline">\(n\le n_0\)</span>时, 根据<span class="math inline">\(X_n\in L^r(\Omega)\)</span>知, 当<span class="math inline">\(A\to\infty\)</span>时有<span class="math inline">\(\mathbb{E}\left(|X_n|^r\cdot I_{\{|X|^r&gt;A\}}\right)\to 0\)</span>, 因此 <span class="math display">\[
+\lim_{A\to\infty}\sup_{n\geq 1}\mathbb{E}\left(|X_n|^r\cdot I_{\{|X_n|^r&gt;A\}}\right)=0,
+\]</span> 也即<span class="math inline">\(\{|X_n|^r\}\)</span>一致可积.</p>
+<hr />
+<p><strong>推论</strong> 设<span class="math inline">\(\{X_n\}\)</span>一致可积, 则<span class="math inline">\(X_n\xrightarrow{p}X\)</span>当且仅当<span class="math inline">\(X_n\xrightarrow{L^r}X\)</span>.</p>
+<hr />
+<p><strong>证明</strong> 直接应用上述结论即可.</p>
+<hr />
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/76ab/">https://dylandong.top/posts/76ab/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E6%94%B6%E6%95%9B/">收敛</a><a class="post-meta__tags" href="/tags/%E4%B8%80%E8%87%B4%E5%8F%AF%E7%A7%AF/">一致可积</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/data.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/d646/"><img class="next-cover" src="/posts/top/math.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">矩收敛及其基本性质</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/d646/" title="矩收敛及其基本性质"><img class="cover" src="/posts/top/math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">矩收敛及其基本性质</div></div></a></div><div><a href="/posts/3d93/" title="随机变量的依分布收敛"><img class="cover" src="/posts/top/metry.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">随机变量的依分布收敛</div></div></a></div><div><a href="/posts/352c/" title="次概率测度的列紧性"><img class="cover" src="/posts/top/university.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">次概率测度的列紧性</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大三在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">33</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/76ab/" title="随机变量序列的一致可积"><img src="/posts/top/data.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量序列的一致可积"/></a><div class="content"><a class="title" href="/posts/76ab/" title="随机变量序列的一致可积">随机变量序列的一致可积</a><time datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d646/" title="矩收敛及其基本性质"><img src="/posts/top/math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩收敛及其基本性质"/></a><div class="content"><a class="title" href="/posts/d646/" title="矩收敛及其基本性质">矩收敛及其基本性质</a><time datetime="2022-05-12T12:37:34.000Z" title="发表于 2022-05-12 20:37:34">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3d93/" title="随机变量的依分布收敛"><img src="/posts/top/metry.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量的依分布收敛"/></a><div class="content"><a class="title" href="/posts/3d93/" title="随机变量的依分布收敛">随机变量的依分布收敛</a><time datetime="2022-05-12T07:07:03.000Z" title="发表于 2022-05-12 15:07:03">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 董晟渤</div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="opentype">闽ICP备2022001871号</a> | <a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000858"><img src="/img/备案图标.png" />陕公网安备61010302000858号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'N7yEQ5ITkU7Y55cFGH3pOXMc-gzGzoHsz',
+      appKey: 'ktEPnSIJtFdgBdkWIysLkR14',
+      avatar: 'identicon',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false,
+      master: '1a01b9b2375d6e96d870e609bda894b2',
+      friends: ["443f4e4438b7ca83b673c6e68e416780", "cb3c60eef57d6d2ce173e27dc925f259", "c6776f0b02873cce8532d29652608fd6", "f6d1e747a75b86590ea7500970c95124", "ea3479697461cc200d0fa17be9ae6e43"],
+      tagMeta: ["博主", "朋友", "访客"]
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":50,"vOffset":-60},"mobile":{"show":false},"log":false});</script></body></html>
