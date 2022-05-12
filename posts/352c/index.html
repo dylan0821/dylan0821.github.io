@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>次概率测度的列紧性 | 董晟渤的个人主页</title><meta name="keywords" content="概率论,收敛,淡收敛,依分布收敛,泛函分析"><meta name="author" content="董晟渤"><meta name="copyright" content="董晟渤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="进一步, 我们研究所有次概率测度所构成的集合的结构. 考虑到所有的次概率测度和\([0, 1]\)是类似的, 并且考虑到\([0, 1]\)是列紧集, 我们也可以证明次概率测度所构成的集合是列紧的.  定理1 设\(\{\mu_n\}\)是次概率测度, 则存在子列\(\{\mu_{n_k}\}\), 使得\(\mu_{n_k}\xrightarrow{v}\mu\).  证明 定义函数 \">
+<meta property="og:type" content="article">
+<meta property="og:title" content="次概率测度的列紧性">
+<meta property="og:url" content="https://dylandong.top/posts/352c/index.html">
+<meta property="og:site_name" content="董晟渤的个人主页">
+<meta property="og:description" content="进一步, 我们研究所有次概率测度所构成的集合的结构. 考虑到所有的次概率测度和\([0, 1]\)是类似的, 并且考虑到\([0, 1]\)是列紧集, 我们也可以证明次概率测度所构成的集合是列紧的.  定理1 设\(\{\mu_n\}\)是次概率测度, 则存在子列\(\{\mu_{n_k}\}\), 使得\(\mu_{n_k}\xrightarrow{v}\mu\).  证明 定义函数 \">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dylandong.top/posts/top/university.jpg">
+<meta property="article:published_time" content="2022-05-12T06:59:11.000Z">
+<meta property="article:modified_time" content="2022-05-12T07:06:45.998Z">
+<meta property="article:author" content="董晟渤">
+<meta property="article:tag" content="概率论">
+<meta property="article:tag" content="收敛">
+<meta property="article:tag" content="淡收敛">
+<meta property="article:tag" content="依分布收敛">
+<meta property="article:tag" content="泛函分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dylandong.top/posts/top/university.jpg"><link rel="shortcut icon" href="/img/portrait.jpg"><link rel="canonical" href="https://dylandong.top/posts/352c/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?https://hm.baidu.com/hm.js?33cedb9c9ebaea6dd40705edde03eb5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '次概率测度的列紧性',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-05-12 15:06:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="董晟渤的个人主页" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/portrait.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/course"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/top/university.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">董晟渤的个人主页</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/course"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">次概率测度的列紧性</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-12T06:59:11.000Z" title="发表于 2022-05-12 14:59:11">2022-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-12T07:06:45.998Z" title="更新于 2022-05-12 15:06:45">2022-05-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/">讨论班</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">810</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="次概率测度的列紧性"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>进一步, 我们研究所有次概率测度所构成的集合的结构. 考虑到所有的次概率测度和<span class="math inline">\([0, 1]\)</span>是类似的, 并且考虑到<span class="math inline">\([0, 1]\)</span>是列紧集, 我们也可以证明次概率测度所构成的集合是列紧的.</p>
+<hr />
+<p><strong>定理1</strong> 设<span class="math inline">\(\{\mu_n\}\)</span>是次概率测度, 则存在子列<span class="math inline">\(\{\mu_{n_k}\}\)</span>, 使得<span class="math inline">\(\mu_{n_k}\xrightarrow{v}\mu\)</span>.</p>
+<hr />
+<p><strong>证明</strong> 定义函数 <span class="math display">\[
+F_n(x)=\mu_n(-\infty,x],\quad\forall x\in\mathbb{R}. 
+\]</span> 则<span class="math inline">\(F_n\)</span>是<span class="math inline">\(\mathbb{R}\)</span>上单调递增的右连续函数, 且<span class="math inline">\(F_n(-\infty)=0\)</span>, <span class="math inline">\(F_n(\infty)=\mu_n(\mathbb{R})\le 1\)</span>. 设<span class="math inline">\(D\)</span>是<span class="math inline">\(\mathbb{R}\)</span>的可数稠密子集, <span class="math inline">\(\{r_k, k\geq 1\}\)</span>是它的排列, 按照如下方式选择<span class="math inline">\(\{F_n\}\)</span>的一个子列:</p>
+<ul>
+<li>数列<span class="math inline">\(\{F_n(r_1), n\geq 1\}\)</span>有界, 选取其的一个收敛子列<span class="math inline">\(\left\{F_n^{(1)}(r_1), n\geq 1\right\}\)</span>;</li>
+<li>数列<span class="math inline">\(\left\{F_n^{(1)}(r_2), n\geq 1\right\}\)</span>有界, 选取其的一个收敛子列<span class="math inline">\(\left\{F_n^{(2)}(r_2), n\geq 1\right\}\)</span>;</li>
+<li>…;</li>
+<li>数列<span class="math inline">\(\left\{F_n^{(k-1)}(r_k), n\geq 1\right\}\)</span>有界, 选取其的一个收敛子列<span class="math inline">\(\left\{F_n^{(k)}(r_k), n\geq 1\right\}\)</span>;</li>
+</ul>
+<p>由此, 我们得到了若干函数列: <span class="math display">\[
+\begin{array}{*{6}{cccccl}}
+F_1^{(1)}, &amp; F_2^{(1)}, &amp; \cdots, &amp; F_n^{(1)}, &amp; \cdots, &amp; \text{在$r_1$处收敛;} \\
+F_1^{(2)}, &amp; F_2^{(2)}, &amp; \cdots, &amp; F_n^{(2)}, &amp; \cdots, &amp; \text{在$r_1, r_2$处收敛;} \\
+\cdots, &amp; \cdots, &amp; \cdots, &amp; \cdots, &amp; \cdots; \\
+F_1^{(k)}, &amp; F_2^{(k)}, &amp; \cdots, &amp; F_n^{(k)}, &amp; \cdots, &amp; \text{在$r_1, r_2, \cdots ,r_k$处收敛;} \\
+\cdots, &amp; \cdots, &amp; \cdots, &amp; \cdots, &amp; \cdots. \\
+\end{array}
+\]</span> 选取上述函数列的对角线<span class="math inline">\(F_1^{(1)}\)</span>, <span class="math inline">\(F_2^{(2)}\)</span>, <span class="math inline">\(\cdots\)</span>, <span class="math inline">\(F_k^{(k)}\)</span>, <span class="math inline">\(\cdots\)</span>, 则<span class="math inline">\(\displaystyle\lim_{k\to\infty}F_k^{(k)}\)</span>在所有的<span class="math inline">\(\{r_k, k\geq 1\}\)</span>处收敛, 也即在<span class="math inline">\(D\)</span>上收敛. 记 <span class="math display">\[
+\begin{aligned}
+&amp;G(r):=\lim_{k\to\infty}F_k^{(k)}(r),\quad\forall r\in D,\\
+&amp;F(x):=\sup_{x&lt;r\in D}G(r),\quad\forall x\in\mathbb{R},
+\end{aligned}
+\]</span> 则<span class="math inline">\(F(x)\)</span>是<span class="math inline">\(\mathbb{R}\)</span>上单调递增的右连续函数. 设<span class="math inline">\(C\)</span>是<span class="math inline">\(F(x)\)</span>的连续点, 则<span class="math inline">\(C\)</span>在<span class="math inline">\(\mathbb{R}\)</span>中稠密. 设<span class="math inline">\(x\in C\)</span>, 则对任意的<span class="math inline">\(\varepsilon&gt;0\)</span>, 存在<span class="math inline">\(r, r&#39;, r&#39;&#39;\in D\)</span>, 使得<span class="math inline">\(r&lt;r&#39;&lt;x&lt;r&#39;&#39;\)</span>, 且<span class="math inline">\(F(r&#39;&#39;)-F(r)&lt;\varepsilon\)</span>, 于是 <span class="math display">\[
+F(r)\le G(r&#39;)\le F(x)\le G(r&#39;&#39;)\le F(r&#39;&#39;)\le F(r)+\varepsilon,
+\]</span> 且 <span class="math display">\[
+F_k^{(k)}(r&#39;)&lt;F_k^{(k)}(x)&lt;F_k^{(k)}(r&#39;&#39;),
+\]</span> 由<span class="math inline">\(\varepsilon\)</span>的任意性知 <span class="math display">\[
+\lim_{k\to\infty}F_k^{(k)}(x)=F(x),\quad\forall x\in C.
+\]</span> 我们知道, 存在唯一的概率测度<span class="math inline">\(\mu\)</span>, 使得<span class="math inline">\(F(x)=\mu(-\infty, x]\)</span>. 另外, 设<span class="math inline">\(F_k^{(k)}\)</span>所对应的次概率测度为<span class="math inline">\(\mu_{n_k}\)</span>. 由上面的结果, 知对任意的<span class="math inline">\(a, b\in C\)</span>, 都有 <span class="math display">\[
+\lim_{k\to\infty}\mu_{n_k}(a, b]=\mu(a, b],
+\]</span> 从而<span class="math inline">\(\mu_{n_k}\xrightarrow{v}\mu\)</span>.</p>
+<hr />
+<p><strong>推论</strong> 设<span class="math inline">\(\{\mu_n\}\)</span>是次概率测度, 如果对任何淡收敛的子列<span class="math inline">\(\{\mu_{n_k}\}\)</span>, 都有<span class="math inline">\(\mu_{n_k}\xrightarrow{v}\mu\)</span>, 则<span class="math inline">\(\mu_n\xrightarrow{v}\mu\)</span>.</p>
+<hr />
+<p><strong>证明</strong> 假设<span class="math inline">\(\mu_n\)</span>不淡收敛到<span class="math inline">\(\mu\)</span>, 则存在连续性区间<span class="math inline">\((a, b)\)</span>, 使得<span class="math inline">\(\mu_n(a,b)\)</span>不以<span class="math inline">\(\mu(a, b)\)</span>为极限. 由<span class="math inline">\([0, 1]\)</span>的列紧性, 存在子列<span class="math inline">\(\{\mu_{n_k}(a, b)\}\)</span>, 使得 <span class="math display">\[
+\mu_{n_k}(a, b)\to a\ne \mu(a, b).
+\]</span> 而由次概率密度的列紧性, <span class="math inline">\(\{\mu_{n_k}\}\)</span>存在淡收敛的子列<span class="math inline">\(\{\mu_{n_k&#39;}\}\)</span>, 使得<span class="math inline">\(\mu_{n_k&#39;}\xrightarrow{v}\mu\)</span>, 因此 <span class="math display">\[
+\mu_{n_k&#39;}(a, b)\to\mu(a, b),
+\]</span> 此与以上极限矛盾, 从而假设不成立.</p>
+<hr />
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/352c/">https://dylandong.top/posts/352c/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E6%94%B6%E6%95%9B/">收敛</a><a class="post-meta__tags" href="/tags/%E6%B7%A1%E6%94%B6%E6%95%9B/">淡收敛</a><a class="post-meta__tags" href="/tags/%E4%BE%9D%E5%88%86%E5%B8%83%E6%94%B6%E6%95%9B/">依分布收敛</a><a class="post-meta__tags" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/">泛函分析</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/university.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3d93/"><img class="prev-cover" src="/posts/top/metry.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">随机变量的依分布收敛</div></div></a></div><div class="next-post pull-right"><a href="/posts/525b/"><img class="next-cover" src="/posts/top/book.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">淡收敛及其等价命题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/525b/" title="淡收敛及其等价命题"><img class="cover" src="/posts/top/book.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">淡收敛及其等价命题</div></div></a></div><div><a href="/posts/3d93/" title="随机变量的依分布收敛"><img class="cover" src="/posts/top/metry.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">随机变量的依分布收敛</div></div></a></div><div><a href="/posts/48cf/" title="Borel-Cantelli引理"><img class="cover" src="/posts/top/geometry.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">Borel-Cantelli引理</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大三在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/3d93/" title="随机变量的依分布收敛"><img src="/posts/top/metry.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量的依分布收敛"/></a><div class="content"><a class="title" href="/posts/3d93/" title="随机变量的依分布收敛">随机变量的依分布收敛</a><time datetime="2022-05-12T07:07:03.000Z" title="发表于 2022-05-12 15:07:03">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/352c/" title="次概率测度的列紧性"><img src="/posts/top/university.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="次概率测度的列紧性"/></a><div class="content"><a class="title" href="/posts/352c/" title="次概率测度的列紧性">次概率测度的列紧性</a><time datetime="2022-05-12T06:59:11.000Z" title="发表于 2022-05-12 14:59:11">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/525b/" title="淡收敛及其等价命题"><img src="/posts/top/book.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="淡收敛及其等价命题"/></a><div class="content"><a class="title" href="/posts/525b/" title="淡收敛及其等价命题">淡收敛及其等价命题</a><time datetime="2022-05-12T06:49:14.000Z" title="发表于 2022-05-12 14:49:14">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 董晟渤</div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="opentype">闽ICP备2022001871号</a> | <a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000858"><img src="/img/备案图标.png" />陕公网安备61010302000858号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'N7yEQ5ITkU7Y55cFGH3pOXMc-gzGzoHsz',
+      appKey: 'ktEPnSIJtFdgBdkWIysLkR14',
+      avatar: 'identicon',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false,
+      master: '1a01b9b2375d6e96d870e609bda894b2',
+      friends: ["443f4e4438b7ca83b673c6e68e416780", "cb3c60eef57d6d2ce173e27dc925f259", "c6776f0b02873cce8532d29652608fd6", "f6d1e747a75b86590ea7500970c95124", "ea3479697461cc200d0fa17be9ae6e43"],
+      tagMeta: ["博主", "朋友", "访客"]
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":50,"vOffset":-60},"mobile":{"show":false},"log":false});</script></body></html>
