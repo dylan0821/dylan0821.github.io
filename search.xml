@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>基于ElegantPaper的国赛论文模板</title>
+      <link href="/posts/5bd6/"/>
+      <url>/posts/5bd6/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>笔者基于ElegantPaper模板，整理了国赛的论文模板，供大家参考。</p></blockquote><p>关于ElegantLaTeX相关模板，详见<a href="https://elegantlatex.org/cn/">ElegantLaTeX 系列模板</a>。</p><div class="row">    <embed src="/works/基于ElegantPaper的国赛论文模板.pdf" width="100%" height="550" type="application/pdf"></div><p>下载：<a href="/works/基于ElegantPaper的国赛论文模板.zip">基于ElegantPaper的国赛论文模板.zip</a>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 模板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LaTeX </tag>
+            
+            <tag> 排版 </tag>
+            
+            <tag> 数学建模 </tag>
+            
+            <tag> 模板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>随机变量序列的一致可积</title>
       <link href="/posts/76ab/"/>
       <url>/posts/76ab/</url>
@@ -887,7 +918,7 @@
       <link href="/posts/9d29/"/>
       <url>/posts/9d29/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>美赛也即美国大学生数学建模竞赛，分为MCM和ICM。笔者基于ElegantPaper模板，整理了美赛的论文模板，希望可以帮到大家。</p><p>本模板与官方模板可能有冲突，需要使用者自行注意。保险起见，请在这里下载<a href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.docx">Microsoft Word Summary Sheet</a>和<a href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.tex">LaTeX Summary Sheet</a>，并根据自己的要求做修改。</p></blockquote><span id="more"></span><p>关于ElegantLaTeX相关模板，详见<a href="https://elegantlatex.org/cn/">ElegantLaTeX 系列模板</a>。</p><ul><li>使用ElegantPaper的酒红色（winered）来代替原模板的红色，更加自然好看。</li><li>使用longtable代替了table，通过跨页表格来节省论文空间。</li><li>论文的结构并不是主办方规定的结构，可以根据实际要求自行修改。</li></ul><p>下载：<a href="/works/基于ElegantPaper的美赛论文模板.zip">基于ElegantPaper的美赛论文模板.zip</a>。</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>美赛也即美国大学生数学建模竞赛，分为MCM和ICM。笔者基于ElegantPaper模板，整理了美赛的论文模板，希望可以帮到大家。</p><p>本模板与官方模板可能有冲突，需要使用者自行注意。保险起见，请在这里下载<a href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.docx">Microsoft Word Summary Sheet</a>和<a href="https://www.comap.com/undergraduate/contests/mcm/flyer/MCM-ICM_Summary.tex">LaTeX Summary Sheet</a>，并根据自己的要求做修改。</p></blockquote><span id="more"></span><p>关于ElegantLaTeX相关模板，详见<a href="https://elegantlatex.org/cn/">ElegantLaTeX 系列模板</a>。</p><ul><li>使用ElegantPaper的酒红色（winered）来代替原模板的红色，更加自然好看。</li><li>使用longtable代替了table，通过跨页表格来节省论文空间。</li><li>论文的结构并不是主办方规定的结构，可以根据实际要求自行修改。</li><li>笔者在2022年美赛中使用本模板，成功获得了F奖，见<a href="/works/2022-MCMICM.pdf">建模论文</a>。</li></ul><div class="row">    <embed src="/works/基于ElegantPaper的美赛赛论文模板.pdf" width="100%" height="550" type="application/pdf"></div><p>下载：<a href="/works/基于ElegantPaper的美赛论文模板.zip">基于ElegantPaper的美赛论文模板.zip</a>。</p>]]></content>
       
       
       <categories>
