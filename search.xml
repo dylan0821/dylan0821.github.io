@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>2022年5月28日公告</title>
+      <link href="/posts/7b07/"/>
+      <url>/posts/7b07/</url>
+      
+        <content type="html"><![CDATA[<p>因最近<code>jsdelivr</code>在国内被墙，本网站的公式渲染可能出现问题。</p><p>等有时间的时候（考完最近的考试后）将尝试解决该问题。</p><p>若问题无法解决，之后的文章可能采用内置pdf的形式发布。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 公告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于ElegantPaper的国赛论文模板</title>
       <link href="/posts/5bd6/"/>
       <url>/posts/5bd6/</url>

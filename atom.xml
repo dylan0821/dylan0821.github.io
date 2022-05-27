@@ -6,7 +6,7 @@
   <link href="https://dylandong.top/atom.xml" rel="self"/>
   
   <link href="https://dylandong.top/"/>
-  <updated>2022-05-13T05:41:54.749Z</updated>
+  <updated>2022-05-27T16:17:41.113Z</updated>
   <id>https://dylandong.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022年5月28日公告</title>
+    <link href="https://dylandong.top/posts/7b07/"/>
+    <id>https://dylandong.top/posts/7b07/</id>
+    <published>2022-05-27T16:10:01.000Z</published>
+    <updated>2022-05-27T16:17:41.113Z</updated>
+    
+    <content type="html"><![CDATA[<p>因最近<code>jsdelivr</code>在国内被墙，本网站的公式渲染可能出现问题。</p><p>等有时间的时候（考完最近的考试后）将尝试解决该问题。</p><p>若问题无法解决，之后的文章可能采用内置pdf的形式发布。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;因最近&lt;code&gt;jsdelivr&lt;/code&gt;在国内被墙，本网站的公式渲染可能出现问题。&lt;/p&gt;
+&lt;p&gt;等有时间的时候（考完最近的考试后）将尝试解决该问题。&lt;/p&gt;
+&lt;p&gt;若问题无法解决，之后的文章可能采用内置pdf的形式发布。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="网站" scheme="https://dylandong.top/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    
+    <category term="公告" scheme="https://dylandong.top/tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>基于ElegantPaper的国赛论文模板</title>
@@ -436,7 +463,7 @@ y_i=\mu_i+e_i=\</summary>
     <link href="https://dylandong.top/posts/a18b/"/>
     <id>https://dylandong.top/posts/a18b/</id>
     <published>2022-03-16T02:11:32.000Z</published>
-    <updated>2022-05-24T02:48:46.613Z</updated>
+    <updated>2022-05-27T16:17:12.973Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>高等概率论</strong>以初等概率论、实分析和测度论为基础，是研究随机现象的数量规律的数学学科。</p></blockquote><ul><li>课程：高等概率论；</li><li>书籍：《A Course in Probability Theory》；</li><li>周次：第3周至第16周；</li><li>时间：周一上午10:00至11:30。</li></ul><span id="more"></span><h1 id="线上参与">线上参与</h1><ul><li>QQ群：694658057；</li><li>腾讯会议：678-7704-7480，会议密码：2022。</li></ul><h1 id="学习进度">学习进度</h1><ul class="task-list"><li><input type="checkbox" disabled="" checked="" />第1-2次：符号测度，条件期望，鞅；<ul class="task-list"><li><input type="checkbox" disabled="" checked="" />第1次（测度论）：符号测度，Radon-Nikodym定理；</li><li><input type="checkbox" disabled="" checked="" />第2次（概率论）：条件期望，条件概率，鞅。</li></ul></li><li><input type="checkbox" disabled="" checked="" />第3次：分布函数，集合；</li><li><input type="checkbox" disabled="" checked="" />第4次：测度空间，概率测度；</li><li><input type="checkbox" disabled="" checked="" />第5次：随机变量，期望；</li><li><input type="checkbox" disabled="" checked="" />第6次：独立，乘积空间；</li><li><input type="checkbox" disabled="" checked="" />第7次：几乎处处收敛，依概率收敛；</li><li><input type="checkbox" disabled="" checked="" />第8次：B-C引理，弱收敛；</li><li><input type="checkbox" disabled="" checked="" />第9次：依分布收敛，矩收敛；</li><li><input type="checkbox" disabled="" checked="" />第10次：大数定律（一）；</li><li><input type="checkbox" disabled="" />第11次：大数定律（二）。</li></ul><h1 id="参考书籍">参考书籍</h1><ol type="1"><li>Kai Lai Chung. <em>A Course in Probability Theory</em>;</li><li>Gerald B. Folland. <em>Real Analysis: Modern Techniques and Their Applications</em>;</li><li>程士宏. <em>测度论与概率论基础</em>.</li></ol><h1 id="相关文章">相关文章</h1><ul><li><a href="../7a46/">条件期望、条件概率与例子</a></li><li><a href="../c50d/">条件期望的性质</a></li><li><a href="../fe14/">离散时间鞅的定义</a></li><li><a href="../f4af/">停时与上穿不等式</a></li><li><a href="../1430/">Doob鞅收敛定理</a></li><li><a href="../b3e2/">事件的独立</a></li><li><a href="../52a8/">随机元的独立</a></li><li><a href="../1e09/">随机变量的独立</a></li><li><a href="../893/">有限维乘积空间</a></li><li><a href="../48cf/">Borel-Cantelli引理</a></li><li><a href="../525b/">淡收敛及其等价命题</a></li><li><a href="../352c/">次概率测度的列紧性</a></li><li><a href="../3d93/">随机变量的依分布收敛</a></li></ul><h1 id="资料下载">资料下载</h1><ul><li><a href="/study/高等概率论讨论班.pdf">高等概率论讨论班.pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班.pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/高等概率论讨论班(第0次).pdf">高等概率论讨论班(第0次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第0次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/高等概率论讨论班(第5次).pdf">高等概率论讨论班(第5次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第5次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/高等概率论讨论班(第6次).pdf">高等概率论讨论班(第6次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第6次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/条件期望的几何意义.pdf">条件期望的几何意义.pdf</a></li></ul><div class="row">    <embed src="/study/条件期望的几何意义.pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/高等概率论讨论班(第8、9次).pdf">高等概率论讨论班(第8、9次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第8、9次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><a href="/study/高等概率论讨论班(第10次).pdf">高等概率论讨论班(第10次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第10次).pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
     
@@ -551,31 +578,6 @@ y_i=\mu_i+e_i=\</summary>
     
     
     <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    <category term="条件期望" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>条件期望、条件概率与例子</title>
-    <link href="https://dylandong.top/posts/7a46/"/>
-    <id>https://dylandong.top/posts/7a46/</id>
-    <published>2022-03-08T15:21:33.000Z</published>
-    <updated>2022-03-20T03:28:45.052Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。</p><span id="more"></span><h1 id="条件期望与条件概率的定义">条件期望与条件概率的定义</h1><p>设<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>为概率空间，条件期望首先是对于<span class="math inline">\(\mathscr{F}\)</span>的子<span class="math inline">\(\sigma\)</span>-域而言的。</p><hr /><p><strong>定义1（子<span class="math inline">\(\sigma\)</span>-域）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是<span class="math inline">\(\sigma\)</span>-域，则称<span class="math inline">\(\mathscr{G}\)</span>是<span class="math inline">\(\mathscr{F}\)</span>的<strong>子<span class="math inline">\(\sigma\)</span>-域</strong>。</p><hr /><p>设<span class="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，定义 <span class="math display">\[\varphi(C):=\int_CX\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G},\]</span> 则<span class="math inline">\(\varphi\)</span>是<span class="math inline">\(\mathscr{G}\)</span>上的符号测度，且根据 <span class="math display">\[\mathbb{P}(C)=0\implies \varphi(C)=\int_CX\mathrm{d}\mathbb{P}=0\]</span> 得知<span class="math inline">\(\varphi\ll\mathbb{P}\)</span>，从而由Radon-Nikodym定理知，存在概率空间<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量<span class="math inline">\(Y\in\mathscr{L}^1(\Omega)\)</span>，使得 <span class="math display">\[\varphi(C)=\int_CX\mathrm{d}\mathbb{P}=\int_CY\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G}.\]</span> 需要注意的是，上式中<span class="math inline">\(X\)</span>是<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，而<span class="math inline">\(Y\)</span>是<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量。据此，条件期望可以得到定义：</p><hr /><p><strong>定义2（条件期望）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<span class="math inline">\(\mathbb{E}(X|\mathscr{G})\in\mathscr{L}^1(\Omega)\)</span>是概率空间<span class="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量，且满足 <span class="math display">\[\int_CX\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G},\]</span> 则称<span class="math inline">\(\mathbb{E}(X|\mathscr{G})\)</span>是<span class="math inline">\(X\)</span>关于子<span class="math inline">\(\sigma\)</span>-域<span class="math inline">\(\mathscr{G}\)</span>的<strong>条件期望</strong>。</p><hr /><p>在初等概率论中，设<span class="math inline">\(A\in\mathscr{F}\)</span>，<span class="math inline">\(I_A\)</span>是<span class="math inline">\(A\)</span>的示性函数，则<span class="math inline">\(\mathbb{E} I_A=\mathbb{P}(A)\)</span>。受此启发，可以定义条件概率：</p><hr /><p><strong>定义3（条件概率）</strong>设<span class="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<span class="math inline">\(\sigma\)</span>-域，<span class="math inline">\(A\in\mathscr{F}\)</span>，称<span class="math inline">\(\mathbb{P}(A|\mathscr{G})=\mathbb{E}(I_A|\mathscr{G})\)</span>是<span class="math inline">\(A\)</span>关于子<span class="math inline">\(\sigma\)</span>-域<span class="math inline">\(\mathscr{G}\)</span>的<strong>条件概率</strong>。</p><hr /><p>需要注意，条件概率实际上也是随机变量。</p><h1 id="简单的例子">简单的例子</h1><p>为了加强对条件概率与条件期望的定义的理解，在这里考虑一些简单的例子。</p><hr /><p><strong>例4</strong> 设<span class="math inline">\(B\in\mathscr{F}\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B)=\{\varnothing,B,B^C,\Omega\}\)</span>，且<span class="math inline">\(\mathbb{P}(B)\notin\{0,1\}\)</span>。设<span class="math inline">\(A\in\mathscr{G}\)</span>，则<span class="math inline">\(\mathbb{P}(A|\mathscr{G})\)</span>是<span class="math inline">\(\mathscr{G}\)</span>上的可测函数，从而 <span class="math display">\[\mathbb{P}(A|\mathscr{G})=a I_B+b I_{B^C};\]</span> 另外，根据定义得 <span class="math display">\[\int_C\mathbb{P}(A|\mathscr{G})\mathrm{d}\mathbb{P}=\int_C I_A\mathrm{d}\mathbb{P}=\mathbb{P}(AC),\]</span> 取<span class="math inline">\(C=B\)</span>得<span class="math inline">\(a=\dfrac{\mathbb{P}(AB)}{\mathbb{P}(B)}=\mathbb{P}(A|B)\)</span>，取<span class="math inline">\(C=B^C\)</span>得<span class="math inline">\(b=\dfrac{\mathbb{P}(AB^C)}{\mathbb{P}(B^C)}=\mathbb{P}(A|B^C)\)</span>，从而 <span class="math display">\[\mathbb{P}(A|\mathscr{G})=\mathbb{P}(A|B)\cdot I_B+\mathbb{P}(A|B^C)\cdot I_{B^C}.\]</span></p><hr /><p><strong>例5</strong> 设<span class="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<span class="math inline">\(B_1\cup B_2\cup\cdots\cup B_m=\Omega\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>。设<span class="math inline">\(A\in\mathscr{F}\)</span>，类似例4，可以求出 <span class="math display">\[\mathbb{P}(A|\mathscr{G})=\sum_{j=1}^{m}\mathbb{P}(A|B_j)\cdot I_{B_j}.\]</span></p><hr /><p>对于例5的结果，如果<span class="math inline">\(\omega\in B_j\)</span>，也即给定条件<span class="math inline">\(B_j\)</span>，则 <span class="math display">\[\mathbb{P}(A|\mathscr{G})(\omega)=\mathbb{P}(A|B_j),\]</span> 右边是在条件<span class="math inline">\(B_j\)</span>下，事件<span class="math inline">\(A\)</span>发生的概率，这说明了抽象定义的合理性。</p><hr /><p><strong>例6</strong> 设<span class="math inline">\(A_1,A_2,\cdots,A_n\in\mathscr{F}\)</span>互不相关，且<span class="math inline">\(A_1\cup A_2\cup\cdots\cup A_n=\Omega\)</span>，令 <span class="math display">\[X=\sum_{i=1}^{n}a_i\cdot I_{A_i},\]</span> 再设<span class="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<span class="math inline">\(B_1\cup B_2\cup\cdots\cup B_m=\Omega\)</span>，<span class="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>，类似例4，可以求出 <span class="math display">\[\mathbb{E}(X|\mathscr{G})=\sum_{j=1}^{m}\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j)\cdot I_{B_j.}\]</span></p><hr /><p>例6的结果非常有趣。如果<span class="math inline">\(\omega\in B_j\)</span>，也即给定条件<span class="math inline">\(B_j\)</span>，我们知道 <span class="math display">\[\mathbb{E}(X|\mathscr{G})(\omega)=\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j),\]</span> 这事实上是将样本空间作划分<span class="math inline">\(\Omega=A_1\cup A_2\cup\cdots\cup A_n\)</span>，随机变量<span class="math inline">\(X\)</span>在第<span class="math inline">\(i\)</span>个集合<span class="math inline">\(A_i\)</span>上的取值为<span class="math inline">\(a_i\)</span>，而<span class="math inline">\(\mathbb{P}(A_i|B_j)\)</span>是在条件<span class="math inline">\(B_j\)</span>下，事件<span class="math inline">\(A_i\)</span>发生的概率，它们相乘求和，就得到了初等概率论中定义的条件期望。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="讨论班" scheme="https://dylandong.top/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/"/>
-    
-    
-    <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    <category term="条件概率" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87/"/>
     
     <category term="条件期望" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B/"/>
     
