@@ -156,32 +156,67 @@
 </blockquote>
 <span id="more"></span>
 <h1 id="试题">试题</h1>
-<p>一、设事件<span class="math inline">\(A,B\)</span>的概率都为<span class="math inline">\(\dfrac{2}{3}\)</span>，求事件<span class="math inline">\(A\cup B-(AB)\)</span>的概率的最大值。</p>
+<p>一、设事件<span class="math inline">\(A,B\)</span>的概率都为<span
+class="math inline">\(\dfrac{2}{3}\)</span>，求事件<span
+class="math inline">\(A\cup B-(AB)\)</span>的概率的最大值。</p>
 <hr />
 <p>二、独立地投掷三个骰子，求第一个骰子和第二个骰子的点数之和与第三个骰子的点数相等的概率。</p>
 <hr />
-<p>三、设<span class="math inline">\(X\sim\mathrm{Exp}(2)\)</span>，写出<span class="math inline">\(X\)</span>的密度函数，并求<span class="math inline">\(\mathbb{E} X^3\)</span>。</p>
+<p>三、设<span
+class="math inline">\(X\sim\mathrm{Exp}(2)\)</span>，写出<span
+class="math inline">\(X\)</span>的密度函数，并求<span
+class="math inline">\(\mathbb{E} X^3\)</span>。</p>
 <hr />
-<p>四、设<span class="math inline">\(X\sim\mathcal{N}(0,1)\)</span>，写出<span class="math inline">\(X\)</span>的密度函数，并求<span class="math inline">\(\mathbb{E}\exp\left(\dfrac{16}{50}X^2\right)\)</span>。</p>
+<p>四、设<span
+class="math inline">\(X\sim\mathcal{N}(0,1)\)</span>，写出<span
+class="math inline">\(X\)</span>的密度函数，并求<span
+class="math inline">\(\mathbb{E}\exp\left(\dfrac{16}{50}X^2\right)\)</span>。</p>
 <hr />
-<p>五、设<span class="math inline">\(X\sim\mathcal{U}[0,1]\)</span>，求<span class="math inline">\(Y=\dfrac{1}{1+X}\)</span>的密度函数。</p>
+<p>五、设<span
+class="math inline">\(X\sim\mathcal{U}[0,1]\)</span>，求<span
+class="math inline">\(Y=\dfrac{1}{1+X}\)</span>的密度函数。</p>
 <hr />
-<p>六、设<span class="math inline">\((X,Y)\sim\mathcal{N}(a_1,a_2;\sigma_1^2,\sigma_2^2;r)\)</span>，求<span class="math inline">\(X+Y\)</span>与<span class="math inline">\(X-Y\)</span>独立的充要条件。</p>
+<p>六、设<span
+class="math inline">\((X,Y)\sim\mathcal{N}(a_1,a_2;\sigma_1^2,\sigma_2^2;r)\)</span>，求<span
+class="math inline">\(X+Y\)</span>与<span
+class="math inline">\(X-Y\)</span>独立的充要条件。</p>
 <hr />
-<p>七、设<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立，且<span class="math inline">\(\mathrm{Var} X_i=\sigma_i^2,1\le i\le n\)</span>，再设<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>非负，且<span class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_i=1\)</span>，求使得<span class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>的方差最小的权重<span class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>。</p>
+<p>七、设<span
+class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立，且<span
+class="math inline">\(\mathrm{Var} X_i=\sigma_i^2,1\le i\le
+n\)</span>，再设<span
+class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>非负，且<span
+class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_i=1\)</span>，求使得<span
+class="math inline">\(\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>的方差最小的权重<span
+class="math inline">\(\omega_1,\omega_2,\cdots,\omega_n\)</span>。</p>
 <hr />
-<p>八、设<span class="math inline">\(X\)</span>的特征函数<span class="math inline">\(f(t)=\cos^{2021}(t)\)</span>，求<span class="math inline">\(X\)</span>的期望与方差。</p>
+<p>八、设<span class="math inline">\(X\)</span>的特征函数<span
+class="math inline">\(f(t)=\cos^{2021}(t)\)</span>，求<span
+class="math inline">\(X\)</span>的期望与方差。</p>
 <hr />
 <p>九、叙述并证明Levy中心极限定理。</p>
 <hr />
 <h1 id="解答">解答</h1>
 <p>一、注意到 <span class="math display">\[
-\mathbb{P}(A\cup B-(AB))=\mathbb{P}(A\cup B)-\mathbb{P}(AB)\le 1-\mathbb{P}(AB),
+\mathbb{P}(A\cup B-(AB))=\mathbb{P}(A\cup B)-\mathbb{P}(AB)\le
+1-\mathbb{P}(AB),
 \]</span> 以及 <span class="math display">\[
-\mathbb{P}(A\cup B-(AB))=\mathbb{P}(A-B)+\mathbb{P}(B-A)=\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(AB),
-\]</span> 解得<span class="math inline">\(\mathbb{P}(AB)\geq\dfrac{1}{3}\)</span>，从而<span class="math inline">\(\mathbb{P}(A\cup B-(AB))\le\dfrac{2}{3}\)</span>。一种取等的方式如下：设<span class="math inline">\(\Omega=[0,1]\)</span>，<span class="math inline">\(A=\left[0,\dfrac{2}{3}\right]\)</span>，<span class="math inline">\(B=\left[\dfrac{1}{3},1\right]\)</span>，则<span class="math inline">\(\mathbb{P}(A)=\mathbb{P}(B)=\dfrac{2}{3}\)</span>，<span class="math inline">\(\mathbb{P}(A\cup B-(AB))=\dfrac{2}{3}\)</span>。</p>
+\mathbb{P}(A\cup
+B-(AB))=\mathbb{P}(A-B)+\mathbb{P}(B-A)=\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(AB),
+\]</span> 解得<span
+class="math inline">\(\mathbb{P}(AB)\geq\dfrac{1}{3}\)</span>，从而<span
+class="math inline">\(\mathbb{P}(A\cup
+B-(AB))\le\dfrac{2}{3}\)</span>。一种取等的方式如下：设<span
+class="math inline">\(\Omega=[0,1]\)</span>，<span
+class="math inline">\(A=\left[0,\dfrac{2}{3}\right]\)</span>，<span
+class="math inline">\(B=\left[\dfrac{1}{3},1\right]\)</span>，则<span
+class="math inline">\(\mathbb{P}(A)=\mathbb{P}(B)=\dfrac{2}{3}\)</span>，<span
+class="math inline">\(\mathbb{P}(A\cup
+B-(AB))=\dfrac{2}{3}\)</span>。</p>
 <hr />
-<p>二、设三个骰子的点数分别为<span class="math inline">\(X,Y,Z\)</span>，由全概率公式得 <span class="math display">\[
+<p>二、设三个骰子的点数分别为<span
+class="math inline">\(X,Y,Z\)</span>，由全概率公式得 <span
+class="math display">\[
 \begin{aligned}
 \mathbb{P}(X+Y=Z)&amp;=\sum_{k=1}^{6}\mathbb{P}(X+Y=k|Z=k)\\
 &amp;=\dfrac{1}{6}\times\dfrac{1}{36}\times(1+2+3+4+5)\\
@@ -205,36 +240,59 @@ p(x)=\dfrac{1}{\sqrt{2\pi}}\cdot\mathrm{e}^{-\frac{1}{2}x^2},
 \mathbb{E}\exp\left(\dfrac{16}{50}X^2\right)=\int_{-\infty}^{+\infty}\dfrac{1}{\sqrt{2\pi}}\cdot\mathrm{e}^{-\frac{9}{50}x^2}\mathrm{d}x=\dfrac{5}{3}.
 \]</span></p>
 <hr />
-<p>五、由<span class="math inline">\(y=\dfrac{1}{1+x}\)</span>得<span class="math inline">\(x=\dfrac{1}{y}-1\)</span>，<span class="math inline">\(\mathrm{d}x=-\dfrac{\mathrm{d}y}{y^2}\)</span>，因此 <span class="math display">\[
+<p>五、由<span class="math inline">\(y=\dfrac{1}{1+x}\)</span>得<span
+class="math inline">\(x=\dfrac{1}{y}-1\)</span>，<span
+class="math inline">\(\mathrm{d}x=-\dfrac{\mathrm{d}y}{y^2}\)</span>，因此
+<span class="math display">\[
 q(y)=\dfrac{1}{y^2},\quad \dfrac{1}{2}\le y\le 1.
 \]</span></p>
 <hr />
-<p>六、由<span class="math inline">\((X,Y)\)</span>服从正态分布知<span class="math inline">\((X-Y,X+Y)\)</span>服从正态分布，从而独立等价于不相关。计算得 <span class="math display">\[
-\mathrm{Cov}(X-Y,X+Y)=\mathrm{Var} X-\mathrm{Var}Y=\sigma_1^2-\sigma_2^2,
-\]</span> 因此<span class="math inline">\(X-Y\)</span>与<span class="math inline">\(X+Y\)</span>独立的充要条件是<span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span>。</p>
+<p>六、由<span class="math inline">\((X,Y)\)</span>服从正态分布知<span
+class="math inline">\((X-Y,X+Y)\)</span>服从正态分布，从而独立等价于不相关。计算得
+<span class="math display">\[
+\mathrm{Cov}(X-Y,X+Y)=\mathrm{Var}
+X-\mathrm{Var}Y=\sigma_1^2-\sigma_2^2,
+\]</span> 因此<span class="math inline">\(X-Y\)</span>与<span
+class="math inline">\(X+Y\)</span>独立的充要条件是<span
+class="math inline">\(\sigma_1^2=\sigma_2^2\)</span>。</p>
 <hr />
-<p>七、记<span class="math inline">\(Y=\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>，计算得 <span class="math display">\[
+<p>七、记<span
+class="math inline">\(Y=\displaystyle\sum_{i=1}^{n}\omega_iX_i\)</span>，计算得
+<span class="math display">\[
 \mathrm{Var}Y=\mathrm{Var}\left(\sum_{i=1}^{n}\omega_iX_i\right)=\sum_{i=1}^{n}\omega_i^2\sigma_i^2.
 \]</span> 由Cauchy不等式得 <span class="math display">\[
 \left(\sum_{i=1}^{n}\omega_i^2\sigma_i^2\right)\cdot\left(\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}\right)\geq\left(\sum_{i=1}^{n}\omega_i\right)^2=1,
 \]</span> 从而 <span class="math display">\[
 \mathrm{Var}Y\geq\dfrac{1}{\displaystyle\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}},
-\]</span> 取等时<span class="math inline">\(\omega_i^2\sigma_i^4=\omega_j^2\sigma_j^4\)</span>，解得<span class="math inline">\(\omega_j=\left.\dfrac{1}{\sigma_j^2}\middle/\displaystyle\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}\right.\)</span>。</p>
+\]</span> 取等时<span
+class="math inline">\(\omega_i^2\sigma_i^4=\omega_j^2\sigma_j^4\)</span>，解得<span
+class="math inline">\(\omega_j=\left.\dfrac{1}{\sigma_j^2}\middle/\displaystyle\sum_{i=1}^{n}\dfrac{1}{\sigma_i^2}\right.\)</span>。</p>
 <hr />
-<p>八、计算得<span class="math inline">\(\mathbb{E}X=\dfrac{f&#39;(0)}{i}=0\)</span>，<span class="math inline">\(\mathbb{E}X^2=\dfrac{f&#39;&#39;(0)}{i^2}=2021\)</span>，因此<span class="math inline">\(\mathrm{Var}X=\mathbb{E}X^2=2021\)</span>。</p>
+<p>八、计算得<span
+class="math inline">\(\mathbb{E}X=\dfrac{f&#39;(0)}{i}=0\)</span>，<span
+class="math inline">\(\mathbb{E}X^2=\dfrac{f&#39;&#39;(0)}{i^2}=2021\)</span>，因此<span
+class="math inline">\(\mathrm{Var}X=\mathbb{E}X^2=2021\)</span>。</p>
 <hr />
-<p>九、设<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立同分布，且<span class="math inline">\(\mathbb{E}X=\mu\)</span>，<span class="math inline">\(0&lt;\mathrm{Var}X=\sigma^2&lt;\infty\)</span>，则 <span class="math display">\[
-\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot \sigma}\xrightarrow{d}\mathcal{N}(0,1).
+<p>九、设<span
+class="math inline">\(X_1,X_2,\cdots,X_n\)</span>独立同分布，且<span
+class="math inline">\(\mathbb{E}X=\mu\)</span>，<span
+class="math inline">\(0&lt;\mathrm{Var}X=\sigma^2&lt;\infty\)</span>，则
+<span class="math display">\[
+\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot
+\sigma}\xrightarrow{d}\mathcal{N}(0,1).
 \]</span> 计算得 <span class="math display">\[
 \begin{aligned}
-\mathbb{E}\exp\left\{it\cdot\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot \sigma}\right\}&amp;=\mathbb{E}\exp\left\{it\cdot\sum_{i=1}^{n}\dfrac{X_i-\mu}{\sqrt{n}\sigma}\right\}\\
+\mathbb{E}\exp\left\{it\cdot\dfrac{X_1+X_2+\cdots+X_n-n\mu}{\sqrt{n}\cdot
+\sigma}\right\}&amp;=\mathbb{E}\exp\left\{it\cdot\sum_{i=1}^{n}\dfrac{X_i-\mu}{\sqrt{n}\sigma}\right\}\\
 &amp;=\prod_{i=1}^{n}\mathbb{E}\exp\left\{it\cdot\dfrac{X_i-\mu}{\sqrt{n}\sigma}\right\}\\
 &amp;=\left(\mathbb{E}\exp\left\{it\cdot\dfrac{X-\mu}{\sqrt{n}\sigma}\right\}\right)^n\\
 &amp;=\left(1-\dfrac{t^2}{n}+o\left(\dfrac{t^2}{n}\right)\right)^n\\
 &amp;\to\exp\left\{-\dfrac{t^2}{2}\right\},
 \end{aligned}
-\]</span> 右式即为<span class="math inline">\(\mathcal{N}(0,1)\)</span>的特征函数，从而上式依分布收敛到<span class="math inline">\(\mathcal{N}(0,1)\)</span>。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/ec41/">https://dylandong.top/posts/ec41/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E8%AF%95%E9%A2%98/">试题</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/probability.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4367/"><img class="prev-cover" src="/posts/img/report_1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">基于ElegantPaper的带封面报告模板</div></div></a></div><div class="next-post pull-right"><a href="/posts/fe96/"><img class="next-cover" src="/posts/top/data.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2022年数理统计试题回忆及解答</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/a18b/" title="2022年高等概率论讨论班"><img class="cover" src="/posts/top/probability.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">2022年高等概率论讨论班</div></div></a></div><div><a href="/posts/76ab/" title="随机变量序列的一致可积"><img class="cover" src="/posts/top/data.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">随机变量序列的一致可积</div></div></a></div><div><a href="/posts/d646/" title="矩收敛及其基本性质"><img class="cover" src="/posts/top/math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">矩收敛及其基本性质</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大四在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%95%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">试题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-number">2.</span> <span class="toc-text">解答</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的国赛论文模板"/></a><div class="content"><a class="title" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板">基于ElegantPaper的国赛论文模板</a><time datetime="2022-05-13T05:34:47.691Z" title="发表于 2022-05-13 13:34:47">2022-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/76ab/" title="随机变量序列的一致可积"><img src="/posts/top/data.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量序列的一致可积"/></a><div class="content"><a class="title" href="/posts/76ab/" title="随机变量序列的一致可积">随机变量序列的一致可积</a><time datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d646/" title="矩收敛及其基本性质"><img src="/posts/top/math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩收敛及其基本性质"/></a><div class="content"><a class="title" href="/posts/d646/" title="矩收敛及其基本性质">矩收敛及其基本性质</a><time datetime="2022-05-12T12:37:34.000Z" title="发表于 2022-05-12 20:37:34">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 董晟渤</div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="opentype">闽ICP备2022001871号</a> | <a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000858"><img src="/img/备案图标.png" />陕公网安备61010302000858号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+\]</span> 右式即为<span
+class="math inline">\(\mathcal{N}(0,1)\)</span>的特征函数，从而上式依分布收敛到<span
+class="math inline">\(\mathcal{N}(0,1)\)</span>。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/ec41/">https://dylandong.top/posts/ec41/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E8%AF%95%E9%A2%98/">试题</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/probability.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4367/"><img class="prev-cover" src="/posts/img/report_1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">基于ElegantPaper的带封面报告模板</div></div></a></div><div class="next-post pull-right"><a href="/posts/fe96/"><img class="next-cover" src="/posts/top/data.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2022年数理统计试题回忆及解答</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/a18b/" title="2022年高等概率论讨论班"><img class="cover" src="/posts/top/probability.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">2022年高等概率论讨论班</div></div></a></div><div><a href="/posts/76ab/" title="随机变量序列的一致可积"><img class="cover" src="/posts/top/data.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">随机变量序列的一致可积</div></div></a></div><div><a href="/posts/d646/" title="矩收敛及其基本性质"><img class="cover" src="/posts/top/math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-12</div><div class="title">矩收敛及其基本性质</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大四在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%95%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">试题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-number">2.</span> <span class="toc-text">解答</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9d29/" title="基于ElegantPaper的美赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的美赛论文模板"/></a><div class="content"><a class="title" href="/posts/9d29/" title="基于ElegantPaper的美赛论文模板">基于ElegantPaper的美赛论文模板</a><time datetime="2022-11-27T08:30:16.855Z" title="发表于 2022-11-27 16:30:16">2022-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的国赛论文模板"/></a><div class="content"><a class="title" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板">基于ElegantPaper的国赛论文模板</a><time datetime="2022-11-27T08:30:16.850Z" title="发表于 2022-11-27 16:30:16">2022-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/76ab/" title="随机变量序列的一致可积"><img src="/posts/top/data.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量序列的一致可积"/></a><div class="content"><a class="title" href="/posts/76ab/" title="随机变量序列的一致可积">随机变量序列的一致可积</a><time datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 董晟渤</div><div class="footer_custom_text">基于<a target="_blank" rel="noopener" href="https://github.com/dylan0821">Github Pages</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
   window.MathJax = {
     tex: {
       inlineMath: [ ['$','$'], ["\\(","\\)"]],

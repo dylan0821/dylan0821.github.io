@@ -154,82 +154,201 @@
 </head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/portrait.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/books"><i class="fa-fw fa-solid fa-book"></i><span> 书架</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/posts/top/data2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">董晟渤的个人主页</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-solid fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 课程</span></a></div><div class="menus_item"><a class="site-page" href="/works"><i class="fa-fw fa-solid fa-file"></i><span> 作品</span></a></div><div class="menus_item"><a class="site-page" href="/books"><i class="fa-fw fa-solid fa-book"></i><span> 书架</span></a></div><div class="menus_item"><a class="site-page" href="/about"><i class="fa-fw fa-solid fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">离散时间鞅的定义</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-15T07:19:45.000Z" title="发表于 2022-03-15 15:19:45">2022-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-20T03:30:20.256Z" title="更新于 2022-03-20 11:30:20">2022-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/">讨论班</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="离散时间鞅的定义"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>鞅（Martingale）的概念来源于公平赌博。在上一节中，所提到的鞅差过程也与鞅有一定的联系。</p>
 <span id="more"></span>
 <hr />
-<p><strong>定义1（鞅）</strong>设<span class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是带流的随机过程，也即对任意的<span class="math inline">\(n\geq0\)</span>，<span class="math inline">\(X_n\)</span>是关于<span class="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<span class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。如果对任意的<span class="math inline">\(n\geq0\)</span>，<span class="math inline">\(X_n\)</span>的积分存在，且 <span class="math display">\[
+<p><strong>定义1（鞅）</strong>设<span
+class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是带流的随机过程，也即对任意的<span
+class="math inline">\(n\geq0\)</span>，<span
+class="math inline">\(X_n\)</span>是关于<span
+class="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<span
+class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。如果对任意的<span
+class="math inline">\(n\geq0\)</span>，<span
+class="math inline">\(X_n\)</span>的积分存在，且 <span
+class="math display">\[
 \mathbb{E}(X_{n+1}|\mathscr{F}_n)=X_n,\quad\mathrm{a.s.},
-\]</span> 则称<span class="math inline">\(\{X_n\}\)</span>为<strong>鞅</strong>。如果将上式改为 <span class="math display">\[
-\mathbb{E}(X_{n+1}|\mathscr{F}_n)\le X_n,\quad\mathrm{a.s.},\quad\text{或}\quad\mathbb{E}(X_{n+1}|\mathscr{F}_n)\geq X_n,\quad\mathrm{a.s.},
-\]</span> 则分别称<span class="math inline">\(\{X_n\}\)</span>为<strong>上鞅</strong>或<strong>下鞅</strong>。</p>
+\]</span> 则称<span
+class="math inline">\(\{X_n\}\)</span>为<strong>鞅</strong>。如果将上式改为
+<span class="math display">\[
+\mathbb{E}(X_{n+1}|\mathscr{F}_n)\le
+X_n,\quad\mathrm{a.s.},\quad\text{或}\quad\mathbb{E}(X_{n+1}|\mathscr{F}_n)\geq
+X_n,\quad\mathrm{a.s.},
+\]</span> 则分别称<span
+class="math inline">\(\{X_n\}\)</span>为<strong>上鞅</strong>或<strong>下鞅</strong>。</p>
 <hr />
-<p>根据以上定义，若<span class="math inline">\(\{-X_n\}\)</span>为上鞅，则<span class="math inline">\(\{X_n\}\)</span>为下鞅，反之亦成立。</p>
+<p>根据以上定义，若<span
+class="math inline">\(\{-X_n\}\)</span>为上鞅，则<span
+class="math inline">\(\{X_n\}\)</span>为下鞅，反之亦成立。</p>
 <hr />
-<p><strong>例2</strong> 考虑简单的赌博模型，设本金为<span class="math inline">\(X_0\)</span>，对<span class="math inline">\(n\geq 1\)</span>，每次赌博的金额为1元，收益为<span class="math inline">\(\delta_n\)</span>，且 <span class="math display">\[
+<p><strong>例2</strong> 考虑简单的赌博模型，设本金为<span
+class="math inline">\(X_0\)</span>，对<span class="math inline">\(n\geq
+1\)</span>，每次赌博的金额为1元，收益为<span
+class="math inline">\(\delta_n\)</span>，且 <span
+class="math display">\[
 \mathbb{P}(\delta_n=-1)=\mathbb{P}(\delta_n=1)=\dfrac{1}{2},
-\]</span> 设经过<span class="math inline">\(n\)</span>次赌博后的本金为<span class="math inline">\(X_n\)</span>，则有 <span class="math display">\[
+\]</span> 设经过<span
+class="math inline">\(n\)</span>次赌博后的本金为<span
+class="math inline">\(X_n\)</span>，则有 <span class="math display">\[
 X_{n+1}=X_0+\sum_{i=1}^{n+1}\delta_i=X_n+\delta_{n+1}.
-\]</span> 记<span class="math inline">\(\mathscr{F}_n=\sigma(X_0,\delta_1,\cdots,\delta_n)\)</span>，则<span class="math inline">\(X_n\)</span>是关于<span class="math inline">\(\mathscr{F}_n\)</span>可测的，且<span class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>，并且 <span class="math display">\[
+\]</span> 记<span
+class="math inline">\(\mathscr{F}_n=\sigma(X_0,\delta_1,\cdots,\delta_n)\)</span>，则<span
+class="math inline">\(X_n\)</span>是关于<span
+class="math inline">\(\mathscr{F}_n\)</span>可测的，且<span
+class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>，并且
+<span class="math display">\[
 \mathbb{E}(X_{n+1}|\mathscr{F}_n)=\mathbb{E}(X_n|\mathscr{F}_n)+\mathbb{E}(\delta_{n+1}|\mathscr{F})=X_n+\mathbb{E}\delta_{n+1}=X_n,
-\]</span> 其中<span class="math inline">\(X_n\)</span>关于<span class="math inline">\(\mathscr{F}_n\)</span>可测，<span class="math inline">\(\delta_{n+1}\)</span>与<span class="math inline">\(\mathscr{F}_n\)</span>独立。从而<span class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是鞅。</p>
+\]</span> 其中<span class="math inline">\(X_n\)</span>关于<span
+class="math inline">\(\mathscr{F}_n\)</span>可测，<span
+class="math inline">\(\delta_{n+1}\)</span>与<span
+class="math inline">\(\mathscr{F}_n\)</span>独立。从而<span
+class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是鞅。</p>
 <hr />
-<p>在大致了解了鞅之后，现在需要进一步研究鞅的性质。以下通常用<span class="math inline">\(\{X_n\}\)</span>表示鞅，并且记使得<span class="math inline">\(X_0, X_1, \cdots, X_n\)</span>可测的最小<span class="math inline">\(\sigma\)</span>-代数 <span class="math display">\[
-\mathscr{F}_n=\sigma(X_0,X_1,\cdots,X_n). 
+<p>在大致了解了鞅之后，现在需要进一步研究鞅的性质。以下通常用<span
+class="math inline">\(\{X_n\}\)</span>表示鞅，并且记使得<span
+class="math inline">\(X_0, X_1, \cdots, X_n\)</span>可测的最小<span
+class="math inline">\(\sigma\)</span>-代数 <span class="math display">\[
+\mathscr{F}_n=\sigma(X_0,X_1,\cdots,X_n).
 \]</span></p>
 <hr />
-<p><strong>命题3（期望）</strong> 设<span class="math inline">\(\{X_n\}\)</span>为鞅，则<span class="math inline">\(\mathbb{E}X_n\)</span>为常数；设<span class="math inline">\(\{X_n\}\)</span>为上鞅，则<span class="math inline">\(\{\mathbb{E}X_n\}\)</span>单调递减；设<span class="math inline">\(\{X_n\}\)</span>为下鞅，则<span class="math inline">\(\{\mathbb{E}X_n\}\)</span>单调递增。</p>
+<p><strong>命题3（期望）</strong> 设<span
+class="math inline">\(\{X_n\}\)</span>为鞅，则<span
+class="math inline">\(\mathbb{E}X_n\)</span>为常数；设<span
+class="math inline">\(\{X_n\}\)</span>为上鞅，则<span
+class="math inline">\(\{\mathbb{E}X_n\}\)</span>单调递减；设<span
+class="math inline">\(\{X_n\}\)</span>为下鞅，则<span
+class="math inline">\(\{\mathbb{E}X_n\}\)</span>单调递增。</p>
 <hr />
-<p><strong>证明</strong> 对于鞅的情形，对任意的<span class="math inline">\(n\geq0\)</span>，都有 <span class="math display">\[
+<p><strong>证明</strong> 对于鞅的情形，对任意的<span
+class="math inline">\(n\geq0\)</span>，都有 <span
+class="math display">\[
 \mathbb{E}X_{n+1}=\mathbb{E}[\mathbb{E}(X_{n+1}|\mathscr{F}_n)]=\mathbb{E}X_n,
-\]</span> 这便说明了<span class="math inline">\(\mathbb{E}X_n\)</span>为常数。上鞅和下鞅的情形可以类似证明。</p>
+\]</span> 这便说明了<span
+class="math inline">\(\mathbb{E}X_n\)</span>为常数。上鞅和下鞅的情形可以类似证明。</p>
 <hr />
-<p><strong>命题4（可加性）</strong>设<span class="math inline">\(\{X_n\}\)</span>、<span class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅、下鞅），则<span class="math inline">\(\{X_n+Y_n\}\)</span>也为鞅（上鞅、下鞅）。</p>
+<p><strong>命题4（可加性）</strong>设<span
+class="math inline">\(\{X_n\}\)</span>、<span
+class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅、下鞅），则<span
+class="math inline">\(\{X_n+Y_n\}\)</span>也为鞅（上鞅、下鞅）。</p>
 <hr />
-<p><strong>证明</strong> 对于鞅的情形，注意到 <span class="math display">\[
+<p><strong>证明</strong> 对于鞅的情形，注意到 <span
+class="math display">\[
 \mathbb{E}(X_{n+1}+Y_{n+1}|\mathscr{F}_n)=\mathbb{E}(X_{n+1}|\mathscr{F}_n)+\mathbb{E}(Y_{n+1}|\mathscr{F}_n)=X_n+Y_n,
-\]</span> 因此<span class="math inline">\(\{X_n+Y_n\}\)</span>为鞅，同理也可以证明上鞅和下鞅的情形。</p>
+\]</span> 因此<span
+class="math inline">\(\{X_n+Y_n\}\)</span>为鞅，同理也可以证明上鞅和下鞅的情形。</p>
 <hr />
-<p><strong>命题5（最大值与最小值）</strong> 设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅），则<span class="math inline">\(\{X_n\wedge Y_n\}\)</span>为上鞅；设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(\{Y_n\}\)</span>为鞅（下鞅），则<span class="math inline">\(\{X_n\lor Y_n\}\)</span>为下鞅。</p>
+<p><strong>命题5（最大值与最小值）</strong> 设<span
+class="math inline">\(\{X_n\}\)</span>和<span
+class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅），则<span
+class="math inline">\(\{X_n\wedge Y_n\}\)</span>为上鞅；设<span
+class="math inline">\(\{X_n\}\)</span>和<span
+class="math inline">\(\{Y_n\}\)</span>为鞅（下鞅），则<span
+class="math inline">\(\{X_n\lor Y_n\}\)</span>为下鞅。</p>
 <hr />
-<p><strong>证明</strong> 首先，设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅），计算得 <span class="math display">\[
-\mathbb{E}(X_{n+1}\wedge Y_{n+1}|\mathscr{F}_n)\le\mathbb{E}(X_{n+1}|\mathscr{F}_n)\wedge\mathbb{E}(Y_{n+1}|\mathscr{F}_n)\le X_n\wedge Y_n,
-\]</span> 因此<span class="math inline">\(\{X_n\wedge Y_n\}\)</span>为上鞅；接下来，设<span class="math inline">\(\{X_n\}\)</span>和<span class="math inline">\(\{Y_n\}\)</span>为鞅（下鞅），计算得 <span class="math display">\[
-\mathbb{E}(X_{n+1}\lor Y_{n+1}|\mathscr{F}_n)\geq\mathbb{E}(X_{n+1}|\mathscr{F}_n)\lor\mathbb{E}(Y_{n+1}|\mathscr{F}_n)\geq X_n\lor Y_n,
-\]</span> 因此<span class="math inline">\(\{X_n\lor Y_n\}\)</span>为下鞅。</p>
+<p><strong>证明</strong> 首先，设<span
+class="math inline">\(\{X_n\}\)</span>和<span
+class="math inline">\(\{Y_n\}\)</span>为鞅（上鞅），计算得 <span
+class="math display">\[
+\mathbb{E}(X_{n+1}\wedge
+Y_{n+1}|\mathscr{F}_n)\le\mathbb{E}(X_{n+1}|\mathscr{F}_n)\wedge\mathbb{E}(Y_{n+1}|\mathscr{F}_n)\le
+X_n\wedge Y_n,
+\]</span> 因此<span class="math inline">\(\{X_n\wedge
+Y_n\}\)</span>为上鞅；接下来，设<span
+class="math inline">\(\{X_n\}\)</span>和<span
+class="math inline">\(\{Y_n\}\)</span>为鞅（下鞅），计算得 <span
+class="math display">\[
+\mathbb{E}(X_{n+1}\lor
+Y_{n+1}|\mathscr{F}_n)\geq\mathbb{E}(X_{n+1}|\mathscr{F}_n)\lor\mathbb{E}(Y_{n+1}|\mathscr{F}_n)\geq
+X_n\lor Y_n,
+\]</span> 因此<span class="math inline">\(\{X_n\lor
+Y_n\}\)</span>为下鞅。</p>
 <hr />
-<p><strong>命题6（凸函数）</strong>设<span class="math inline">\(\{X_n\}\)</span>为鞅，<span class="math inline">\(f\)</span>为<span class="math inline">\(\mathbb{R}\)</span>上的连续凸函数，如果每个<span class="math inline">\(f(X_n)\)</span>可积，则<span class="math inline">\(\{f(X_n)\}\)</span>为下鞅；设<span class="math inline">\(\{X_n\}\)</span>为下鞅，<span class="math inline">\(f\)</span>是连续非降的凸函数，如果每个<span class="math inline">\(f(X_n)\)</span>可积，则<span class="math inline">\(\{f(X_n)\}\)</span>为下鞅。</p>
+<p><strong>命题6（凸函数）</strong>设<span
+class="math inline">\(\{X_n\}\)</span>为鞅，<span
+class="math inline">\(f\)</span>为<span
+class="math inline">\(\mathbb{R}\)</span>上的连续凸函数，如果每个<span
+class="math inline">\(f(X_n)\)</span>可积，则<span
+class="math inline">\(\{f(X_n)\}\)</span>为下鞅；设<span
+class="math inline">\(\{X_n\}\)</span>为下鞅，<span
+class="math inline">\(f\)</span>是连续非降的凸函数，如果每个<span
+class="math inline">\(f(X_n)\)</span>可积，则<span
+class="math inline">\(\{f(X_n)\}\)</span>为下鞅。</p>
 <hr />
-<p><strong>证明</strong> 设<span class="math inline">\(\{X_n\}\)</span>为鞅，根据Jensen不等式得 <span class="math display">\[
-\mathbb{E}(f(X_{n+1})|\mathscr{F}_n)\geq f(\mathbb{E}(X_{n+1}|\mathscr{F}_n))=f(X_n),
-\]</span> 因此<span class="math inline">\(\{f(X_n)\}\)</span>为下鞅；再设<span class="math inline">\(\{X_n\}\)</span>为下鞅，同样根据Jensen不等式得 <span class="math display">\[
-\mathbb{E}(f(X_{n+1})|\mathscr{F}_n)\geq f(\mathbb{E}(X_{n+1}|\mathscr{F}_n))\geq f(X_n),
-\]</span> 因此<span class="math inline">\(\{f(X_n)\}\)</span>为下鞅。</p>
+<p><strong>证明</strong> 设<span
+class="math inline">\(\{X_n\}\)</span>为鞅，根据Jensen不等式得 <span
+class="math display">\[
+\mathbb{E}(f(X_{n+1})|\mathscr{F}_n)\geq
+f(\mathbb{E}(X_{n+1}|\mathscr{F}_n))=f(X_n),
+\]</span> 因此<span
+class="math inline">\(\{f(X_n)\}\)</span>为下鞅；再设<span
+class="math inline">\(\{X_n\}\)</span>为下鞅，同样根据Jensen不等式得
+<span class="math display">\[
+\mathbb{E}(f(X_{n+1})|\mathscr{F}_n)\geq
+f(\mathbb{E}(X_{n+1}|\mathscr{F}_n))\geq f(X_n),
+\]</span> 因此<span
+class="math inline">\(\{f(X_n)\}\)</span>为下鞅。</p>
 <hr />
 <p>回忆起在上一节中定义了鞅差。</p>
 <hr />
-<p><strong>定义7（鞅差）</strong>设<span class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq 0\}\)</span>是带流的随机过程，也即对任意的<span class="math inline">\(n\geq 0\)</span>，<span class="math inline">\(X_n\)</span>是关于<span class="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<span class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。如果对任意的<span class="math inline">\(n\geq 0\)</span>，<span class="math inline">\(X_n\)</span>的积分存在，且 <span class="math display">\[
+<p><strong>定义7（鞅差）</strong>设<span
+class="math inline">\(\{(X_n,\mathscr{F}_n),n\geq
+0\}\)</span>是带流的随机过程，也即对任意的<span
+class="math inline">\(n\geq 0\)</span>，<span
+class="math inline">\(X_n\)</span>是关于<span
+class="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<span
+class="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。如果对任意的<span
+class="math inline">\(n\geq 0\)</span>，<span
+class="math inline">\(X_n\)</span>的积分存在，且 <span
+class="math display">\[
 \mathbb{E}(X_{n+1}|\mathscr{F}_n)=0,\quad\mathrm{a.s.},
-\]</span> 则称<span class="math inline">\(\{X_n\}\)</span>为<strong>鞅差</strong>。</p>
+\]</span> 则称<span
+class="math inline">\(\{X_n\}\)</span>为<strong>鞅差</strong>。</p>
 <hr />
-<p>事实上，设<span class="math inline">\(\{X_n\}\)</span>为鞅，若记<span class="math inline">\(x_0=X_0\)</span>，<span class="math inline">\(x_{n+1}=X_{n+1}-X_n(n\geq 0)\)</span>，则有 <span class="math display">\[
+<p>事实上，设<span class="math inline">\(\{X_n\}\)</span>为鞅，若记<span
+class="math inline">\(x_0=X_0\)</span>，<span
+class="math inline">\(x_{n+1}=X_{n+1}-X_n(n\geq 0)\)</span>，则有 <span
+class="math display">\[
 X_n=\sum_{i=0}^{n}x_i,\quad\text{且}\quad\mathbb{E}(x_{n+1}|\mathscr{F}_n)=X_n-X_n=0,
-\]</span> 这便说明了<span class="math inline">\(\{x_n\}\)</span>是鞅差。反之，如果<span class="math inline">\(\{x_n\}\)</span>是鞅差，也即对任意的<span class="math inline">\(n\geq 0\)</span>，都有<span class="math inline">\(\mathbb{E}(x_{n+1}|\mathscr{F}_n)=0\)</span>，记 <span class="math display">\[
+\]</span> 这便说明了<span
+class="math inline">\(\{x_n\}\)</span>是鞅差。反之，如果<span
+class="math inline">\(\{x_n\}\)</span>是鞅差，也即对任意的<span
+class="math inline">\(n\geq 0\)</span>，都有<span
+class="math inline">\(\mathbb{E}(x_{n+1}|\mathscr{F}_n)=0\)</span>，记
+<span class="math display">\[
 X_n=\sum_{i=0}^{n}x_i,
-\]</span> 则根据<span class="math inline">\(x_1,x_2,\cdots,x_n\)</span>关于<span class="math inline">\(\mathscr{F}_n\)</span>是可测的，知<span class="math inline">\(X_n\)</span>关于<span class="math inline">\(\mathscr{F}_n\)</span>是可测的，从而 <span class="math display">\[
+\]</span> 则根据<span
+class="math inline">\(x_1,x_2,\cdots,x_n\)</span>关于<span
+class="math inline">\(\mathscr{F}_n\)</span>是可测的，知<span
+class="math inline">\(X_n\)</span>关于<span
+class="math inline">\(\mathscr{F}_n\)</span>是可测的，从而 <span
+class="math display">\[
 \mathbb{E}(X_{n+1}|\mathscr{F}_n)=\mathbb{E}(X_n+x_{n+1}|\mathscr{F}_n)=X_n,
-\]</span> 这便说明了<span class="math inline">\(\{X_n\}\)</span>是鞅。上面的过程说明了鞅和鞅差是可以一一对应的。下面的定理就需要用到这样的技巧。</p>
+\]</span> 这便说明了<span
+class="math inline">\(\{X_n\}\)</span>是鞅。上面的过程说明了鞅和鞅差是可以一一对应的。下面的定理就需要用到这样的技巧。</p>
 <hr />
-<p><strong>定理8（Doob分解）</strong>设<span class="math inline">\(\{X_n\}\)</span>是下鞅，则存在鞅<span class="math inline">\(\{Y_n\}\)</span>及增过程<span class="math inline">\(\{Z_n\}\)</span>，使得 <span class="math display">\[
+<p><strong>定理8（Doob分解）</strong>设<span
+class="math inline">\(\{X_n\}\)</span>是下鞅，则存在鞅<span
+class="math inline">\(\{Y_n\}\)</span>及增过程<span
+class="math inline">\(\{Z_n\}\)</span>，使得 <span
+class="math display">\[
 X_n=Y_n+Z_n.
 \]</span></p>
 <hr />
-<p><strong>证明</strong> 记<span class="math inline">\(x_0=X_0\)</span>，<span class="math inline">\(x_{n+1}=X_{n+1}-X_n\)</span>，则 <span class="math display">\[
-\mathbb{E}(x_{n+1}|\mathscr{F}_n)=\mathbb{E}(X_{n+1}|\mathscr{F}_n)-X_n\geq 0.
+<p><strong>证明</strong> 记<span
+class="math inline">\(x_0=X_0\)</span>，<span
+class="math inline">\(x_{n+1}=X_{n+1}-X_n\)</span>，则 <span
+class="math display">\[
+\mathbb{E}(x_{n+1}|\mathscr{F}_n)=\mathbb{E}(X_{n+1}|\mathscr{F}_n)-X_n\geq
+0.
 \]</span> 记 <span class="math display">\[
-z_0=0,\quad z_n=\mathbb{E}(x_n|\mathscr{F}_{n-1})\geq 0,\quad Z_n=\sum_{i=0}^{n}z_i,
-\]</span> 则<span class="math inline">\(\{Z_n\}\)</span>是增过程，再记 <span class="math display">\[
+z_0=0,\quad z_n=\mathbb{E}(x_n|\mathscr{F}_{n-1})\geq 0,\quad
+Z_n=\sum_{i=0}^{n}z_i,
+\]</span> 则<span class="math inline">\(\{Z_n\}\)</span>是增过程，再记
+<span class="math display">\[
 y_0=x_0,\quad y_n=x_n-z_n,\quad Y_n=\sum_{i=0}^{n}y_i,
-\]</span> 则<span class="math inline">\(X_n=Y_n+Z_n\)</span>，并且根据 <span class="math display">\[
+\]</span> 则<span class="math inline">\(X_n=Y_n+Z_n\)</span>，并且根据
+<span class="math display">\[
 \mathbb{E}(y_{n+1}|\mathscr{F}_n)=\mathbb{E}(x_{n+1}|\mathscr{F}_n)-\mathbb{E}(x_{n+1}|\mathscr{F}_n)=0
-\]</span> 知<span class="math inline">\(\{y_n\}\)</span>是鞅差，从而<span class="math inline">\(\{Y_n\}\)</span>是鞅。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/fe14/">https://dylandong.top/posts/fe14/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E9%9E%85%E8%AE%BA/">鞅论</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/data2.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/f4af/"><img class="prev-cover" src="/posts/top/data3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">停时与上穿不等式</div></div></a></div><div class="next-post pull-right"><a href="/posts/c50d/"><img class="next-cover" src="/posts/top/book.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">条件期望的性质</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/1430/" title="Doob鞅收敛定理"><img class="cover" src="/posts/top/metry.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">Doob鞅收敛定理</div></div></a></div><div><a href="/posts/f4af/" title="停时与上穿不等式"><img class="cover" src="/posts/top/data3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-15</div><div class="title">停时与上穿不等式</div></div></a></div><div><a href="/posts/a18b/" title="2022年高等概率论讨论班"><img class="cover" src="/posts/top/probability.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">2022年高等概率论讨论班</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大四在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的国赛论文模板"/></a><div class="content"><a class="title" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板">基于ElegantPaper的国赛论文模板</a><time datetime="2022-05-13T05:34:47.691Z" title="发表于 2022-05-13 13:34:47">2022-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/76ab/" title="随机变量序列的一致可积"><img src="/posts/top/data.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量序列的一致可积"/></a><div class="content"><a class="title" href="/posts/76ab/" title="随机变量序列的一致可积">随机变量序列的一致可积</a><time datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d646/" title="矩收敛及其基本性质"><img src="/posts/top/math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩收敛及其基本性质"/></a><div class="content"><a class="title" href="/posts/d646/" title="矩收敛及其基本性质">矩收敛及其基本性质</a><time datetime="2022-05-12T12:37:34.000Z" title="发表于 2022-05-12 20:37:34">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 董晟渤</div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="opentype">闽ICP备2022001871号</a> | <a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000858"><img src="/img/备案图标.png" />陕公网安备61010302000858号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+\]</span> 知<span
+class="math inline">\(\{y_n\}\)</span>是鞅差，从而<span
+class="math inline">\(\{Y_n\}\)</span>是鞅。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">董晟渤</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://dylandong.top/posts/fe14/">https://dylandong.top/posts/fe14/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://dylandong.top" target="_blank">董晟渤的个人主页</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a><a class="post-meta__tags" href="/tags/%E9%9E%85%E8%AE%BA/">鞅论</a></div><div class="post_share"><div class="social-share" data-image="/posts/top/data2.jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/f4af/"><img class="prev-cover" src="/posts/top/data3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">停时与上穿不等式</div></div></a></div><div class="next-post pull-right"><a href="/posts/c50d/"><img class="next-cover" src="/posts/top/book.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">条件期望的性质</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/1430/" title="Doob鞅收敛定理"><img class="cover" src="/posts/top/metry.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">Doob鞅收敛定理</div></div></a></div><div><a href="/posts/f4af/" title="停时与上穿不等式"><img class="cover" src="/posts/top/data3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-15</div><div class="title">停时与上穿不等式</div></div></a></div><div><a href="/posts/a18b/" title="2022年高等概率论讨论班"><img class="cover" src="/posts/top/probability.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">2022年高等概率论讨论班</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/portrait.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董晟渤</div><div class="author-info__description">西安交通大学，统计学大四在读</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/posts/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dylan-dong@outlook.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=198368289" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/9d29/" title="基于ElegantPaper的美赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的美赛论文模板"/></a><div class="content"><a class="title" href="/posts/9d29/" title="基于ElegantPaper的美赛论文模板">基于ElegantPaper的美赛论文模板</a><time datetime="2022-11-27T08:30:16.855Z" title="发表于 2022-11-27 16:30:16">2022-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板"><img src="/posts/top/keyboard.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于ElegantPaper的国赛论文模板"/></a><div class="content"><a class="title" href="/posts/5bd6/" title="基于ElegantPaper的国赛论文模板">基于ElegantPaper的国赛论文模板</a><time datetime="2022-11-27T08:30:16.850Z" title="发表于 2022-11-27 16:30:16">2022-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/76ab/" title="随机变量序列的一致可积"><img src="/posts/top/data.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机变量序列的一致可积"/></a><div class="content"><a class="title" href="/posts/76ab/" title="随机变量序列的一致可积">随机变量序列的一致可积</a><time datetime="2022-05-12T13:00:24.000Z" title="发表于 2022-05-12 21:00:24">2022-05-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 董晟渤</div><div class="footer_custom_text">基于<a target="_blank" rel="noopener" href="https://github.com/dylan0821">Github Pages</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
   window.MathJax = {
     tex: {
       inlineMath: [ ['$','$'], ["\\(","\\)"]],
