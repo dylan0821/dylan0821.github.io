@@ -6,7 +6,7 @@
   <link href="https://dylandong.top/atom.xml" rel="self"/>
   
   <link href="https://dylandong.top/"/>
-  <updated>2022-05-13T05:40:12.912Z</updated>
+  <updated>2023-01-23T11:11:01.889Z</updated>
   <id>https://dylandong.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>公告</title>
+    <link href="https://dylandong.top/posts/7b07/"/>
+    <id>https://dylandong.top/posts/7b07/</id>
+    <published>2023-01-23T11:00:59.000Z</published>
+    <updated>2023-01-23T11:11:01.889Z</updated>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+      
+      
+    <summary type="html">
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>基于ElegantPaper的美赛论文模板</title>
@@ -42,9 +63,9 @@ Summary Sheet&lt;/a&gt;，并根据自己的要求做修改。&lt;/p&gt;
     
     <category term="LaTeX" scheme="https://dylandong.top/tags/LaTeX/"/>
     
-    <category term="数学建模" scheme="https://dylandong.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
     <category term="排版" scheme="https://dylandong.top/tags/%E6%8E%92%E7%89%88/"/>
+    
+    <category term="数学建模" scheme="https://dylandong.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
     
     <category term="模板" scheme="https://dylandong.top/tags/%E6%A8%A1%E6%9D%BF/"/>
     
@@ -76,9 +97,9 @@ href=&quot;https://elegantlatex.org/cn/&quot;&gt;El</summary>
     
     <category term="LaTeX" scheme="https://dylandong.top/tags/LaTeX/"/>
     
-    <category term="数学建模" scheme="https://dylandong.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
     <category term="排版" scheme="https://dylandong.top/tags/%E6%8E%92%E7%89%88/"/>
+    
+    <category term="数学建模" scheme="https://dylandong.top/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
     
     <category term="模板" scheme="https://dylandong.top/tags/%E6%A8%A1%E6%9D%BF/"/>
     
@@ -593,29 +614,6 @@ y_i=\mu_i+e_i</summary>
     <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
     <category term="鞅论" scheme="https://dylandong.top/tags/%E9%9E%85%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>条件期望的性质</title>
-    <link href="https://dylandong.top/posts/c50d/"/>
-    <id>https://dylandong.top/posts/c50d/</id>
-    <published>2022-03-10T14:08:18.000Z</published>
-    <updated>2022-03-20T03:29:52.469Z</updated>
-    
-    <content type="html"><![CDATA[<p>本节中将探讨条件期望的一些基本性质。</p><span id="more"></span><hr /><p><strong>命题1（特殊的条件期望）</strong>设<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域。</p><p>（1）如果<span class="math inline">\(X\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测，则<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=X,\mathrm{a.s.}\)</span>；</p><p>（2）如果<span class="math inline">\(X\)</span>与<spanclass="math inline">\(\mathscr{G}\)</span>独立，则<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=\mathbb{E}X,\mathrm{a.s.}\)</span>。</p><hr /><p><strong>证明</strong>（1）<spanclass="math inline">\(X\)</span>是<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的可测函数，且<span class="math display">\[\int_{C}X\mathrm{d}\mathbb{P}=\int_{C}X\mathrm{d}\mathbb{P},\quad\forallC\in\mathscr{G},\]</span> 根据定义知<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=X,\mathrm{a.s.}\)</span>。</p><p>（2）<span class="math inline">\(\mathbb{E} X\)</span>是<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的可测函数，且<span class="math display">\[\int_C X\mathrm{d}P=\mathbb{E}(X\cdot I_C)=\mathbb{E}X\cdot\mathbb{P}(C)=\int_C\mathbb{E}X\mathrm{d}\mathbb{P},\]</span> 根据定义知<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=\mathbb{E}X,\mathrm{a.s.}\)</span>。</p><blockquote><p>在这里应用了结论：若<span class="math inline">\(X\)</span>与<spanclass="math inline">\(C\)</span>独立，则<spanclass="math inline">\(\mathbb{E}(X\cdotI_C)=\mathbb{E}X\cdot\mathbb{P}(C)\)</span>，证明需要使用典型方法。</p></blockquote><hr /><p><strong>命题2（复合条件期望）</strong>设<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\subset\mathscr{F}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，则 <spanclass="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_1)|\mathscr{G}_2]=\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 一方面，根据<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G}_1)\)</span>关于<spanclass="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\)</span>可测，应用命题1的（1）得<span class="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_1)|\mathscr{G}_2]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.};\]</span> 另外一方面，根据<spanclass="math inline">\(\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]\)</span>关于<spanclass="math inline">\(\mathscr{G}_1\)</span>可测，且对任意的<spanclass="math inline">\(C\in\mathscr{G}_1\subset\mathscr{G}_2\)</span>，都有<span class="math display">\[\int_C\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G}_2)\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G}_1)\mathrm{d}\mathbb{P},\]</span> 由<span class="math inline">\(C\)</span>的任意性得 <spanclass="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}.\]</span> 综合以上两条可知命题成立。</p><hr /><p><strong>命题3（单调性）</strong>设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(X\le Y, \mathrm{a.s.}\)</span>，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，则 <spanclass="math display">\[\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span> 特别地，<spanclass="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>证明</strong> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，都有 <spanclass="math display">\[\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P}\le\int_CY\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(Y|\mathscr{G})\mathrm{d}\mathbb{P},\]</span> 由<span class="math inline">\(C\)</span>的任意性得 <spanclass="math display">\[\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span> 另外，注意到<span class="math inline">\(-X\le|X|,X\le|X|\)</span>， 因此 <span class="math display">\[\begin{cases}-\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(|X||\mathscr{G}),&amp;\mathrm{a.s.},\\\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(|X||\mathscr{G}),&amp;\mathrm{a.s.}.\end{cases}\]</span> 综合以上两式，有<spanclass="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>命题4（可加性）</strong>设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，<span class="math inline">\(a,b\in\mathbb{R}\)</span>，且<spanclass="math inline">\(a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，则 <spanclass="math display">\[\mathbb{E}(aX+bY|\mathscr{G})=a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由<spanclass="math inline">\(\mathbb{E}(aX+bY)=a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，知<spanclass="math inline">\(\mathbb{E}(aX+bY|\mathscr{G})\)</span>有定义。对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，都有 <spanclass="math display">\[\begin{aligned}\int_C(aX+bY)\mathrm{d}\mathbb{P}&amp;=a\int_CX\mathrm{d}\mathbb{P}+b\int_CY\mathrm{d}\mathbb{P}\\&amp;=a\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P}+b\int_C\mathbb{E}(Y|\mathscr{G})\mathrm{d}\mathbb{P}\\&amp;=\int_C(a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}))\mathrm{d}\mathbb{P}.\end{aligned}\]</span> 因此，<spanclass="math inline">\(\mathbb{E}(aX+bY|\mathscr{G})=a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p>命题3和4都是期望<spanclass="math inline">\(\mathbb{E}(\cdot)\)</span>的性质向条件期望<spanclass="math inline">\(\mathbb{E}(\cdot|\mathscr{G})\)</span>的推广。联想到期望所满足的单调收敛定理、Fatou引理及Lebesgue控制收敛定理，我们接下来证明这些定理对于条件期望也是成立的。</p><hr /><p><strong>定理5（单调收敛定理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>和<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(0\le X_n\uparrow X,\mathrm{a.s.}\)</span>，则<span class="math display">\[0\le\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由命题3得<spanclass="math inline">\(\{\mathbb{E}(X_n|\mathscr{G})\}\)</span>单调递增，且根据<spanclass="math inline">\(\mathbb{E}(X_n|\mathscr{G})\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测知<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测。对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用单调收敛定理得 <spanclass="math display">\[\int_C\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_C\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>定理6（Fatou引理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量序列，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(X_n\geq 0,\mathrm{a.s.}\)</span>，则 <spanclass="math display">\[\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用Fatou引理得 <spanclass="math display">\[\int_C\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\mathrm{d}\mathbb{P}=\int_C\liminf_{n\to\infty}X_n\mathrm{d}\mathbb{P}\le\liminf_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\displaystyle\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>定理7（Lebesgue控制收敛定理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>和<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}X_n=X\)</span>，且存在<spanclass="math inline">\(Y\in L^1(\Omega)\)</span>，使得对任意的<spanclass="math inline">\(n\geq 1\)</span>，都有<spanclass="math inline">\(|X_n|\le Y,\mathrm{a.s.}\)</span>，则 <spanclass="math display">\[\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})=\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由命题3知 <span class="math display">\[|\mathbb{E}(X_n|\mathscr{G})|\le\mathbb{E}(|X_n||\mathscr{G})\le\mathbb{E}(Y|\mathscr{G})\inL^1(\Omega).\]</span> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用Lebesgue控制收敛定理得<span class="math display">\[\int_C\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_C\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})=\mathbb{E}(X|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p>定理5、6和7的证明过程说明了，条件期望是离不开期望的。在处理条件期望的问题时，常常需要借助条件期望的定义转化为期望。最后，作为定理5的应用，我们引出如下的重要结论，其在随机过程中有应用。</p><hr /><p><strong>命题8</strong> 设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，<spanclass="math inline">\(X\)</span>和<spanclass="math inline">\(XY\)</span>的积分存在，且<spanclass="math inline">\(Y\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测，则 <spanclass="math display">\[\mathbb{E}(XY|\mathscr{G})=Y\cdot\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 用典型方法。</p><hr /><p><strong>例9</strong> 设<spanclass="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是带流的随机过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，<spanclass="math inline">\(X_n\)</span>是关于<spanclass="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<spanclass="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。设其期望为0，方差为<spanclass="math inline">\(\sigma^2&lt;\infty\)</span>。若其是一个鞅差过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，都有 <spanclass="math display">\[\mathbb{E}(X_{n+1}|\mathscr{F}_n)=0,\quad\mathrm{a.s.},\]</span> 则其一定是一个白噪声过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，都有 <spanclass="math display">\[\mathrm{Cov}(X_n,X_{n+1})=0.\]</span> 这是因为，<span class="math inline">\(X_n\)</span>是关于<spanclass="math inline">\(\mathscr{F}_n\)</span>可测的，从而 <spanclass="math display">\[\mathbb{E}(X_nX_{n+1}|\mathscr{F}_n)=X_n\cdot\mathbb{E}(X_{n+1}|\mathscr{F}_n)=0,\quad\mathrm{a.s.},\]</span> 对上式两边取期望得 <span class="math display">\[\mathrm{Cov}(X_n,X_{n+1})=\mathbb{E}[\mathbb{E}(X_nX_{n+1}|\mathscr{F}_n)]=0.\]</span></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本节中将探讨条件期望的一些基本性质。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="讨论班" scheme="https://dylandong.top/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/"/>
-    
-    
-    <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    <category term="条件期望" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B/"/>
     
   </entry>
   
