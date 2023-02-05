@@ -4,7 +4,7 @@
   <url>
     <loc>https://dylandong.top/about/index.html</loc>
     
-    <lastmod>2023-01-23</lastmod>
+    <lastmod>2023-02-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,36 +20,9 @@
   </url>
   
   <url>
-    <loc>https://dylandong.top/about/index-old.html</loc>
-    
-    <lastmod>2023-01-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://dylandong.top/nft/index.html</loc>
     
     <lastmod>2022-11-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/books/index.html</loc>
-    
-    <lastmod>2022-06-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/about/index-en.html</loc>
-    
-    <lastmod>2022-06-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -495,27 +468,6 @@
   </url>
   
   <url>
-    <loc>https://dylandong.top/tags/%E9%9E%85%E8%AE%BA/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/tags/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/tags/%E5%85%A8%E5%BE%AE%E5%88%86/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dylandong.top/tags/LaTeX/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -531,6 +483,13 @@
   
   <url>
     <loc>https://dylandong.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-02-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dylandong.top/tags/%E9%9E%85%E8%AE%BA/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -558,6 +517,27 @@
   </url>
   
   <url>
+    <loc>https://dylandong.top/tags/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</loc>
+    <lastmod>2023-02-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dylandong.top/tags/%E5%85%A8%E5%BE%AE%E5%88%86/</loc>
+    <lastmod>2023-02-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dylandong.top/tags/VSCode/</loc>
+    <lastmod>2023-02-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dylandong.top/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -579,7 +559,7 @@
   </url>
   
   <url>
-    <loc>https://dylandong.top/tags/VSCode/</loc>
+    <loc>https://dylandong.top/tags/%E7%8B%AC%E7%AB%8B/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -594,13 +574,6 @@
   
   <url>
     <loc>https://dylandong.top/tags/iGEM/</loc>
-    <lastmod>2023-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://dylandong.top/tags/%E7%8B%AC%E7%AB%8B/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -670,7 +643,7 @@
   </url>
   
   <url>
-    <loc>https://dylandong.top/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/</loc>
+    <loc>https://dylandong.top/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -691,7 +664,7 @@
   </url>
   
   <url>
-    <loc>https://dylandong.top/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
+    <loc>https://dylandong.top/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
