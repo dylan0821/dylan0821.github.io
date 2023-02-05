@@ -6,7 +6,7 @@
   <link href="https://dylandong.top/atom.xml" rel="self"/>
   
   <link href="https://dylandong.top/"/>
-  <updated>2023-01-23T11:11:01.889Z</updated>
+  <updated>2023-02-05T18:01:45.947Z</updated>
   <id>https://dylandong.top/</id>
   
   <author>
@@ -17,23 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>公告</title>
+    <title>服务器到期公告</title>
     <link href="https://dylandong.top/posts/7b07/"/>
     <id>https://dylandong.top/posts/7b07/</id>
-    <published>2023-01-23T11:00:59.000Z</published>
-    <updated>2023-01-23T11:11:01.889Z</updated>
+    <published>2023-02-05T16:00:00.000Z</published>
+    <updated>2023-02-05T18:01:45.947Z</updated>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>因服务器到期，本网站现在部署于<ahref="http://github.com/dylan0821">Github</a>。</p><p>尽管尽力保留网站的所有内容（包括域名），但是本网站的访问会较卡顿，请见谅。</p>]]></content>
     
     
       
       
-    <summary type="html">
+    <summary type="html">&lt;p&gt;因服务器到期，本网站现在部署于&lt;a
+href=&quot;http://github.com/dylan0821&quot;&gt;Github&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;尽管尽力保留网站的所有内容（包括域名），但是本网站的访问会较卡顿，请见谅。&lt;/p&gt;
 </summary>
       
     
     
     
+    <category term="公告" scheme="https://dylandong.top/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="公告" scheme="https://dylandong.top/tags/%E5%85%AC%E5%91%8A/"/>
     
   </entry>
   
@@ -225,11 +231,11 @@ class=&quot;math inlin</summary>
     
     <category term="收敛" scheme="https://dylandong.top/tags/%E6%94%B6%E6%95%9B/"/>
     
+    <category term="泛函分析" scheme="https://dylandong.top/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
+    
     <category term="淡收敛" scheme="https://dylandong.top/tags/%E6%B7%A1%E6%94%B6%E6%95%9B/"/>
     
     <category term="依分布收敛" scheme="https://dylandong.top/tags/%E4%BE%9D%E5%88%86%E5%B8%83%E6%94%B6%E6%95%9B/"/>
-    
-    <category term="泛函分析" scheme="https://dylandong.top/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -519,7 +525,7 @@ y_i=\mu_i+e_i</summary>
     <link href="https://dylandong.top/posts/a18b/"/>
     <id>https://dylandong.top/posts/a18b/</id>
     <published>2022-03-16T02:11:32.000Z</published>
-    <updated>2022-05-30T15:26:37.701Z</updated>
+    <updated>2023-02-05T17:58:10.155Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>高等概率论</strong>以初等概率论、实分析和测度论为基础，是研究随机现象的数量规律的数学学科。</p></blockquote><ul><li>课程：高等概率论；</li><li>书籍：《A Course in Probability Theory》；</li><li>周次：第3周至第16周；</li><li>时间：周一上午10:00至11:30；</li><li>QQ群：694658057。</li></ul><span id="more"></span><h1 id="学习进度">学习进度</h1><ul class="task-list"><li><input type="checkbox"checked="" />第1-2次：符号测度，条件期望，鞅；<ul class="task-list"><li><input type="checkbox"checked="" />第1次（测度论）：符号测度，Radon-Nikodym定理；</li><li><input type="checkbox"checked="" />第2次（概率论）：条件期望，条件概率，鞅。</li></ul></li><li><input type="checkbox" checked="" />第3次：分布函数，集合；</li><li><input type="checkbox" checked="" />第4次：测度空间，概率测度；</li><li><input type="checkbox" checked="" />第5次：随机变量，期望；</li><li><input type="checkbox" checked="" />第6次：独立，乘积空间；</li><li><input type="checkbox"checked="" />第7次：几乎处处收敛，依概率收敛；</li><li><input type="checkbox" checked="" />第8次：B-C引理，弱收敛；</li><li><input type="checkbox" checked="" />第9次：依分布收敛，矩收敛；</li><li><input type="checkbox" checked="" />第10次：大数定律（一）；</li><li><input type="checkbox" checked="" />第11次：大数定律（二）；</li><li><input type="checkbox" />第12次：大数定律（三），结束。</li></ul><h1 id="参考书籍">参考书籍</h1><ol type="1"><li>Kai Lai Chung. <em>A Course in Probability Theory</em>;</li><li>Gerald B. Folland. <em>Real Analysis: Modern Techniques and TheirApplications</em>;</li><li>程士宏. <em>测度论与概率论基础</em>.</li></ol><h1 id="相关文章">相关文章</h1><ul><li><a href="../7a46/">条件期望、条件概率与例子</a></li><li><a href="../c50d/">条件期望的性质</a></li><li><a href="../fe14/">离散时间鞅的定义</a></li><li><a href="../f4af/">停时与上穿不等式</a></li><li><a href="../1430/">Doob鞅收敛定理</a></li><li><a href="../b3e2/">事件的独立</a></li><li><a href="../52a8/">随机元的独立</a></li><li><a href="../1e09/">随机变量的独立</a></li><li><a href="../893/">有限维乘积空间</a></li><li><a href="../48cf/">Borel-Cantelli引理</a></li><li><a href="../525b/">淡收敛及其等价命题</a></li><li><a href="../352c/">次概率测度的列紧性</a></li><li><a href="../3d93/">随机变量的依分布收敛</a></li></ul><h1 id="资料下载">资料下载</h1><ul><li><a href="/study/高等概率论讨论班.pdf">高等概率论讨论班.pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班.pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第0次).pdf">高等概率论讨论班(第0次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第0次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第5次).pdf">高等概率论讨论班(第5次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第5次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第6次).pdf">高等概率论讨论班(第6次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第6次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/条件期望的几何意义.pdf">条件期望的几何意义.pdf</a></li></ul><div class="row">    <embed src="/study/条件期望的几何意义.pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第8、9次).pdf">高等概率论讨论班(第8、9次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第8、9次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第10次).pdf">高等概率论讨论班(第10次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第10次).pdf" width="100%" height="550" type="application/pdf"></div><ul><li><ahref="/study/高等概率论讨论班(第10次).pdf">高等概率论讨论班(第11次).pdf</a></li></ul><div class="row">    <embed src="/study/高等概率论讨论班(第11次).pdf" width="100%" height="550" type="application/pdf"></div><h1 id="讨论班记录">讨论班记录</h1><div data-align="center"><p><img src="../img/prob1.jpg" alt="prob1" style="zoom: 100%;"/></p></div><div data-align="center"><p><img src="../img/prob2.jpg" alt="prob2" style="zoom: 100%;"/></p></div><div data-align="center"><p><img src="../img/prob3.jpg" alt="prob3" style="zoom: 100%;"/></p></div><div data-align="center"><p><img src="../img/prob4.jpg" alt="prob4" style="zoom: 100%;"/></p></div><p>点击<ahref="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1027873842">这里</a>勾搭分析学之神陈昱坤。</p>]]></content>
     
