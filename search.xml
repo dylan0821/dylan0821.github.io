@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>服务器到期公告</title>
+      <title>2月7日公告</title>
       <link href="/posts/7b07/"/>
       <url>/posts/7b07/</url>
       
-        <content type="html"><![CDATA[<p>因服务器到期，本网站现在部署于<ahref="http://github.com/dylan0821">Github</a>。</p><p>尽管尽力保留网站的所有内容（包括域名），但是本网站的访问会较卡顿，请见谅。</p>]]></content>
+        <content type="html"><![CDATA[<p>因服务器到期，本网站现在部署于<ahref="https://github.com/dylan0821/dylan0821.github.io">GithubPages</a>，可能会导致访问卡顿，敬请谅解。</p><p>如有需要，可以搜索如何加速Github访问。</p>]]></content>
       
       
       <categories>
@@ -706,9 +706,9 @@
       
         <tags>
             
-            <tag> 试题 </tag>
-            
             <tag> 概率论 </tag>
+            
+            <tag> 试题 </tag>
             
         </tags>
       
@@ -733,9 +733,9 @@
       
         <tags>
             
-            <tag> 数理统计 </tag>
-            
             <tag> 试题 </tag>
+            
+            <tag> 数理统计 </tag>
             
         </tags>
       
@@ -787,9 +787,9 @@
       
         <tags>
             
-            <tag> 数理统计 </tag>
-            
             <tag> 概率论 </tag>
+            
+            <tag> 数理统计 </tag>
             
             <tag> 正态分布 </tag>
             
