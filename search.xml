@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>2月7日公告</title>
-      <link href="/posts/7b07/"/>
-      <url>/posts/7b07/</url>
-      
-        <content type="html"><![CDATA[<p>因服务器到期，本网站现在部署于<ahref="https://github.com/dylan0821/dylan0821.github.io">GithubPages</a>，可能会导致访问卡顿，敬请谅解。</p><p>如有需要，可以搜索如何加速Github访问。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 公告 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 公告 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>基于ElegantPaper的美赛论文模板</title>
       <link href="/posts/9d29/"/>
       <url>/posts/9d29/</url>
@@ -439,33 +414,6 @@
     
     
     <entry>
-      <title>基于Mallows准则的模型平均</title>
-      <link href="/posts/3627/"/>
-      <url>/posts/3627/</url>
-      
-        <content type="html"><![CDATA[<p>我们考虑的是线性模型的模型平均。首先，设<spanclass="math inline">\(y_i,i=1,2,\cdots,n\)</span>是随机样本，它的数据产生过程为<span class="math display">\[y_i=\mu_i+e_i=\sum_{j=1}^{\infty}\theta_jx_{ij}+e_i,\quadi=1,2,\cdots,n,\]</span> 其中<spanclass="math inline">\({x}_i=(x_{i1},x_{i2},\cdots)\)</span>是对第<spanclass="math inline">\(i\)</span>个样本的解释变量，有可数无穷多个元素；<spanclass="math inline">\(\theta_j\)</span>是对解释变量的第<spanclass="math inline">\(j\)</span>个元素的未知系数，<spanclass="math inline">\(e_i\)</span>是对第<spanclass="math inline">\(i\)</span>个样本的随机误差。为了方便表示，记 <spanclass="math display">\[{y}=\begin{bmatrix}    y_1 \\ y_2 \\ \vdots \\ y_n\end{bmatrix},\quad{\mu}=\begin{bmatrix}    \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n\end{bmatrix},\quad {e}=\begin{bmatrix}    e_1 \\ e_2 \\ \vdots \\ e_n\end{bmatrix},\quad{X}=\begin{bmatrix}    {x}_1 \\ {x}_2 \\ \vdots \\ {x}_n\end{bmatrix}=\begin{bmatrix}    x_{11} &amp; x_{12} &amp; \cdots \\    x_{21} &amp; x_{22} &amp; \cdots \\    \vdots &amp; \vdots &amp; \ddots \\    x_{n1} &amp; x_{n2} &amp; \cdots \\\end{bmatrix},\quad{\theta}=\begin{bmatrix}    \theta_1 \\ \theta_2 \\ \vdots\end{bmatrix},\]</span> 则模型可以表示为 <span class="math display">\[{y}={\mu}+{e}={X}{\theta}+{e}.\]</span> 在这里，假设<spanclass="math inline">\(\mathbb{E}({e}|{X})={0}\)</span>，<spanclass="math inline">\(\mathrm{Var}({e}|{X})=\sigma^2{I}\)</span>，也即上面的模型是无偏的，且每个随机误差的方差都为<spanclass="math inline">\(\sigma^2\)</span>。基于上述模型，我们按照如下的方式，得到<spanclass="math inline">\(M\)</span>个模型：对<spanclass="math inline">\(1\le m\le M\)</span>，设<spanclass="math inline">\(k_m\)</span>是正整数且<spanclass="math inline">\(1\le k_1\le k_2\le\cdots\lek_M\)</span>。选取<span class="math inline">\({X}\)</span>的<spanclass="math inline">\(k_m\)</span>列，构成的矩阵记作<spanclass="math inline">\({X}_{(m)}\)</span>，并选出<spanclass="math inline">\({\theta}\)</span>对应的<spanclass="math inline">\(k_m\)</span>行，构成的向量记作<spanclass="math inline">\({\theta}_{(m)}\)</span>。记第<spanclass="math inline">\(m\)</span>个近似模型 <span class="math display">\[{y}={X}_{(m)}{\theta}_{(m)}+{e},\quad 1\le m\le M.\]</span> 简而言之，上面所确定的第<spanclass="math inline">\(m\)</span>个模型，其实就是在模型中选取<spanclass="math inline">\(k_m\)</span>个元素，可以视作模型的近似。对于模型中的第<spanclass="math inline">\(m\)</span>个模型，结合矩阵分析的相关理论，可以得到<spanclass="math inline">\({\theta}_{(m)}\)</span>的最小二乘估计为 <spanclass="math display">\[\hat{\theta}_{(m)}=\left(X&#39;_{(m)}X_{(m)}\right)^{-1}X_{(m)}&#39;{y},\]</span> 从而<span class="math inline">\({\mu}\)</span>的最小二乘估计<span class="math display">\[\hat{\mu}_{(m)}={X}_{(m)}\hat{\theta}_{(m)}={X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;{y},\]</span> <span class="math inline">\({e}\)</span>的最小二乘估计<spanclass="math inline">\(\hat{e}_{(m)}={y}-\hat{\mu}_{(m)}\)</span>。</p><p>所谓的“模型评价估计”，指的是将多种不同的估计作加权平均。从而我们接下来要做的，是将以上的<spanclass="math inline">\(M\)</span>个模型进行加权平均，此时权重向量 <spanclass="math display">\[{\omega}=\begin{bmatrix}    \omega_1 \\ \omega_2 \\ \vdots \\ \omega_M\end{bmatrix}\in\mathcal{H}=\left\{\omega_m\in[0,1],1\le m\leM,\sum_{m=1}^{M}\omega_m=1\right\}.\]</span> 对于某组权重<spanclass="math inline">\({\omega}\)</span>，<spanclass="math inline">\({\mu}\)</span>的模型平均估计为 <spanclass="math display">\[\hat{\mu}({\omega})=\sum_{m=1}^{M}\omega_m\hat{\mu}_{(m)}=\sum_{m=1}^{M}\omega_m{X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;{y}:={P}({\omega}){y},\]</span> 其中 <span class="math display">\[{P}(\omega)=\sum_{m=1}^{M}\omega_m{X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;。\]</span> 对于某组权重<spanclass="math inline">\({\omega}\)</span>，我们可以考虑其所对的<spanclass="math inline">\({\mu}\)</span>的模型平均估计的平方误差和风险，分别为<span class="math display">\[\begin{aligned}L_n({\omega})&amp;=\left(\hat{\mu}({\omega})-{\mu}\right)&#39;\left(\hat{\mu}({\omega})-{\mu}\right),\\R_n({\omega})&amp;=\mathbb{E}\left(L({\omega})\middle|{x}_1,{x}_2,\cdots,{x}_n\right);\end{aligned}\]</span> 除此之外，也可以考虑该模型平均估计的Mallows准则 <spanclass="math display">\[C_p({\omega})=\left({y}-\hat{\mu}({\omega})\right)&#39;\left({y}-\hat{\mu}({\omega})\right)+2\sigma^2\cdot\mathrm{tr}{P}^2({\omega}),\]</span> 令<spanclass="math inline">\(\hat{\omega}=\mathrm{argmin}_{\omega\in\mathcal{H}}C_p(\omega)\)</span>，并在估计中代入<spanclass="math inline">\(\hat{\omega}\)</span>，便得到了<spanclass="math inline">\({\mu}\)</span>的基于Mallows准则的模型平均估计<spanclass="math inline">\(\hat{\mu}(\hat{\omega})\)</span>。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 课程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 统计学 </tag>
-            
-            <tag> 模型评价 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2022年高等概率论讨论班</title>
       <link href="/posts/a18b/"/>
       <url>/posts/a18b/</url>
@@ -706,9 +654,9 @@
       
         <tags>
             
-            <tag> 试题 </tag>
-            
             <tag> 概率论 </tag>
+            
+            <tag> 试题 </tag>
             
         </tags>
       
@@ -733,9 +681,9 @@
       
         <tags>
             
-            <tag> 数理统计 </tag>
-            
             <tag> 试题 </tag>
+            
+            <tag> 数理统计 </tag>
             
         </tags>
       
@@ -787,9 +735,9 @@
       
         <tags>
             
-            <tag> 数理统计 </tag>
-            
             <tag> 概率论 </tag>
+            
+            <tag> 数理统计 </tag>
             
             <tag> 正态分布 </tag>
             

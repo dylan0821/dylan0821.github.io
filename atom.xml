@@ -6,7 +6,7 @@
   <link href="https://dylandong.top/atom.xml" rel="self"/>
   
   <link href="https://dylandong.top/"/>
-  <updated>2023-02-07T10:00:50.530Z</updated>
+  <updated>2022-05-13T05:40:12.912Z</updated>
   <id>https://dylandong.top/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2月7日公告</title>
-    <link href="https://dylandong.top/posts/7b07/"/>
-    <id>https://dylandong.top/posts/7b07/</id>
-    <published>2023-02-07T10:00:00.000Z</published>
-    <updated>2023-02-07T10:00:50.530Z</updated>
-    
-    <content type="html"><![CDATA[<p>因服务器到期，本网站现在部署于<ahref="https://github.com/dylan0821/dylan0821.github.io">GithubPages</a>，可能会导致访问卡顿，敬请谅解。</p><p>如有需要，可以搜索如何加速Github访问。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;因服务器到期，本网站现在部署于&lt;a
-href=&quot;https://github.com/dylan0821/dylan0821.github.io&quot;&gt;Github
-Pages&lt;/a&gt;，可能会导致访问卡顿，敬请谅解。&lt;/p&gt;
-&lt;p&gt;如有需要，可以搜索如何加速Github访</summary>
-      
-    
-    
-    
-    <category term="公告" scheme="https://dylandong.top/categories/%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="公告" scheme="https://dylandong.top/tags/%E5%85%AC%E5%91%8A/"/>
-    
-  </entry>
   
   <entry>
     <title>基于ElegantPaper的美赛论文模板</title>
@@ -492,35 +465,6 @@ Hall问题的数值模拟设计与结果-2022.03.pdf&lt;/a&gt;。&lt;/p&gt;
   </entry>
   
   <entry>
-    <title>基于Mallows准则的模型平均</title>
-    <link href="https://dylandong.top/posts/3627/"/>
-    <id>https://dylandong.top/posts/3627/</id>
-    <published>2022-03-21T11:02:00.000Z</published>
-    <updated>2022-03-21T11:03:43.808Z</updated>
-    
-    <content type="html"><![CDATA[<p>我们考虑的是线性模型的模型平均。首先，设<spanclass="math inline">\(y_i,i=1,2,\cdots,n\)</span>是随机样本，它的数据产生过程为<span class="math display">\[y_i=\mu_i+e_i=\sum_{j=1}^{\infty}\theta_jx_{ij}+e_i,\quadi=1,2,\cdots,n,\]</span> 其中<spanclass="math inline">\({x}_i=(x_{i1},x_{i2},\cdots)\)</span>是对第<spanclass="math inline">\(i\)</span>个样本的解释变量，有可数无穷多个元素；<spanclass="math inline">\(\theta_j\)</span>是对解释变量的第<spanclass="math inline">\(j\)</span>个元素的未知系数，<spanclass="math inline">\(e_i\)</span>是对第<spanclass="math inline">\(i\)</span>个样本的随机误差。为了方便表示，记 <spanclass="math display">\[{y}=\begin{bmatrix}    y_1 \\ y_2 \\ \vdots \\ y_n\end{bmatrix},\quad{\mu}=\begin{bmatrix}    \mu_1 \\ \mu_2 \\ \vdots \\ \mu_n\end{bmatrix},\quad {e}=\begin{bmatrix}    e_1 \\ e_2 \\ \vdots \\ e_n\end{bmatrix},\quad{X}=\begin{bmatrix}    {x}_1 \\ {x}_2 \\ \vdots \\ {x}_n\end{bmatrix}=\begin{bmatrix}    x_{11} &amp; x_{12} &amp; \cdots \\    x_{21} &amp; x_{22} &amp; \cdots \\    \vdots &amp; \vdots &amp; \ddots \\    x_{n1} &amp; x_{n2} &amp; \cdots \\\end{bmatrix},\quad{\theta}=\begin{bmatrix}    \theta_1 \\ \theta_2 \\ \vdots\end{bmatrix},\]</span> 则模型可以表示为 <span class="math display">\[{y}={\mu}+{e}={X}{\theta}+{e}.\]</span> 在这里，假设<spanclass="math inline">\(\mathbb{E}({e}|{X})={0}\)</span>，<spanclass="math inline">\(\mathrm{Var}({e}|{X})=\sigma^2{I}\)</span>，也即上面的模型是无偏的，且每个随机误差的方差都为<spanclass="math inline">\(\sigma^2\)</span>。基于上述模型，我们按照如下的方式，得到<spanclass="math inline">\(M\)</span>个模型：对<spanclass="math inline">\(1\le m\le M\)</span>，设<spanclass="math inline">\(k_m\)</span>是正整数且<spanclass="math inline">\(1\le k_1\le k_2\le\cdots\lek_M\)</span>。选取<span class="math inline">\({X}\)</span>的<spanclass="math inline">\(k_m\)</span>列，构成的矩阵记作<spanclass="math inline">\({X}_{(m)}\)</span>，并选出<spanclass="math inline">\({\theta}\)</span>对应的<spanclass="math inline">\(k_m\)</span>行，构成的向量记作<spanclass="math inline">\({\theta}_{(m)}\)</span>。记第<spanclass="math inline">\(m\)</span>个近似模型 <span class="math display">\[{y}={X}_{(m)}{\theta}_{(m)}+{e},\quad 1\le m\le M.\]</span> 简而言之，上面所确定的第<spanclass="math inline">\(m\)</span>个模型，其实就是在模型中选取<spanclass="math inline">\(k_m\)</span>个元素，可以视作模型的近似。对于模型中的第<spanclass="math inline">\(m\)</span>个模型，结合矩阵分析的相关理论，可以得到<spanclass="math inline">\({\theta}_{(m)}\)</span>的最小二乘估计为 <spanclass="math display">\[\hat{\theta}_{(m)}=\left(X&#39;_{(m)}X_{(m)}\right)^{-1}X_{(m)}&#39;{y},\]</span> 从而<span class="math inline">\({\mu}\)</span>的最小二乘估计<span class="math display">\[\hat{\mu}_{(m)}={X}_{(m)}\hat{\theta}_{(m)}={X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;{y},\]</span> <span class="math inline">\({e}\)</span>的最小二乘估计<spanclass="math inline">\(\hat{e}_{(m)}={y}-\hat{\mu}_{(m)}\)</span>。</p><p>所谓的“模型评价估计”，指的是将多种不同的估计作加权平均。从而我们接下来要做的，是将以上的<spanclass="math inline">\(M\)</span>个模型进行加权平均，此时权重向量 <spanclass="math display">\[{\omega}=\begin{bmatrix}    \omega_1 \\ \omega_2 \\ \vdots \\ \omega_M\end{bmatrix}\in\mathcal{H}=\left\{\omega_m\in[0,1],1\le m\leM,\sum_{m=1}^{M}\omega_m=1\right\}.\]</span> 对于某组权重<spanclass="math inline">\({\omega}\)</span>，<spanclass="math inline">\({\mu}\)</span>的模型平均估计为 <spanclass="math display">\[\hat{\mu}({\omega})=\sum_{m=1}^{M}\omega_m\hat{\mu}_{(m)}=\sum_{m=1}^{M}\omega_m{X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;{y}:={P}({\omega}){y},\]</span> 其中 <span class="math display">\[{P}(\omega)=\sum_{m=1}^{M}\omega_m{X}_{(m)}\left({X}&#39;_{(m)}{X}_{(m)}\right)^{-1}{X}_{(m)}&#39;。\]</span> 对于某组权重<spanclass="math inline">\({\omega}\)</span>，我们可以考虑其所对的<spanclass="math inline">\({\mu}\)</span>的模型平均估计的平方误差和风险，分别为<span class="math display">\[\begin{aligned}L_n({\omega})&amp;=\left(\hat{\mu}({\omega})-{\mu}\right)&#39;\left(\hat{\mu}({\omega})-{\mu}\right),\\R_n({\omega})&amp;=\mathbb{E}\left(L({\omega})\middle|{x}_1,{x}_2,\cdots,{x}_n\right);\end{aligned}\]</span> 除此之外，也可以考虑该模型平均估计的Mallows准则 <spanclass="math display">\[C_p({\omega})=\left({y}-\hat{\mu}({\omega})\right)&#39;\left({y}-\hat{\mu}({\omega})\right)+2\sigma^2\cdot\mathrm{tr}{P}^2({\omega}),\]</span> 令<spanclass="math inline">\(\hat{\omega}=\mathrm{argmin}_{\omega\in\mathcal{H}}C_p(\omega)\)</span>，并在估计中代入<spanclass="math inline">\(\hat{\omega}\)</span>，便得到了<spanclass="math inline">\({\mu}\)</span>的基于Mallows准则的模型平均估计<spanclass="math inline">\(\hat{\mu}(\hat{\omega})\)</span>。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;我们考虑的是线性模型的模型平均。首先，设&lt;span
-class=&quot;math inline&quot;&gt;\(y_i,i=1,2,\cdots,n\)&lt;/span&gt;是随机样本，它的数据产生过程为
-&lt;span class=&quot;math display&quot;&gt;\[
-y_i=\mu_i+e_i</summary>
-      
-    
-    
-    
-    <category term="课程" scheme="https://dylandong.top/categories/%E8%AF%BE%E7%A8%8B/"/>
-    
-    
-    <category term="统计学" scheme="https://dylandong.top/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
-    
-    <category term="模型评价" scheme="https://dylandong.top/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2022年高等概率论讨论班</title>
     <link href="https://dylandong.top/posts/a18b/"/>
     <id>https://dylandong.top/posts/a18b/</id>
@@ -620,6 +564,54 @@ y_i=\mu_i+e_i</summary>
     <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
     <category term="鞅论" scheme="https://dylandong.top/tags/%E9%9E%85%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>条件期望的性质</title>
+    <link href="https://dylandong.top/posts/c50d/"/>
+    <id>https://dylandong.top/posts/c50d/</id>
+    <published>2022-03-10T14:08:18.000Z</published>
+    <updated>2022-03-20T03:29:52.469Z</updated>
+    
+    <content type="html"><![CDATA[<p>本节中将探讨条件期望的一些基本性质。</p><span id="more"></span><hr /><p><strong>命题1（特殊的条件期望）</strong>设<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域。</p><p>（1）如果<span class="math inline">\(X\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测，则<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=X,\mathrm{a.s.}\)</span>；</p><p>（2）如果<span class="math inline">\(X\)</span>与<spanclass="math inline">\(\mathscr{G}\)</span>独立，则<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=\mathbb{E}X,\mathrm{a.s.}\)</span>。</p><hr /><p><strong>证明</strong>（1）<spanclass="math inline">\(X\)</span>是<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的可测函数，且<span class="math display">\[\int_{C}X\mathrm{d}\mathbb{P}=\int_{C}X\mathrm{d}\mathbb{P},\quad\forallC\in\mathscr{G},\]</span> 根据定义知<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=X,\mathrm{a.s.}\)</span>。</p><p>（2）<span class="math inline">\(\mathbb{E} X\)</span>是<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的可测函数，且<span class="math display">\[\int_C X\mathrm{d}P=\mathbb{E}(X\cdot I_C)=\mathbb{E}X\cdot\mathbb{P}(C)=\int_C\mathbb{E}X\mathrm{d}\mathbb{P},\]</span> 根据定义知<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})=\mathbb{E}X,\mathrm{a.s.}\)</span>。</p><blockquote><p>在这里应用了结论：若<span class="math inline">\(X\)</span>与<spanclass="math inline">\(C\)</span>独立，则<spanclass="math inline">\(\mathbb{E}(X\cdotI_C)=\mathbb{E}X\cdot\mathbb{P}(C)\)</span>，证明需要使用典型方法。</p></blockquote><hr /><p><strong>命题2（复合条件期望）</strong>设<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\subset\mathscr{F}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，则 <spanclass="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_1)|\mathscr{G}_2]=\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 一方面，根据<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G}_1)\)</span>关于<spanclass="math inline">\(\mathscr{G}_1\subset\mathscr{G}_2\)</span>可测，应用命题1的（1）得<span class="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_1)|\mathscr{G}_2]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.};\]</span> 另外一方面，根据<spanclass="math inline">\(\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]\)</span>关于<spanclass="math inline">\(\mathscr{G}_1\)</span>可测，且对任意的<spanclass="math inline">\(C\in\mathscr{G}_1\subset\mathscr{G}_2\)</span>，都有<span class="math display">\[\int_C\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G}_2)\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G}_1)\mathrm{d}\mathbb{P},\]</span> 由<span class="math inline">\(C\)</span>的任意性得 <spanclass="math display">\[\mathbb{E}[\mathbb{E}(X|\mathscr{G}_2)|\mathscr{G}_1]=\mathbb{E}(f|\mathscr{G}_1),\quad\mathrm{a.s.}.\]</span> 综合以上两条可知命题成立。</p><hr /><p><strong>命题3（单调性）</strong>设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(X\le Y, \mathrm{a.s.}\)</span>，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，则 <spanclass="math display">\[\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span> 特别地，<spanclass="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>证明</strong> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，都有 <spanclass="math display">\[\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P}\le\int_CY\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(Y|\mathscr{G})\mathrm{d}\mathbb{P},\]</span> 由<span class="math inline">\(C\)</span>的任意性得 <spanclass="math display">\[\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span> 另外，注意到<span class="math inline">\(-X\le|X|,X\le|X|\)</span>， 因此 <span class="math display">\[\begin{cases}-\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(|X||\mathscr{G}),&amp;\mathrm{a.s.},\\\mathbb{E}(X|\mathscr{G})\le\mathbb{E}(|X||\mathscr{G}),&amp;\mathrm{a.s.}.\end{cases}\]</span> 综合以上两式，有<spanclass="math inline">\(|\mathbb{E}(X|\mathscr{G})|\le\mathbb{E}(|X||\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>命题4（可加性）</strong>设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，<span class="math inline">\(a,b\in\mathbb{R}\)</span>，且<spanclass="math inline">\(a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，则 <spanclass="math display">\[\mathbb{E}(aX+bY|\mathscr{G})=a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由<spanclass="math inline">\(\mathbb{E}(aX+bY)=a\mathbb{E}X+b\mathbb{E}Y\)</span>存在，知<spanclass="math inline">\(\mathbb{E}(aX+bY|\mathscr{G})\)</span>有定义。对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，都有 <spanclass="math display">\[\begin{aligned}\int_C(aX+bY)\mathrm{d}\mathbb{P}&amp;=a\int_CX\mathrm{d}\mathbb{P}+b\int_CY\mathrm{d}\mathbb{P}\\&amp;=a\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P}+b\int_C\mathbb{E}(Y|\mathscr{G})\mathrm{d}\mathbb{P}\\&amp;=\int_C(a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}))\mathrm{d}\mathbb{P}.\end{aligned}\]</span> 因此，<spanclass="math inline">\(\mathbb{E}(aX+bY|\mathscr{G})=a\mathbb{E}(X|\mathscr{G})+b\mathbb{E}(Y|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p>命题3和4都是期望<spanclass="math inline">\(\mathbb{E}(\cdot)\)</span>的性质向条件期望<spanclass="math inline">\(\mathbb{E}(\cdot|\mathscr{G})\)</span>的推广。联想到期望所满足的单调收敛定理、Fatou引理及Lebesgue控制收敛定理，我们接下来证明这些定理对于条件期望也是成立的。</p><hr /><p><strong>定理5（单调收敛定理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>和<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(0\le X_n\uparrow X,\mathrm{a.s.}\)</span>，则<span class="math display">\[0\le\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由命题3得<spanclass="math inline">\(\{\mathbb{E}(X_n|\mathscr{G})\}\)</span>单调递增，且根据<spanclass="math inline">\(\mathbb{E}(X_n|\mathscr{G})\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测知<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测。对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用单调收敛定理得 <spanclass="math display">\[\int_C\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_C\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\mathbb{E}(X_n|\mathscr{G})\uparrow\mathbb{E}(X|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>定理6（Fatou引理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量序列，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(X_n\geq 0,\mathrm{a.s.}\)</span>，则 <spanclass="math display">\[\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用Fatou引理得 <spanclass="math display">\[\int_C\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\mathrm{d}\mathbb{P}=\int_C\liminf_{n\to\infty}X_n\mathrm{d}\mathbb{P}\le\liminf_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\displaystyle\mathbb{E}\left(\liminf_{n\to\infty}X_n|\mathscr{G}\right)\le\liminf_{n\to\infty}\mathbb{E}(X_n|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p><strong>定理7（Lebesgue控制收敛定理）</strong>设<spanclass="math inline">\(\{X_n\}\)</span>和<spanclass="math inline">\(X\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的积分存在的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，若<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}X_n=X\)</span>，且存在<spanclass="math inline">\(Y\in L^1(\Omega)\)</span>，使得对任意的<spanclass="math inline">\(n\geq 1\)</span>，都有<spanclass="math inline">\(|X_n|\le Y,\mathrm{a.s.}\)</span>，则 <spanclass="math display">\[\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})=\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 由命题3知 <span class="math display">\[|\mathbb{E}(X_n|\mathscr{G})|\le\mathbb{E}(|X_n||\mathscr{G})\le\mathbb{E}(Y|\mathscr{G})\inL^1(\Omega).\]</span> 对任意的<spanclass="math inline">\(C\in\mathscr{G}\)</span>，应用Lebesgue控制收敛定理得<span class="math display">\[\int_C\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_C\mathbb{E}(X_n|\mathscr{G})\mathrm{d}\mathbb{P}=\lim_{n\to\infty}\int_CX_n\mathrm{d}\mathbb{P}=\int_CX\mathrm{d}\mathbb{P},\]</span> 这便说明了<spanclass="math inline">\(\displaystyle\lim_{n\to\infty}\mathbb{E}(X_n|\mathscr{G})=\mathbb{E}(X|\mathscr{G}),\mathrm{a.s.}\)</span>。</p><hr /><p>定理5、6和7的证明过程说明了，条件期望是离不开期望的。在处理条件期望的问题时，常常需要借助条件期望的定义转化为期望。最后，作为定理5的应用，我们引出如下的重要结论，其在随机过程中有应用。</p><hr /><p><strong>命题8</strong> 设<span class="math inline">\(X,Y\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域，<spanclass="math inline">\(X\)</span>和<spanclass="math inline">\(XY\)</span>的积分存在，且<spanclass="math inline">\(Y\)</span>关于<spanclass="math inline">\(\mathscr{G}\)</span>可测，则 <spanclass="math display">\[\mathbb{E}(XY|\mathscr{G})=Y\cdot\mathbb{E}(X|\mathscr{G}),\quad\mathrm{a.s.}.\]</span></p><hr /><p><strong>证明</strong> 用典型方法。</p><hr /><p><strong>例9</strong> 设<spanclass="math inline">\(\{(X_n,\mathscr{F}_n),n\geq0\}\)</span>是带流的随机过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，<spanclass="math inline">\(X_n\)</span>是关于<spanclass="math inline">\(\mathscr{F}_n\)</span>可测的随机变量，且<spanclass="math inline">\(\mathscr{F}_n\subset\mathscr{F}_{n+1}\)</span>。设其期望为0，方差为<spanclass="math inline">\(\sigma^2&lt;\infty\)</span>。若其是一个鞅差过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，都有 <spanclass="math display">\[\mathbb{E}(X_{n+1}|\mathscr{F}_n)=0,\quad\mathrm{a.s.},\]</span> 则其一定是一个白噪声过程，也即对任意的<spanclass="math inline">\(n\geq0\)</span>，都有 <spanclass="math display">\[\mathrm{Cov}(X_n,X_{n+1})=0.\]</span> 这是因为，<span class="math inline">\(X_n\)</span>是关于<spanclass="math inline">\(\mathscr{F}_n\)</span>可测的，从而 <spanclass="math display">\[\mathbb{E}(X_nX_{n+1}|\mathscr{F}_n)=X_n\cdot\mathbb{E}(X_{n+1}|\mathscr{F}_n)=0,\quad\mathrm{a.s.},\]</span> 对上式两边取期望得 <span class="math display">\[\mathrm{Cov}(X_n,X_{n+1})=\mathbb{E}[\mathbb{E}(X_nX_{n+1}|\mathscr{F}_n)]=0.\]</span></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本节中将探讨条件期望的一些基本性质。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="讨论班" scheme="https://dylandong.top/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/"/>
+    
+    
+    <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    <category term="条件期望" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>条件期望、条件概率与例子</title>
+    <link href="https://dylandong.top/posts/7a46/"/>
+    <id>https://dylandong.top/posts/7a46/</id>
+    <published>2022-03-08T15:21:33.000Z</published>
+    <updated>2022-03-20T03:28:45.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。</p><span id="more"></span><h1 id="条件期望与条件概率的定义">条件期望与条件概率的定义</h1><p>设<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>为概率空间，条件期望首先是对于<spanclass="math inline">\(\mathscr{F}\)</span>的子<spanclass="math inline">\(\sigma\)</span>-域而言的。</p><hr /><p><strong>定义1（子<spanclass="math inline">\(\sigma\)</span>-域）</strong>设<spanclass="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是<spanclass="math inline">\(\sigma\)</span>-域，则称<spanclass="math inline">\(\mathscr{G}\)</span>是<spanclass="math inline">\(\mathscr{F}\)</span>的<strong>子<spanclass="math inline">\(\sigma\)</span>-域</strong>。</p><hr /><p>设<spanclass="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，定义<span class="math display">\[\varphi(C):=\int_CX\mathrm{d}\mathbb{P},\quad\forall C\in\mathscr{G},\]</span> 则<span class="math inline">\(\varphi\)</span>是<spanclass="math inline">\(\mathscr{G}\)</span>上的符号测度，且根据 <spanclass="math display">\[\mathbb{P}(C)=0\implies \varphi(C)=\int_CX\mathrm{d}\mathbb{P}=0\]</span> 得知<spanclass="math inline">\(\varphi\ll\mathbb{P}\)</span>，从而由Radon-Nikodym定理知，存在概率空间<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量<spanclass="math inline">\(Y\in\mathscr{L}^1(\Omega)\)</span>，使得 <spanclass="math display">\[\varphi(C)=\int_CX\mathrm{d}\mathbb{P}=\int_CY\mathrm{d}\mathbb{P},\quad\forallC\in\mathscr{G}.\]</span> 需要注意的是，上式中<spanclass="math inline">\(X\)</span>是<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，而<spanclass="math inline">\(Y\)</span>是<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量。据此，条件期望可以得到定义：</p><hr /><p><strong>定义2（条件期望）</strong>设<spanclass="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<spanclass="math inline">\(\sigma\)</span>-域，<spanclass="math inline">\(X\in\mathscr{L}^1(\Omega)\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{F},\mathbb{P})\)</span>上的随机变量，<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})\in\mathscr{L}^1(\Omega)\)</span>是概率空间<spanclass="math inline">\((\Omega,\mathscr{G},\mathbb{P})\)</span>上的随机变量，且满足<span class="math display">\[\int_CX\mathrm{d}\mathbb{P}=\int_C\mathbb{E}(X|\mathscr{G})\mathrm{d}\mathbb{P},\quad\forallC\in\mathscr{G},\]</span> 则称<spanclass="math inline">\(\mathbb{E}(X|\mathscr{G})\)</span>是<spanclass="math inline">\(X\)</span>关于子<spanclass="math inline">\(\sigma\)</span>-域<spanclass="math inline">\(\mathscr{G}\)</span>的<strong>条件期望</strong>。</p><hr /><p>在初等概率论中，设<spanclass="math inline">\(A\in\mathscr{F}\)</span>，<spanclass="math inline">\(I_A\)</span>是<spanclass="math inline">\(A\)</span>的示性函数，则<spanclass="math inline">\(\mathbb{E}I_A=\mathbb{P}(A)\)</span>。受此启发，可以定义条件概率：</p><hr /><p><strong>定义3（条件概率）</strong>设<spanclass="math inline">\(\mathscr{G}\subset\mathscr{F}\)</span>是子<spanclass="math inline">\(\sigma\)</span>-域，<spanclass="math inline">\(A\in\mathscr{F}\)</span>，称<spanclass="math inline">\(\mathbb{P}(A|\mathscr{G})=\mathbb{E}(I_A|\mathscr{G})\)</span>是<spanclass="math inline">\(A\)</span>关于子<spanclass="math inline">\(\sigma\)</span>-域<spanclass="math inline">\(\mathscr{G}\)</span>的<strong>条件概率</strong>。</p><hr /><p>需要注意，条件概率实际上也是随机变量。</p><h1 id="简单的例子">简单的例子</h1><p>为了加强对条件概率与条件期望的定义的理解，在这里考虑一些简单的例子。</p><hr /><p><strong>例4</strong> 设<spanclass="math inline">\(B\in\mathscr{F}\)</span>，<spanclass="math inline">\(\mathscr{G}=\sigma(B)=\{\varnothing,B,B^C,\Omega\}\)</span>，且<spanclass="math inline">\(\mathbb{P}(B)\notin\{0,1\}\)</span>。设<spanclass="math inline">\(A\in\mathscr{G}\)</span>，则<spanclass="math inline">\(\mathbb{P}(A|\mathscr{G})\)</span>是<spanclass="math inline">\(\mathscr{G}\)</span>上的可测函数，从而 <spanclass="math display">\[\mathbb{P}(A|\mathscr{G})=a I_B+b I_{B^C};\]</span> 另外，根据定义得 <span class="math display">\[\int_C\mathbb{P}(A|\mathscr{G})\mathrm{d}\mathbb{P}=\int_CI_A\mathrm{d}\mathbb{P}=\mathbb{P}(AC),\]</span> 取<span class="math inline">\(C=B\)</span>得<spanclass="math inline">\(a=\dfrac{\mathbb{P}(AB)}{\mathbb{P}(B)}=\mathbb{P}(A|B)\)</span>，取<spanclass="math inline">\(C=B^C\)</span>得<spanclass="math inline">\(b=\dfrac{\mathbb{P}(AB^C)}{\mathbb{P}(B^C)}=\mathbb{P}(A|B^C)\)</span>，从而<span class="math display">\[\mathbb{P}(A|\mathscr{G})=\mathbb{P}(A|B)\cdotI_B+\mathbb{P}(A|B^C)\cdot I_{B^C}.\]</span></p><hr /><p><strong>例5</strong> 设<spanclass="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<spanclass="math inline">\(B_1\cup B_2\cup\cdots\cupB_m=\Omega\)</span>，<spanclass="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>。设<spanclass="math inline">\(A\in\mathscr{F}\)</span>，类似例4，可以求出 <spanclass="math display">\[\mathbb{P}(A|\mathscr{G})=\sum_{j=1}^{m}\mathbb{P}(A|B_j)\cdot I_{B_j}.\]</span></p><hr /><p>对于例5的结果，如果<span class="math inline">\(\omega\inB_j\)</span>，也即给定条件<span class="math inline">\(B_j\)</span>，则<span class="math display">\[\mathbb{P}(A|\mathscr{G})(\omega)=\mathbb{P}(A|B_j),\]</span> 右边是在条件<spanclass="math inline">\(B_j\)</span>下，事件<spanclass="math inline">\(A\)</span>发生的概率，这说明了抽象定义的合理性。</p><hr /><p><strong>例6</strong> 设<spanclass="math inline">\(A_1,A_2,\cdots,A_n\in\mathscr{F}\)</span>互不相关，且<spanclass="math inline">\(A_1\cup A_2\cup\cdots\cup A_n=\Omega\)</span>，令<span class="math display">\[X=\sum_{i=1}^{n}a_i\cdot I_{A_i},\]</span> 再设<spanclass="math inline">\(B_1,B_2,\cdots,B_m\in\mathscr{F}\)</span>互不相交，且<spanclass="math inline">\(B_1\cup B_2\cup\cdots\cupB_m=\Omega\)</span>，<spanclass="math inline">\(\mathscr{G}=\sigma(B_1,B_2,\cdots,B_m)\)</span>，类似例4，可以求出<span class="math display">\[\mathbb{E}(X|\mathscr{G})=\sum_{j=1}^{m}\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j)\cdotI_{B_j.}\]</span></p><hr /><p>例6的结果非常有趣。如果<span class="math inline">\(\omega\inB_j\)</span>，也即给定条件<spanclass="math inline">\(B_j\)</span>，我们知道 <spanclass="math display">\[\mathbb{E}(X|\mathscr{G})(\omega)=\sum_{i=1}^{n}a_i\cdot\mathbb{P}(A_i|B_j),\]</span> 这事实上是将样本空间作划分<spanclass="math inline">\(\Omega=A_1\cup A_2\cup\cdots\cupA_n\)</span>，随机变量<span class="math inline">\(X\)</span>在第<spanclass="math inline">\(i\)</span>个集合<spanclass="math inline">\(A_i\)</span>上的取值为<spanclass="math inline">\(a_i\)</span>，而<spanclass="math inline">\(\mathbb{P}(A_i|B_j)\)</span>是在条件<spanclass="math inline">\(B_j\)</span>下，事件<spanclass="math inline">\(A_i\)</span>发生的概率，它们相乘求和，就得到了初等概率论中定义的条件期望。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本文将给出测度论意义下的条件期望与条件概率的定义，并举一些简单的例子。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="讨论班" scheme="https://dylandong.top/categories/%E8%AE%A8%E8%AE%BA%E7%8F%AD/"/>
+    
+    
+    <category term="概率论" scheme="https://dylandong.top/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    <category term="条件概率" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87/"/>
+    
+    <category term="条件期望" scheme="https://dylandong.top/tags/%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B/"/>
     
   </entry>
   
