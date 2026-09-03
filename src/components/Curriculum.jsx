@@ -1,10 +1,10 @@
-import { FunctionSquare, Grid3x3, ChartSpline, Target, MonitorPlay, School } from 'lucide-react'
+import { FunctionSquare, Grid3x3, ChartSpline, Target, MonitorPlay, Users, School } from 'lucide-react'
 import { curriculum } from '../content.js'
 import SectionHeading from './SectionHeading.jsx'
 import Reveal from './Reveal.jsx'
 
 const trackIcons = { FunctionSquare, Grid3x3, ChartSpline }
-const modeIcons = [MonitorPlay, School]
+const modeIcons = [MonitorPlay, Users, School]
 
 export default function Curriculum() {
   return (
@@ -62,7 +62,7 @@ export default function Curriculum() {
 
         <Reveal>
           <h3 className="mt-14 text-sm font-semibold text-slate-900">授课模式</h3>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
             {curriculum.modes.map((m, i) => {
               const Icon = modeIcons[i] ?? MonitorPlay
               return (

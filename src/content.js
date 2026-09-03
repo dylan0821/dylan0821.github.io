@@ -119,7 +119,7 @@ export const books = [
     status: '已成体系',
     statusClass: 'bg-slate-100 text-slate-700 border-slate-300',
     title: '高考概率统计探秘',
-    subtitle: '从计数到统计推断',
+    subtitle: '从本质建立概率统计的知识体系',
     courseLink: {
       name: '《高考概率统计压轴突破》',
       href: 'https://mp.weixin.qq.com/s/o-Yl8fE7IteFNXNA0nGhUA',
@@ -212,7 +212,11 @@ export const curriculum = {
   modes: [
     {
       title: '线上专题精讲班',
-      body: '小班制直播授课，随堂发放自编讲义与练习，课后保留答疑。',
+      body: '直播或录播课形式，报名人数一般不设上限；随堂发放自编讲义与练习，课后保留答疑。',
+    },
+    {
+      title: '定制化小班',
+      body: '面向希望获得更高关注度的学员：按需定制组班规模、授课内容与节奏，一对一亦可协商。',
     },
     {
       title: '入校讲座 / 驻校培优',
@@ -223,7 +227,7 @@ export const curriculum = {
 
 export const contact = {
   wechat: 'Dylan_PKU',
-  note: '为保证交流效率，添加时请务必备注：【年级 + 省份 + 当前数学平时分数】。',
+  note: '为保证交流效率，添加时请务必备注：【年级 + 省份 + 当前数学平时分数】；如需报名概率统计线上课程，请再加备注【概率统计】。',
   qrNote: '[配图：个人微信二维码图片]',
   gzh: {
     name: '微信公众号',
