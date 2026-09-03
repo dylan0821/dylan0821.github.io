@@ -87,7 +87,7 @@ export default function TeachingOutcomes() {
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
                 <p className="text-xs leading-6 text-slate-500">
                   入校课 / 入校课 + 一对一学员主要来自多地教科院与重点高中合作项目；
-                  线上专题学员覆盖全国卷多个省份。名单之外，还有十余位总分 650+ 的
+                  线上专题学员覆盖全国卷多个省份。名单之外，还有多位总分 650+ 的
                   985 层次学员。
                 </p>
               </div>
