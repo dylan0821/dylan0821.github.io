@@ -1,0 +1,24 @@
+{
+  "name": "dylaaan-academic-homepage",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/inline.mjs",
+    "preview": "vite preview",
+    "mobile:check": "node scripts/mobile-check.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.39.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "playwright-core": "^1.62.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.2"
+  }
+}

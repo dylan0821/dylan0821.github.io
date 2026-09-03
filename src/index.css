@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans SC",
+    "Microsoft YaHei", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-serif:
+    "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun",
+    ui-serif, Georgia, serif;
+
+  --color-oxford: #0f172a;
+  --color-ink: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-700);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
