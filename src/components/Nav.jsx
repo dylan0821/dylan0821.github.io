@@ -31,15 +31,25 @@ export default function Nav() {
         </button>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((l) => (
-            <button
-              key={l.id}
-              onClick={() => go(l.id)}
-              className="text-sm text-slate-600 transition-colors hover:text-slate-900"
-            >
-              {l.label}
-            </button>
-          ))}
+          {navLinks.map((l) =>
+            l.href ? (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-slate-600 transition-colors hover:text-slate-900"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <button
+                key={l.id}
+                onClick={() => go(l.id)}
+                className="text-sm text-slate-600 transition-colors hover:text-slate-900"
+              >
+                {l.label}
+              </button>
+            )
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -63,15 +73,25 @@ export default function Nav() {
       {open ? (
         <div className="border-t border-slate-200 bg-slate-50 lg:hidden">
           <nav className="mx-auto max-w-6xl px-6 py-3">
-            {navLinks.map((l) => (
-              <button
-                key={l.id}
-                onClick={() => go(l.id)}
-                className="block w-full border-b border-slate-100 py-3 text-left text-[0.95rem] text-slate-700 last:border-0 hover:text-slate-900"
-              >
-                {l.label}
-              </button>
-            ))}
+            {navLinks.map((l) =>
+              l.href ? (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="block w-full border-b border-slate-100 py-3 text-left text-[0.95rem] text-slate-700 last:border-0 hover:text-slate-900"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <button
+                  key={l.id}
+                  onClick={() => go(l.id)}
+                  className="block w-full border-b border-slate-100 py-3 text-left text-[0.95rem] text-slate-700 last:border-0 hover:text-slate-900"
+                >
+                  {l.label}
+                </button>
+              )
+            )}
           </nav>
         </div>
       ) : null}

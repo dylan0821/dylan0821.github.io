@@ -38,6 +38,7 @@ export const navLinks = [
   { id: 'publications', label: '出版专著' },
   { id: 'outcomes', label: '教学成果' },
   { id: 'curriculum', label: '课程体系' },
+  { href: '/analysis/', label: '高考分析' },
   { id: 'contact', label: '咨询' },
 ]
 
