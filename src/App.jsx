@@ -6,6 +6,7 @@ import TeachingOutcomes from './components/TeachingOutcomes.jsx'
 import Curriculum from './components/Curriculum.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import AnalysisFloat from './components/AnalysisFloat.jsx'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <AnalysisFloat />
     </div>
   )
 }
