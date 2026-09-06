@@ -96,7 +96,8 @@ export const books = [
   {
     id: 'daoshu',
     status: '已出版',
-    statusClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+    statusClass:
+      'bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/30',
     title: '高考导数探秘',
     subtitle: '解题技巧与策略 · 人民邮电出版社',
     coverNote: '[配图：出版物/导数排版文件/封面.pdf 渲染图]',
@@ -107,7 +108,8 @@ export const books = [
   {
     id: 'yuanzhui',
     status: '已出版',
-    statusClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+    statusClass:
+      'bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/30',
     title: '高考圆锥曲线探秘',
     subtitle: '从体系到技巧 · 人民邮电出版社',
     coverNote: '[配图：出版物/圆锥曲线排版文件/封面.pdf 渲染图]',

@@ -56,7 +56,7 @@ export default function Contact() {
                 onClick={copyWechat}
                 className="mt-6 inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 transition-colors hover:border-slate-500"
               >
-                {copied ? <Check size={15} className="text-emerald-600" /> : <Copy size={15} />}
+                {copied ? <Check size={15} className="text-emerald-600 dark:text-emerald-400" /> : <Copy size={15} />}
                 {copied ? '已复制' : '一键复制微信号'}
               </button>
 

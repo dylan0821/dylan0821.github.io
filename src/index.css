@@ -11,6 +11,37 @@
 
   --color-oxford: #0f172a;
   --color-ink: #1e293b;
+
+  /* slate / white 通过变量间接引用，便于用 prefers-color-scheme 整体切换深浅主题 */
+  --color-white: var(--ds-white);
+  --color-slate-50: var(--ds-slate-50);
+  --color-slate-100: var(--ds-slate-100);
+  --color-slate-200: var(--ds-slate-200);
+  --color-slate-300: var(--ds-slate-300);
+  --color-slate-400: var(--ds-slate-400);
+  --color-slate-500: var(--ds-slate-500);
+  --color-slate-600: var(--ds-slate-600);
+  --color-slate-700: var(--ds-slate-700);
+  --color-slate-800: var(--ds-slate-800);
+  --color-slate-900: var(--ds-slate-900);
+  --color-slate-950: var(--ds-slate-950);
+}
+
+/* 浅色主题（默认，保持原设计不变） */
+:root {
+  color-scheme: light;
+  --ds-white: #ffffff;
+  --ds-slate-50: #f8fafc;
+  --ds-slate-100: #f1f5f9;
+  --ds-slate-200: #e2e8f0;
+  --ds-slate-300: #cbd5e1;
+  --ds-slate-400: #94a3b8;
+  --ds-slate-500: #64748b;
+  --ds-slate-600: #475569;
+  --ds-slate-700: #334155;
+  --ds-slate-800: #1e293b;
+  --ds-slate-900: #0f172a;
+  --ds-slate-950: #020617;
 }
 
 html {
@@ -33,4 +64,60 @@ body {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* 深色主题：跟随浏览器/系统 prefers-color-scheme
+   “白卡片/白区块”→ 藏青，slate 标题/正文 → 对应提亮的灰阶，
+   bg-slate-900 的强调块（深底白字）自动反转为浅色强调块（白底深字）。 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ds-white: #0f172a;
+    --ds-slate-50: #0b1220;
+    --ds-slate-100: #1e293b;
+    --ds-slate-200: #334155;
+    --ds-slate-300: #475569;
+    --ds-slate-400: #8494aa;
+    --ds-slate-500: #6b7c93;
+    --ds-slate-600: #94a3b8;
+    --ds-slate-700: #cbd5e1;
+    --ds-slate-800: #e2e8f0;
+    --ds-slate-900: #f1f5f9;
+    --ds-slate-950: #ffffff;
+  }
+
+  html {
+    background-color: #0b1220;
+  }
+
+  ::selection {
+    background-color: #f1f5f9;
+    color: #0f172a;
+  }
+}
+
+/* slate/white 主题色为变量时，Tailwind 4 无法内联透明度修饰符，
+   这里用 color-mix 手动补上，保证浅色原观感不变、深色下随变量同步翻转。 */
+.bg-slate-50\/85 {
+  background-color: color-mix(in oklab, var(--color-slate-50) 85%, transparent);
+}
+
+.bg-slate-100\/80 {
+  background-color: color-mix(in oklab, var(--color-slate-100) 80%, transparent);
+}
+
+.bg-white\/95 {
+  background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
+}
+
+.border-slate-200\/80 {
+  border-color: color-mix(in oklab, var(--color-slate-200) 80%, transparent);
+}
+
+.from-slate-200\/60 {
+  --tw-gradient-from: color-mix(in oklab, var(--color-slate-200) 60%, transparent);
+}
+
+.shadow-slate-900\/10 {
+  --tw-shadow-color: color-mix(in oklab, var(--color-slate-900) 10%, transparent);
 }
