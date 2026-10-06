@@ -99,7 +99,7 @@ export default function Hero() {
             <Reveal delay={180} className="mx-auto w-full max-w-sm lg:sticky lg:top-24 lg:max-w-none">
               <PlaceholderImage
                 src={images.hero}
-                aspect="aspect-[3/4]"
+                aspect="aspect-square"
                 label="董晟渤（Dylaaan）· 北京大学数学科学学院"
                 className="shadow-sm"
               />

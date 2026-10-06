@@ -3,9 +3,10 @@
 // 简历/高考数学培优课程方案_202607.pdf · 讲义/ · 出版物/
 
 // 图片统一放 public/images/ 下，文件按下面这些名字命名即可；缺图时页面会显示占位框。
-// 注意：教师形象照（hero）未放入前不会显示任何占位，放图后自动出现。
+// 注意：形象照（hero）未放入前不会显示任何占位，放图后自动出现。
+// hero 源图为方形（1:1），出自 画像/Dylaaan_虚拟人物画像_真人与头像融合版_20261004.png。
 export const images = {
-  hero: './images/hero-photo.jpg', // 教师形象照 / 北大认证照片（竖版 3:4），未放图前隐藏
+  hero: './images/hero-photo.jpg', // 虚拟人物形象照（方形 1:1），未放图前隐藏
   outcomes: './images/student.webp', // 学员出分的微信聊天截图（原“喜报拼图”位改为该图）
   qrWechat: './images/qr-wechat-square.png', // 个人微信二维码（已修成规整方图）
   qrGzh: './images/qr-gzh.jpg', // 微信公众号二维码（方形）
