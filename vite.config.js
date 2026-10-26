@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 const publicDir = fileURLToPath(new URL('./public', import.meta.url))
 
-// dev：/analysis/ 这类目录地址直接提供 public/ 下的静态页，
+// dev：/about/ 这类目录地址直接提供 public/ 下的静态页，
 // 否则会被 SPA 回退拦走（线上为纯静态目录，不受此问题影响）。
 const servePublicIndex = {
   name: 'serve-public-index',
